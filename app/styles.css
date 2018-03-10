@@ -151,7 +151,7 @@ a{
 .portfolio .dziedzina{
 		background-color: green;
 		padding-bottom: 30px;
-		padding-top: 30px;
+		padding-top: 20px;
 }
 .portfolio .dziedzina .nazwa_dziedziny{
 			margin:0 auto;
@@ -159,7 +159,7 @@ a{
 			color:red;
 			text-align: center;
 		}
-.portfolio .dziedzina .kafelki_main, .portfolio .dziedzina .kafelki_more{
+.portfolio .dziedzina .kafelki{
 			padding-top:10px;
 			padding-bottom: 10px;
 			background-color: red;
@@ -171,7 +171,7 @@ a{
 			    -ms-flex-direction:column;
 			        flex-direction:column;
 		}
-.portfolio .dziedzina .kafelki_main .kafelek, .portfolio .dziedzina .kafelki_more .kafelek {
+.portfolio .dziedzina .kafelki .kafelek {
 				position: relative;
 				width: 80%;
 				padding-top: 80%;
@@ -180,31 +180,33 @@ a{
 				margin-bottom:10px;
 				background-color: blue;
 			}
-.portfolio .dziedzina .kafelki_main .kafelek .nazwa, .portfolio .dziedzina .kafelki_more .kafelek .nazwa {
+.portfolio .dziedzina .kafelki .kafelek .nazwa {
 					position:  absolute;
 					top: 0;
 					left: 0;
 					bottom: 0;
 					right: 0;
+					height:20px;
 					text-align: center;
 					font-size: 20px;
 					color: white;
+					pointer-events: none;
 				}
 @media (min-width: 600px) {
-.portfolio .dziedzina .kafelki_main, .portfolio .dziedzina .kafelki_more{
+.portfolio .dziedzina .kafelki{
 				-webkit-box-orient:horizontal;
 				-webkit-box-direction:normal;
 				    -ms-flex-direction:row;
 				        flex-direction:row
 		}
 
-				.portfolio .dziedzina .kafelki_main .kafelek,.portfolio .dziedzina .kafelki_more .kafelek{
+				.portfolio .dziedzina .kafelki .kafelek{
 					width:20%;
 					padding-top:20%;
 				}
   }
 .portfolio .dziedzina .kafelki_more{
-
+			display: none;
 		}
 .portfolio .dziedzina .pokaz_wszystkie{
 			width:100px;
@@ -250,7 +252,14 @@ a{
 			}
 @media (min-width: 600px) {
 .portfolio .dane .galeria .main{
-					width:70%;
+					width:60%;
+					padding-top:15%;
+					padding-bottom:15%
+			}
+  }
+@media (min-width: 600px) {
+.portfolio .dane .galeria .main{
+					width:80%;
 					padding-top:25%;
 					padding-bottom:25%
 			}

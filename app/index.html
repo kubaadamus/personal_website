@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta charset="utf-8" /> 
+<meta charset="utf-8"> 
 <link rel="stylesheet" href="styles.css">
 	<title></title>
 </head>
@@ -16,19 +16,25 @@
 		<h1 class="imie">JAKUB <wbr>ADAMUS</h1>
 		<h3 class="slogan">pomysł, <wbr>projekt, <wbr>realizacja.</h3>
 	</div>
-	<a href="#section2">
+	<a href="#film">
 		<div class="wyswietlfilm">WYŚWIETL FILM</div>
 	</a>
-	<div class="menu_open_button"></div>
+	<div class="menu_open_button" id="menu_open_button"></div>
 </div>
 <!===================================== M E N U ===========================================>
-<div class="menu">
-	<h3 class="button">O mnie</h3>
-	<h3 class="button">Portfolio</h3>
-	<h3 class="button">Kontakt</h3>
+<div class="menu" id="menu">
+	<a href="#omnie">
+		<h3 class="button">O mnie</h3>
+	</a>
+	<a href="#portfolio">
+		<h3 class="button">Portfolio</h3>
+	</a>
+	<a href="#stopka">
+		<h3 class="button">Kontakt</h3>
+	</a>
 </div>
 <!===================================== O M N I E ===========================================>
-<div class="omnie">
+<div class="omnie"  id="omnie">
 	<div class="naglowek"><h1>O MNIE</h1></div>
 	<p class="tekst ">
 		Od<wbr>kąd się<wbr>gam pa<wbr>mię<wbr>cią, śru<wbr>bo<wbr>kręt i ta<wbr>śma kle<wbr>ją<wbr>ca by<wbr>ły mo<wbr>i<wbr>mi u<wbr>lu<wbr>bio<wbr>ny<wbr>mi za<wbr>ba<wbr>wka<wbr>mi. Już ja<wbr>ko szkrab spę<wbr>dza<wbr>łem dłu<wbr>gie go<wbr>dzi<wbr>ny na roz<wbr>krę<wbr>ca<wbr>niu prze<wbr>kaź<wbr>ni<wbr>ków ele<wbr>ktry<wbr>cznych, któ<wbr>re dzia<wbr>dek (ele<wbr>ktryk auto<wbr>ma<wbr>tyk) nie<wbr>opa<wbr>trznie zo<wbr>sta<wbr>wiał w za<wbr>się<wbr>gu mo<wbr>je<wbr>go wzro<wbr>ku. Fa<wbr>scy<wbr>na<wbr>cja urzą<wbr>dze<wbr>nia<wbr>mi ele<wbr>ktry<wbr>czny<wbr>mi z bie<wbr>giem lat roz<wbr>wi<wbr>ja<wbr>ła się pro<wbr>wa<wbr>dząc mnie od pro<wbr>stej elek<wbr>tro<wbr>ni<wbr>ki ana<wbr>lo<wbr>go<wbr>wej po<wbr>przez po<wbr>je<wbr>dyn<wbr>cze ele<wbr>men<wbr>ty cy<wbr>fro<wbr>we aż do pro<wbr>gra<wbr>mo<wbr>wa<wbr>nia mik<wbr>ro<wbr>kon<wbr>tro<wbr>le<wbr>rów i two<wbr>rze<wbr>nia współ<wbr>pra<wbr>cu<wbr>ją<wbr>cych z nimi apli<wbr>kacji. 
@@ -41,7 +47,7 @@
 
 <!===================================== V I D E O ===========================================>
 
-<div class="video" id="section2">
+<div class="video" id="film">
 	<div class="naglowek"><h1>PO<wbr>ZNAJ<wbr>MY SIE LE<wbr>PIEJ</h1></div>
 	<p class="tekst">
 		Za<wbr>nim wkro<wbr>czysz do sek<wbr>cji za<wbr>wie<wbr>ra<wbr>ją<wbr>cej zre<wbr>ali<wbr>zo<wbr>wane prze<wbr>ze mnie pro<wbr>jek<wbr>ty, od<wbr>pręż się i zo<wbr>bacz w skró<wbr>cie czym się zaj<wbr>mu<wbr>ję.
@@ -50,7 +56,7 @@
 </div>
 
 <!===================================== P O R T F O L I O ===========================================>
-<div class="portfolio">
+<div class="portfolio"  id="portfolio">
 	<div class="naglowek">
 	<h1>PORT<wbr>FOL<wbr>IO</h1>
 	</div>
@@ -61,7 +67,7 @@
 			<h1>TE<wbr>CHNO<wbr>LO<wbr>GIA <br/> CHE<wbr>MI<wbr>CZNA</h1>
 		</div>
 
-		<div class="kafelki_main">
+		<div class="kafelki">
 
 				<div class="kafelek" name="TCH_inzynierka">
 					<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
@@ -86,47 +92,126 @@
 
 		<!=============== Wiecej ====================>
 		<div class="kafelki_more">
+			<div class="kafelki">
 
-				<div class="kafelek" name="TCH_inzynierka">
-					<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
-				</div>
-
-					<div class="kafelek" name="TCH_magisterka">
-						<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
+					<div class="kafelek" name="TCH_inzynierka">
+						<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
 					</div>
 
-						<div class="kafelek" name="TCH_robocik">
-							<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
+						<div class="kafelek" name="TCH_magisterka">
+							<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
 						</div>
 
-							<div class="kafelek" name="TCH_termostat">
-								<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+							<div class="kafelek" name="TCH_robocik">
+								<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
 							</div>
-			
-		</div>
+
+								<div class="kafelek" name="TCH_termostat">
+									<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+								</div>
+				
+			</div>
 
 
-		<div class="kafelki_more">
+			<div class="kafelki">
 
-				<div class="kafelek" name="TCH_inzynierka">
-					<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
-				</div>
-
-					<div class="kafelek" name="TCH_magisterka">
-						<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
+					<div class="kafelek" name="TCH_inzynierka">
+						<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
 					</div>
 
-						<div class="kafelek" name="TCH_robocik">
-							<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
+						<div class="kafelek" name="TCH_magisterka">
+							<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
 						</div>
 
-							<div class="kafelek" name="TCH_termostat">
-								<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+							<div class="kafelek" name="TCH_robocik">
+								<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
 							</div>
-			
+
+								<div class="kafelek" name="TCH_termostat">
+									<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+								</div>
+				
+			</div>
 		</div>
 	</div>
 
+																																				<!- K O N I E C ->
+	<!=============== ELEKTROTECHNIKA ====================>
+	<div class="dziedzina" >
+		<div class="nazwa_dziedziny">
+			<h1>ELE<wbr>KTRO<wbr>TE<wbr>CHNI<wbr>KA</h1>
+		</div>
+
+		<div class="kafelki">
+
+				<div class="kafelek" name="TCH_inzynierka">
+					<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
+				</div>
+
+					<div class="kafelek" name="TCH_magisterka">
+						<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
+					</div>
+
+						<div class="kafelek" name="TCH_robocik">
+							<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
+						</div>
+
+							<div class="kafelek" name="TCH_termostat">
+								<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+							</div>
+			
+		</div>
+
+		<div class="pokaz_wszystkie">Poka sowe</div>
+
+
+		<!=============== Wiecej ====================>
+		<div class="kafelki_more">
+			<div class="kafelki">
+
+					<div class="kafelek" name="TCH_inzynierka">
+						<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
+					</div>
+
+						<div class="kafelek" name="TCH_magisterka">
+							<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
+						</div>
+
+							<div class="kafelek" name="TCH_robocik">
+								<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
+							</div>
+
+								<div class="kafelek" name="TCH_termostat">
+									<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+								</div>
+				
+			</div>
+
+
+			<div class="kafelki">
+
+					<div class="kafelek" name="TCH_inzynierka">
+						<div class="nazwa">Pra<wbr>ca in<wbr>ży<wbr>nier<wbr>ska</div>
+					</div>
+
+						<div class="kafelek" name="TCH_magisterka">
+							<div class="nazwa">Pra<wbr>ca ma<wbr>gis<wbr>ter<wbr>ska</div>
+						</div>
+
+							<div class="kafelek" name="TCH_robocik">
+								<div class="nazwa">Mie<wbr>szal<wbr>nik mi<wbr>mo<wbr>śro<wbr>do<wbr>wy</div>
+							</div>
+
+								<div class="kafelek" name="TCH_termostat">
+									<div class="nazwa">Pro<wbr>gra<wbr>mo<wbr>wal<wbr>ny ter<wbr>mo<wbr>stat PID</div>
+								</div>
+				
+			</div>
+		</div>
+	</div>
+
+																																				<!- K O N I E C ->
+<!===================================== G A L E R I A ===========================================>
 	<div class="dane">
 		<div class="nazwa">NAZWA</div>
 		<div class="galeria">
@@ -140,9 +225,10 @@
 			<p> OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS OPIS </p>
 		</div>
 	</div>
+
 <!===================================== F O O T E R ===========================================>
 
-<div class="stopka">
+<div class="stopka"  id="stopka">
 	<div class="motto">
 		Stwórz<wbr>my ra<wbr>zem coś nie<wbr>zwy<wbr>kłe<wbr>go!
 	</div>
@@ -157,7 +243,9 @@
 <!======================================== S K R Y P T Y ======================================>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/scripts/menu_open.js"></script>
-<script type="text/javascript" src="assets/scripts/scroll.js"></script>
+<script type="text/javascript" src="assets/scripts/content_open.js"></script>
+<script type="text/javascript" src="assets/scripts/scroll.js"></script>\
+<script type="text/javascript" src="assets/scripts/show_more.js"></script>
 
 
 </body>
