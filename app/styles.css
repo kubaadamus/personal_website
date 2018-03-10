@@ -1,0 +1,293 @@
+/*@import "normalize.css"; */
+/* ========================================== V A R I A B L E S ========================================== */
+/* =============================================  F O N T S  ============================================= */
+@font-face 
+{
+    font-family: Kaligrafia;
+    src: url(assets/fonts/Kaligrafia.otf);
+}
+@font-face 
+{
+    font-family: Mocna;
+    src: url(assets/fonts/Mocna.ttf);
+}
+@font-face 
+{
+    font-family: Regular;
+    src: url(assets/fonts/Regular.ttf);
+}
+/* ============================================= G L O B A L S =========================================== */
+wbr:after { content: "\00200B"; }
+body{
+	min-width: 180px;
+	margin:0px;
+}
+h1, h2, h3, h4, h5{
+	margin:0;
+	padding:0;
+}
+span{
+	margin:-5px;
+	padding:0px;
+}
+h1{
+	margin:0;
+	font-size: 1.5rem;
+}
+p{
+	margin:0;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+/* ============================================ N O R M A L ============================================ */
+.header
+{
+	background-color: #2a2c2f;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.header .logo{
+		width:150px;
+		height:150px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		background-color: blue;
+	}
+.header .motto{
+		min-width:150px;
+		margin:0 auto;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+.header .motto .tytul{
+			color:white;
+		}
+.header .motto .imie{
+			color:white;
+		}
+.header .motto .slogan{
+			color:white;
+		}
+.header .wyswietlfilm{
+		width:150px;
+		margin:0 auto;
+		margin-bottom: 20px;
+		text-align: center;
+		color:white;
+	}
+.header .menu_open_button{
+		width:40px;
+		height:40px;
+		margin:0 auto;
+		background-color: black;
+	}
+.menu{
+	background-color: red;
+}
+.menu .button{
+		width:100px;
+		margin:0 auto;
+		text-align: center;
+	}
+.menu .button:hover{
+			background-color:blue;
+		}
+.omnie{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: green;
+}
+.omnie .naglowek{
+		width:100px;
+		margin: 0 auto;
+		color:white;
+	}
+.omnie .tekst{
+		padding: 5px 20px 5px 20px;
+		text-indent: 30px;
+		text-align: justify;
+	}
+.video{
+	background-color: grey;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+.video .naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		color:white;
+		text-align: center;
+	}
+.video .tekst{
+		padding: 5px 20px 5px 20px;
+		text-indent: 30px;
+		text-align: justify;
+	}
+.video iframe{
+		display:block;
+		margin:0 auto;
+		width:60%;
+	}
+@media (min-width: 400px) {
+.video iframe{
+			width:64vw;
+			height:36vw
+	}
+  }
+.portfolio{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: lightgrey;
+}
+.portfolio .naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:white;
+		text-align: center;
+	}
+.portfolio .dziedzina{
+		background-color: green;
+		padding-bottom: 30px;
+		padding-top: 30px;
+}
+.portfolio .dziedzina .nazwa_dziedziny{
+			margin:0 auto;
+			padding-bottom: 20px;
+			color:red;
+			text-align: center;
+		}
+.portfolio .dziedzina .kafelki_main, .portfolio .dziedzina .kafelki_more{
+			padding-top:10px;
+			padding-bottom: 10px;
+			background-color: red;
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:flex;
+			-webkit-box-orient:vertical;
+			-webkit-box-direction:normal;
+			    -ms-flex-direction:column;
+			        flex-direction:column;
+		}
+.portfolio .dziedzina .kafelki_main .kafelek, .portfolio .dziedzina .kafelki_more .kafelek {
+				position: relative;
+				width: 80%;
+				padding-top: 80%;
+				margin: 0 auto;
+				margin-top:10px;
+				margin-bottom:10px;
+				background-color: blue;
+			}
+.portfolio .dziedzina .kafelki_main .kafelek .nazwa, .portfolio .dziedzina .kafelki_more .kafelek .nazwa {
+					position:  absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					text-align: center;
+					font-size: 20px;
+					color: white;
+				}
+@media (min-width: 600px) {
+.portfolio .dziedzina .kafelki_main, .portfolio .dziedzina .kafelki_more{
+				-webkit-box-orient:horizontal;
+				-webkit-box-direction:normal;
+				    -ms-flex-direction:row;
+				        flex-direction:row
+		}
+
+				.portfolio .dziedzina .kafelki_main .kafelek,.portfolio .dziedzina .kafelki_more .kafelek{
+					width:20%;
+					padding-top:20%;
+				}
+  }
+.portfolio .dziedzina .kafelki_more{
+
+		}
+.portfolio .dziedzina .pokaz_wszystkie{
+			width:100px;
+			padding-top:20px;
+			padding-bottom: 20px;
+			margin:0 auto;
+			background-color: black;
+			color:white;
+			text-align: center;
+		}
+.portfolio .dane{
+		background-color: yellow;
+		padding-top:20px;
+	}
+.portfolio .dane .nazwa{
+			width:100px;
+			margin:0 auto;
+			text-align: center;
+
+		}
+.portfolio .dane .galeria{
+			margin-top:20px;
+			margin-bottom:20px;
+			padding-top:10px;
+			padding-bottom: 10px;
+			background-color: white;
+		}
+.portfolio .dane .galeria .main{
+				display:-webkit-box;
+				display:-ms-flexbox;
+				display:flex;
+				-webkit-box-align:center;
+				    -ms-flex-align:center;
+				        align-items:center;
+				-webkit-box-pack:justify;
+				    -ms-flex-pack:justify;
+				        justify-content:space-between;
+				width:95%;
+				padding-top:30%;
+				padding-bottom: 30%;
+				margin: 0 auto;
+				background-color: darkgrey;
+			}
+@media (min-width: 600px) {
+.portfolio .dane .galeria .main{
+					width:70%;
+					padding-top:25%;
+					padding-bottom:25%
+			}
+  }
+.portfolio .dane .galeria .main .next{
+					float:right;
+					width:40px;
+					height:40px;
+					background-color: red;
+				}
+.portfolio .dane .galeria .main .prev{
+					float:left;
+					width:40px;
+					height:40px;
+					background-color: red;
+				}
+.portfolio .dane .opis{
+			padding:20px;
+			text-align:justify;
+			background-color:blue;
+			text-indent: 40px;
+		}
+.stopka .motto{
+		min-width:150px;
+		margin:0 auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+.stopka .kontakty{
+		width:90%;
+		margin:0 auto;
+		background-color: green;
+	}
+.stopka .kontakty .kontakt{
+			margin:0 auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+		}

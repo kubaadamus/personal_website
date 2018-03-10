@@ -1,0 +1,301 @@
+/*@import "normalize.css"; */
+@import "_mixins";
+
+/* ========================================== V A R I A B L E S ========================================== */
+$mainBlack: #2a2c2f;
+$Cream: #FFF8E7;
+$Cream_2: #D9C9A4;
+$Cream_3: #B29E6C;
+$Cream_4: #8C7640;
+$mainLatte: #D9C9A4;
+$mainBlue: #F5F5F5;
+$mainGreen: #E7FFF8;
+/* =============================================  F O N T S  ============================================= */
+@font-face 
+{
+    font-family: Kaligrafia;
+    src: url(assets/fonts/Kaligrafia.otf);
+}
+@font-face 
+{
+    font-family: Mocna;
+    src: url(assets/fonts/Mocna.ttf);
+}
+@font-face 
+{
+    font-family: Regular;
+    src: url(assets/fonts/Regular.ttf);
+}
+/* ============================================= G L O B A L S =========================================== */
+wbr:after { content: "\00200B"; }
+body{
+	min-width: 180px;
+	margin:0px;
+}
+h1, h2, h3, h4, h5{
+	margin:0;
+	padding:0;
+}
+span{
+	margin:-5px;
+	padding:0px;
+}
+h1{
+	margin:0;
+	font-size: 1.5rem;
+}
+p{
+	margin:0;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+/* ============================================ N O R M A L ============================================ */
+.header
+{
+	background-color: $mainBlack;
+	padding-top: 30px;
+	padding-bottom: 20px;
+
+	.logo{
+		width:150px;
+		height:150px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		background-color: blue;
+	}
+	.motto{
+		min-width:150px;
+		margin:0 auto;
+		margin-bottom: 30px;
+		text-align: center;
+		.tytul{
+			color:white;
+		}
+		.imie{
+			color:white;
+		}
+		.slogan{
+			color:white;
+		}
+	}
+	.wyswietlfilm{
+		width:150px;
+		margin:0 auto;
+		margin-bottom: 20px;
+		text-align: center;
+		color:white;
+	}
+	.menu_open_button{
+		width:40px;
+		height:40px;
+		margin:0 auto;
+		background-color: black;
+	}
+}
+.menu{
+	background-color: red;
+
+	.button{
+		width:100px;
+		margin:0 auto;
+		text-align: center;
+		&:hover{
+			background-color:blue;
+		}
+	}
+}
+.omnie{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: green;
+
+	.naglowek{
+		width:100px;
+		margin: 0 auto;
+		color:white;
+	}
+	.tekst{
+		padding: 5px 20px 5px 20px;
+		text-indent: 30px;
+		text-align: justify;
+	}
+}
+.video{
+	background-color: grey;
+	padding-top:20px;
+	padding-bottom: 20px;
+	.naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		color:white;
+		text-align: center;
+	}
+	.tekst{
+		padding: 5px 20px 5px 20px;
+		text-indent: 30px;
+		text-align: justify;
+	}
+	iframe{
+		display:block;
+		margin:0 auto;
+		width:60%;
+		@mixin tablet{
+			width:64vw;
+			height:36vw;
+		}
+	}
+}
+.portfolio{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: lightgrey;
+	.naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:white;
+		text-align: center;
+	}
+	.dziedzina{
+		background-color: green;
+		padding-bottom: 30px;
+		padding-top: 30px;
+		.nazwa_dziedziny{
+			margin:0 auto;
+			padding-bottom: 20px;
+			color:red;
+			text-align: center;
+		}
+
+		.kafelki_main, .kafelki_more{
+			padding-top:10px;
+			padding-bottom: 10px;
+			background-color: red;
+			display:flex;
+			flex-direction:column;
+
+			.kafelek {
+				position: relative;
+				width: 80%;
+				padding-top: 80%;
+				margin: 0 auto;
+				margin-top:10px;
+				margin-bottom:10px;
+				background-color: blue;
+
+
+				.nazwa {
+					position:  absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					text-align: center;
+					font-size: 20px;
+					color: white;
+				}
+			}
+			@mixin pc{
+				flex-direction:row;
+
+				.kafelek{
+					width:20%;
+					padding-top:20%;
+				}
+			}
+		}
+
+		.kafelki_more{
+
+		}
+
+		.pokaz_wszystkie{
+			width:100px;
+			padding-top:20px;
+			padding-bottom: 20px;
+			margin:0 auto;
+			background-color: black;
+			color:white;
+			text-align: center;
+		}
+}
+	.dane{
+		background-color: yellow;
+		padding-top:20px;
+		.nazwa{
+			width:100px;
+			margin:0 auto;
+			text-align: center;
+
+		}
+
+		.galeria{
+			margin-top:20px;
+			margin-bottom:20px;
+			padding-top:10px;
+			padding-bottom: 10px;
+			background-color: white;
+
+			.main{
+				display:flex;
+				align-items:center;
+				justify-content:space-between;
+				width:95%;
+				padding-top:30%;
+				padding-bottom: 30%;
+				margin: 0 auto;
+				background-color: darkgrey;
+
+				@mixin pc{
+					width:70%;
+					padding-top:25%;
+					padding-bottom:25%;
+				}
+
+				.next{
+					float:right;
+					width:40px;
+					height:40px;
+					background-color: red;
+				}
+				.prev{
+					float:left;
+					width:40px;
+					height:40px;
+					background-color: red;
+				}
+			}
+		}
+		.opis{
+			padding:20px;
+			text-align:justify;
+			background-color:blue;
+			text-indent: 40px;
+		}
+	}
+}
+
+.stopka{
+
+	.motto{
+		min-width:150px;
+		margin:0 auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.kontakty{
+		width:90%;
+		margin:0 auto;
+		background-color: green;
+
+		.kontakt{
+			margin:0 auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+	}
+}
