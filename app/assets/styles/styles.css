@@ -1,4 +1,4 @@
-/*@import "normalize.css"; */
+@import "normalize.css";
 @import "_mixins";
 
 /* ========================================== V A R I A B L E S ========================================== */
@@ -188,14 +188,27 @@ a{
 
 			.kafelek {
 				position: relative;
-				width: 80%;
-				padding-top: 80%;
 				margin: 0 auto;
 				margin-top:10px;
 				margin-bottom:10px;
 				background-color: blue;
 
 
+
+				width: 150px;
+   				height: 150px;
+   				@mixin tablet{
+   					width:380px;
+   					height: 380px;
+   				}
+   				@mixin pc{
+				width: 150px;
+   				height: 150px;
+   				}   				
+   				@mixin tv{
+   				   	width:200px;
+   					height: 200px;	
+   				}
 				.nazwa {
 					position:  absolute;
 					top: 0;
@@ -211,11 +224,6 @@ a{
 			}
 			@mixin pc{
 				flex-direction:row;
-
-				.kafelek{
-					width:20%;
-					padding-top:20%;
-				}
 			}
 		}
 
