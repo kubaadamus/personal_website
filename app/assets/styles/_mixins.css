@@ -6,7 +6,7 @@
 }
 
 @define-mixin pc {
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     @mixin-content;
   }
 }

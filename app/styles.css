@@ -44,10 +44,15 @@ a{
 /* ============================================ N O R M A L ============================================ */
 .header
 {
-	background-color: #2a2c2f;
-	padding-top: 30px;
+	background: #2a2c2f;
 	padding-bottom: 20px;
 }
+@media (min-width: 700px) {
+.header
+{
+		background: none
+}
+  }
 .header .logo{
 		width:150px;
 		height:150px;
@@ -83,7 +88,14 @@ a{
 		margin:0 auto;
 		background-color: black;
 	}
+.header .bgvid
+{
+	position: absolute;
+	width: 100%;
+    z-index: -2;
+}
 .menu{
+	display: none;
 	background-color: red;
 }
 .menu .button{
@@ -192,7 +204,7 @@ a{
 					color: white;
 					pointer-events: none;
 				}
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 .portfolio .dziedzina .kafelki{
 				-webkit-box-orient:horizontal;
 				-webkit-box-direction:normal;
@@ -218,14 +230,21 @@ a{
 			text-align: center;
 		}
 .portfolio .dane{
+		display: none;
 		background-color: yellow;
 		padding-top:20px;
 	}
 .portfolio .dane .nazwa{
+
 			width:150px;
 			margin:0 auto;
 			text-align: center;
 
+		}
+.portfolio .dane .wroc
+		{
+			display: block;
+			margin: 0 auto;
 		}
 .portfolio .dane .galeria{
 			margin-top:20px;
@@ -249,19 +268,27 @@ a{
 				margin: 0 auto;
 				background-color: darkgrey;
 			}
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 .portfolio .dane .galeria .main{
 					width:60%
 			}
   }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 .portfolio .dane .galeria .main{
-					width:80%
+					width:60%
 			}
   }
 .portfolio .dane .galeria .main .gallery_image{
 					display:none;
 					width:100%;
+
+					/*DISABLE RIGHT CLICK*/
+					-webkit-user-select: none;  /* Chrome all / Safari all */
+					-moz-user-select: none;     /* Firefox all */
+					-ms-user-select: none;      /* IE 10+ */
+					-o-user-select: none;
+					user-select: none;
+					/*=============*/
 				}
 .portfolio .dane .galeria .gallery_nav{
 				display: -webkit-box;

@@ -2,14 +2,38 @@ var aktywny_obraz = 0;
 var ilosc_obrazow = 0;
 var main_images;
 var active_photo = document.getElementById("active_photo");
+var dane = document.getElementById("dane");
+var name_kafelka;
+
+//Do kazdego kafelka doładuje jego id takie samo jak jego name
+var kafelki_wszystkie = document.getElementsByClassName('kafelek');
+
+//alert(kafelki_wszystkie.length);
+
+
+
+$( document ).ready(function() {
+   			$(kafelki_wszystkie).each(function(){
+				this.setAttribute('id',$(this).attr('name'));
+			});
+});
+
+
+
+
+
 
 window.addEventListener('click',function(e){
 	//Jesli uzytkownik kliknie na kafelek//
 	var cel = $(e.target);
 	var target_class = cel.attr('class');
+
 	if(target_class == 'kafelek')
 	{
-	
+	name_kafelka = "#"+cel.attr('name');
+
+		aktywny_obraz = 0;
+		$(dane).css({'display':'block'}); // Pokaz w ogole zakładke z danymi
 		// Kod, który wykona się po kliknięciu na kafelek w dziedzinie porfolio //
 		var sciezka = 'assets/xmldata/'+cel.attr('name') + '.xml';
 		//alert(sciezka);
@@ -18,8 +42,17 @@ window.addEventListener('click',function(e){
 
 	}
 
-},false);
 
+	//zapamietaj id kafelka zeby do niego wrócic
+
+	//Jesli kliknie przycisk wroc to przewin do poprzedniego kafelka
+	if(target_class == 'wroc')
+	{
+		$("html, body").animate({scrollTop: $(name_kafelka).offset().top -250}, 500);
+	}
+
+
+},false)
 
 var xhr = new XMLHttpRequest();
 
@@ -28,7 +61,7 @@ xhr.onload = function(){
 
 
 // N A Z W A 
-		var nazwa_xml = response.getElementsByTagName('nazwa')[0].childNodes[0].nodeValue;
+		var nazwa_xml = response.getElementsByTagName("nazwa")[0].childNodes[0].nodeValue;
 		var nazwa_docelowa = document.getElementById("nazwa");
 
 		nazwa_docelowa.childNodes[0].nodeValue = nazwa_xml;
@@ -51,6 +84,8 @@ xhr.onload = function(){
 				photo.setAttribute("style","display: none;")
 				photo.setAttribute("src",obrazy[i].childNodes[0].nodeValue);
 				photo.setAttribute('numerek',i);
+				photo.setAttribute('draggable',"false");
+				photo.setAttribute('oncontextmenu',"return false;");
 				main.appendChild(photo);
 		}
 		
@@ -85,6 +120,12 @@ $(main_images[aktywny_obraz]).css({
 });
 
 active_photo.childNodes[0].nodeValue = (aktywny_obraz+1) + " / "+ilosc_obrazow;
+
+
+
+	//Przesun widok na dane
+	$("html, body").animate({scrollTop: $('#dane').offset().top }, 500);
+
 };
 
 

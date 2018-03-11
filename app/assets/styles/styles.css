@@ -54,9 +54,12 @@ a{
 /* ============================================ N O R M A L ============================================ */
 .header
 {
-	background-color: $mainBlack;
-	padding-top: 30px;
+	background: $mainBlack;
 	padding-bottom: 20px;
+
+	@mixin pc{
+		background: none;
+	}
 
 	.logo{
 		width:150px;
@@ -93,8 +96,15 @@ a{
 		margin:0 auto;
 		background-color: black;
 	}
+.bgvid
+{
+	position: absolute;
+	width: 100%;
+    z-index: -2;
+}
 }
 .menu{
+	display: none;
 	background-color: red;
 
 	.button{
@@ -224,13 +234,20 @@ a{
 		}
 }
 	.dane{
+		display: none;
 		background-color: yellow;
 		padding-top:20px;
 		.nazwa{
+
 			width:150px;
 			margin:0 auto;
 			text-align: center;
 
+		}
+		.wroc
+		{
+			display: block;
+			margin: 0 auto;
 		}
 
 		.galeria{
@@ -253,11 +270,19 @@ a{
 				}
 
 				@mixin pc{
-					width:80%;
+					width:60%;
 				}
 				.gallery_image{
 					display:none;
 					width:100%;
+
+					/*DISABLE RIGHT CLICK*/
+					-webkit-user-select: none;  /* Chrome all / Safari all */
+					-moz-user-select: none;     /* Firefox all */
+					-ms-user-select: none;      /* IE 10+ */
+					-o-user-select: none;
+					user-select: none;
+					/*=============*/
 				}
 			}
 			.gallery_nav{
