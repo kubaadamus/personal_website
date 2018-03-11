@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rzeczy>
+		<nazwa>Praca inzynierska</nazwa>
+
+		<obraz>assets/images/photo1.jpg</obraz>
+		<obraz>assets/images/photo2.jpg</obraz>
+		<obraz>assets/images/photo3.jpg</obraz>
+		<obraz>assets/images/photo4.jpg</obraz>
+		<obraz>assets/images/photo5.jpg</obraz>
+		<obraz>assets/images/photo6.jpg</obraz>
+
+		<paragraf> Pracę inżynierska blablabla napisalem na dwa ale dostałem 5 bo lubie placki z karmelem. </paragraf>
+		<paragraf> Faza że to działa, bende bogaty xD </paragraf>
+
+</rzeczy>

@@ -222,7 +222,7 @@ a{
 		padding-top:20px;
 	}
 .portfolio .dane .nazwa{
-			width:100px;
+			width:150px;
 			margin:0 auto;
 			text-align: center;
 
@@ -233,6 +233,7 @@ a{
 			padding-top:10px;
 			padding-bottom: 10px;
 			background-color: white;
+
 		}
 .portfolio .dane .galeria .main{
 				display:-webkit-box;
@@ -245,36 +246,52 @@ a{
 				    -ms-flex-pack:justify;
 				        justify-content:space-between;
 				width:95%;
-				padding-top:30%;
-				padding-bottom: 30%;
 				margin: 0 auto;
 				background-color: darkgrey;
 			}
 @media (min-width: 600px) {
 .portfolio .dane .galeria .main{
-					width:60%;
-					padding-top:15%;
-					padding-bottom:15%
+					width:60%
 			}
   }
 @media (min-width: 600px) {
 .portfolio .dane .galeria .main{
-					width:80%;
-					padding-top:25%;
-					padding-bottom:25%
+					width:80%
 			}
   }
-.portfolio .dane .galeria .main .next{
-					float:right;
+.portfolio .dane .galeria .main .gallery_image{
+					display:none;
+					width:100%;
+				}
+.portfolio .dane .galeria .gallery_nav{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				-webkit-box-pack:center;
+				    -ms-flex-pack:center;
+				        justify-content:center;			
+			}
+.portfolio .dane .galeria .gallery_nav .next{
 					width:40px;
 					height:40px;
 					background-color: red;
 				}
-.portfolio .dane .galeria .main .prev{
-					float:left;
+.portfolio .dane .galeria .gallery_nav .prev{
 					width:40px;
 					height:40px;
 					background-color: red;
+				}
+.portfolio .dane .galeria .gallery_nav .active_photo{
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					    -ms-flex-align: center;
+					        align-items: center;
 				}
 .portfolio .dane .opis{
 			padding:20px;
@@ -282,6 +299,12 @@ a{
 			background-color:blue;
 			text-indent: 40px;
 		}
+.portfolio .dane .opis .paragraf{
+				color:white;
+				text-indent: 40px;
+				padding-top:20px;
+				padding-bottom: 20px;
+			}
 .stopka .motto{
 		min-width:150px;
 		margin:0 auto;

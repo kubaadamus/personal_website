@@ -227,7 +227,7 @@ a{
 		background-color: yellow;
 		padding-top:20px;
 		.nazwa{
-			width:100px;
+			width:150px;
 			margin:0 auto;
 			text-align: center;
 
@@ -245,42 +245,54 @@ a{
 				align-items:center;
 				justify-content:space-between;
 				width:95%;
-				padding-top:30%;
-				padding-bottom: 30%;
 				margin: 0 auto;
 				background-color: darkgrey;
 
 				@mixin pc{
 					width:60%;
-					padding-top:15%;
-					padding-bottom:15%;
 				}
 
 				@mixin pc{
 					width:80%;
-					padding-top:25%;
-					padding-bottom:25%;
 				}
-
+				.gallery_image{
+					display:none;
+					width:100%;
+				}
+			}
+			.gallery_nav{
+				display: flex;
+				flex-direction: row;
+				justify-content:center;
 				.next{
-					float:right;
 					width:40px;
 					height:40px;
 					background-color: red;
 				}
 				.prev{
-					float:left;
 					width:40px;
 					height:40px;
 					background-color: red;
 				}
+				.active_photo{
+					display: flex;
+					align-items: center;
+				}			
 			}
+
 		}
 		.opis{
 			padding:20px;
 			text-align:justify;
 			background-color:blue;
 			text-indent: 40px;
+
+			.paragraf{
+				color:white;
+				text-indent: 40px;
+				padding-top:20px;
+				padding-bottom: 20px;
+			}
 		}
 	}
 }

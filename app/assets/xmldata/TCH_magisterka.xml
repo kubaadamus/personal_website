@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rzeczy>
+		<nazwa>Praca magisterska</nazwa>
+
+		<obraz>assets/images/photo1.jpg</obraz>
+		<obraz>assets/images/photo2.jpg</obraz>
+		<obraz>assets/images/photo3.jpg</obraz>
+		<obraz>assets/images/photo4.jpg</obraz>
+		<obraz>assets/images/photo5.jpg</obraz>
+		<obraz>assets/images/photo6.jpg</obraz>
+
+		<paragraf> Magister technologii chemicznej skrobia ziemniaki lolol doktorat to CHUJNIA! </paragraf>
+		<paragraf>  BARDZO CHUJNIA !CHUJNIA </paragraf>
+
+</rzeczy>
