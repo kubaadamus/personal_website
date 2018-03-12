@@ -4,7 +4,27 @@ window.addEventListener('click',function(e){
 
 	if(target_class == 'pokaz_wszystkie')
 	{
-	cel = $(e.target).next().slideToggle();
+	cel = $(e.target).next().slideToggle(function()
+		{
+
+
+			$(e.target).attr('value',-$(e.target).attr('value'));
+
+
+			//alert($(e.target).attr('value'));
+
+			if($(e.target).attr('value')==1)
+			$(e.target).html("Mniej");
+
+			if($(e.target).attr('value')==-1)
+			$(e.target).html("Więcej");
+
+		});
+
+
+	
+
 	}
+
 
 },false);

@@ -476,9 +476,14 @@ template {
 
 wbr:after { content: "\00200B"; }
 
+html{
+	cursor:context-menu;
+}
+
 body{
-	min-width: 180px;
+	min-width: 200px;
 	margin:0px;
+		background-color: black;
 }
 
 h1, h2, h3, h4, h5{
@@ -493,7 +498,6 @@ span{
 
 h1{
 	margin:0;
-	font-size: 1.5rem;
 }
 
 p{
@@ -505,15 +509,20 @@ a{
 	color:inherit;
 }
 
+button:focus {outline:0;}
+
+/*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
+
 /* ============================================ N O R M A L ============================================ */
 
 .header
 {
-	background: #2a2c2f;
-	padding-bottom: 20px;
+	background-color: black;
+	position: relative;
+	overflow: hidden;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
 
 .header
 {
@@ -526,150 +535,264 @@ a{
 		height:150px;
 		margin: 0 auto;
 		margin-bottom: 30px;
-		background-color: blue;
+		background-image: url('assets/images/logo_color.png');
+		background-size: cover;
+
+		/*Animacja zwiększania brightnessa po najechaniu myszą*/
+		-webkit-transition-duration: 2.4s;
+    	transition-duration: 2.4s;
 	}
+
+.header .logo:hover {-webkit-filter: brightness(350%); }
 
 .header .motto{
 		min-width:150px;
 		margin:0 auto;
 		margin-bottom: 30px;
 		text-align: center;
+
 	}
 
 .header .motto .tytul{
 			color:white;
+			font-family: kaligrafia;
+			font-size: 1rem;
 		}
+
+@media (min-width: 1000px) {
+
+.header .motto .tytul{
+				font-size: 2rem
+		}
+  }
 
 .header .motto .imie{
 			color:white;
+			font-family: Mocna;
+			letter-spacing: 10px;
+			font-size: 2rem;
 		}
+
+@media (min-width: 1000px) {
+
+.header .motto .imie{
+				font-size: 5rem
+		}
+  }
 
 .header .motto .slogan{
 			color:white;
+			font-family: kaligrafia;
+			font-size: 1rem;
 		}
 
+@media (min-width: 1000px) {
+
+.header .motto .slogan{
+				font-size: 2rem
+		}
+  }
+
 .header .wyswietlfilm{
+		display: block;
 		width:150px;
 		margin:0 auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color:black;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
+		border: solid white 1px;
+		font-family: regular;
+		cursor:pointer;
+
+		-webkit-transition-duration: 0.4s;
+    	transition-duration: 0.4s;
+
 	}
 
+.header .wyswietlfilm:hover {
+		    background-color: #e86400;
+		    color: white;
+		}
+
 .header .menu_open_button{
+		display: block;
 		width:40px;
 		height:40px;
 		margin:0 auto;
-		background-color: black;
+		background-color: Transparent;
+		background-image: url('assets/images/global/menu_button.png');
+		background-size: cover;
+		border:none;
+		cursor:pointer;
+
+		-webkit-transition-duration: 0.4s;
+    	transition-duration: 0.4s;
 	}
 
-.header .bgvid
-{
-	position: absolute;
-	width: 100%;
-    z-index: -2;
+.header .menu_open_button:hover {
+		    background-color: #e86400;
+		    color: white;
+		}
+
+.header .bgvid {
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .menu{
 	display: none;
-	background-color: red;
+	background-color: #2a2c2f;
 }
 
 .menu .button{
-		width:100px;
+		display: block;
+		width:150px;
 		margin:0 auto;
 		text-align: center;
+		background-color:transparent;
+		border:none;
+		color:white;
+		font-size: 1.2rem;
+		cursor:pointer;
+		font-family: regular;
 	}
 
 .menu .button:hover{
-			background-color:blue;
+			background-color:#e86400;
 		}
 
 .omnie{
+
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: green;
+	background-color: #eaece5;
+	font-family: regular;
 }
 
 .omnie .naglowek{
-		width:100px;
+		min-width:100px;
+		text-align: center;
 		margin: 0 auto;
-		color:white;
+		margin-bottom: 10px;
 	}
 
 .omnie .tekst{
 		padding: 5px 20px 5px 20px;
 		text-indent: 30px;
 		text-align: justify;
+		max-width: 60%;
+		margin:0 auto;
 	}
 
+.omnie .tekst:first-letter {
+		    font-size: 150%;
+		}
+
 .video{
-	background-color: grey;
+	background-color: white;
 	padding-top:20px;
-	padding-bottom: 20px;
 }
 
 .video .naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		color:white;
+		color:black;
 		text-align: center;
+		font-family: regular;
+		padding-bottom: 20px;
 	}
 
 .video .tekst{
-		padding: 5px 20px 5px 20px;
-		text-indent: 30px;
-		text-align: justify;
+		margin:0 auto;
+		text-align: center;
+		font-size: 1.2rem;
+		font-family: regular;
+    	text-justify: inter-word;
+		text-indent: 20px;
+		margin-bottom: 30px;
+		max-width: 60%;
+
+
 	}
+
+.video .tekst:first-letter {
+		    font-size: 150%;
+		}
 
 .video iframe{
 		display:block;
 		margin:0 auto;
-		width:60%;
+		width: 90%;
+		height:250px;
 	}
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
 
 .video iframe{
-			width:64vw;
+			width:60%;
 			height:36vw
+	}
+  }
+
+@media (min-width: 1700px)  {
+
+.video iframe{
+			width:50%;
+			height:25vw
 	}
   }
 
 .portfolio{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: lightgrey;
+	background-color: white;
 }
 
 .portfolio .naglowek{
 		min-width:180px;
 		margin: 0 auto;
 		padding-bottom: 20px;
-		color:white;
+		color:black;
+		font-family: Mocna;
+		letter-spacing: 10px;
+		font-size: 1.2rem;
 		text-align: center;
 	}
 
 .portfolio .dziedzina{
-		background-color: green;
-		padding-bottom: 30px;
+		background-color: white;
+		padding-bottom: 10px;
 		padding-top: 20px;
-}
+	}
 
 .portfolio .dziedzina .nazwa_dziedziny{
+			background-image:url('assets/images/dziedzina_background.png');
 			margin:0 auto;
 			padding-bottom: 20px;
-			color:red;
+			padding-top: 20px;
+			color:white;
+			font-family: regular;
 			text-align: center;
 		}
 
 .portfolio .dziedzina .kafelki{
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: red;
-			display:-webkit-box;
-			display:-ms-flexbox;
-			display:flex;
+			background-color: white;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
 			-webkit-box-orient:vertical;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:column;
@@ -681,52 +804,63 @@ a{
 				margin: 0 auto;
 				margin-top:10px;
 				margin-bottom:10px;
-				background-color: blue;
+				background-size: cover;
+				width: 180px;
+   				height: 180px;
+   				padding: 0px;
+   				border:solid black 1px;
 
-
-
-				width: 150px;
-   				height: 150px;
+								-webkit-transition-duration: 0.3s;
+						    	transition-duration: 0.3s;
 			}
 
-@media (min-width: 400px) {
+.portfolio .dziedzina .kafelki .kafelek:hover {
+								    -webkit-box-shadow: 10px 10px 5px darkGrey;
+								            box-shadow: 10px 10px 5px darkGrey;
+								    -webkit-transform: scale(1.1, 1.1);
+								            transform: scale(1.1, 1.1);
+								    
+								}
+
+.portfolio .dziedzina .kafelki .kafelek h3{
+   					pointer-events: none;
+   					background-color:rgba(0,0,0,0.5);
+   					color:white;
+   					font-size: 0.8rem;
+   				}
+
+@media (min-width: 1000px) {
+
+.portfolio .dziedzina .kafelki .kafelek h3{
+   						font-size: 1.5rem
+   				}
+  }
+
+@media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   					width:380px;
-   					height: 380px
+   					width: 100px;
+   					height: 100px
 			}
   }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-				width: 150px;
-   				height: 150px
+				width: 230px;
+   				height: 230px
 			}
   }
 
-@media (min-width: 1280px)  {
+@media (min-width: 1700px)  {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   				   	width:200px;
-   					height: 200px
+   				   	width:400px;
+   					height: 400px
 			}
   }
 
-.portfolio .dziedzina .kafelki .kafelek .nazwa {
-					position:  absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					height:20px;
-					text-align: center;
-					font-size: 20px;
-					color: white;
-					pointer-events: none;
-				}
-
-@media (min-width: 700px) {
+@media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki{
 				-webkit-box-orient:horizontal;
@@ -741,22 +875,23 @@ a{
 		}
 
 .portfolio .dziedzina .pokaz_wszystkie{
+			display: block;
 			width:100px;
-			padding-top:20px;
-			padding-bottom: 20px;
+			padding-top:5px;
+			padding-bottom:5px;
 			margin:0 auto;
 			background-color: black;
 			color:white;
 			text-align: center;
 		}
 
-.portfolio .dane{
+.dane{
 		display: none;
 		background-color: yellow;
 		padding-top:20px;
 	}
 
-.portfolio .dane .nazwa{
+.dane .nazwa{
 
 			width:150px;
 			margin:0 auto;
@@ -764,13 +899,13 @@ a{
 
 		}
 
-.portfolio .dane .wroc
+.dane .wroc
 		{
 			display: block;
 			margin: 0 auto;
 		}
 
-.portfolio .dane .galeria{
+.dane .galeria{
 			margin-top:20px;
 			margin-bottom:20px;
 			padding-top:10px;
@@ -779,7 +914,7 @@ a{
 
 		}
 
-.portfolio .dane .galeria .main{
+.dane .galeria .main{
 				display:-webkit-box;
 				display:-ms-flexbox;
 				display:flex;
@@ -794,21 +929,21 @@ a{
 				background-color: darkgrey;
 			}
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
 
-.portfolio .dane .galeria .main{
+.dane .galeria .main{
+					width:50%
+			}
+  }
+
+@media (min-width: 1000px) {
+
+.dane .galeria .main{
 					width:60%
 			}
   }
 
-@media (min-width: 700px) {
-
-.portfolio .dane .galeria .main{
-					width:60%
-			}
-  }
-
-.portfolio .dane .galeria .main .gallery_image{
+.dane .galeria .main .gallery_image{
 					display:none;
 					width:100%;
 
@@ -821,7 +956,7 @@ a{
 					/*=============*/
 				}
 
-.portfolio .dane .galeria .gallery_nav{
+.dane .galeria .gallery_nav{
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
@@ -834,19 +969,19 @@ a{
 				        justify-content:center;			
 			}
 
-.portfolio .dane .galeria .gallery_nav .next{
+.dane .galeria .gallery_nav .next{
 					width:40px;
 					height:40px;
 					background-color: red;
 				}
 
-.portfolio .dane .galeria .gallery_nav .prev{
+.dane .galeria .gallery_nav .prev{
 					width:40px;
 					height:40px;
 					background-color: red;
 				}
 
-.portfolio .dane .galeria .gallery_nav .active_photo{
+.dane .galeria .gallery_nav .active_photo{
 					display: -webkit-box;
 					display: -ms-flexbox;
 					display: flex;
@@ -855,37 +990,57 @@ a{
 					        align-items: center;
 				}
 
-.portfolio .dane .opis{
+.dane .opis{
 			padding:20px;
 			text-align:justify;
 			background-color:blue;
 			text-indent: 40px;
 		}
 
-.portfolio .dane .opis .paragraf{
+.dane .opis .paragraf{
 				color:white;
 				text-indent: 40px;
 				padding-top:20px;
 				padding-bottom: 20px;
 			}
 
+.stopka{
+	background-color: black;
+	padding-top: 30px;
+}
+
 .stopka .motto{
 		min-width:150px;
 		margin:0 auto;
-		margin-top: 30px;
 		margin-bottom: 30px;
 		text-align: center;
+		color:white;
+		font-family: kaligrafia;
+		font-size: 1.3rem;
 	}
+
+@media (min-width: 600px) {
+
+.stopka .motto{
+			font-size: 2rem
+	}
+  }
 
 .stopka .kontakty{
 		width:90%;
 		margin:0 auto;
 		background-color: green;
+		font-size: 0.8rem;
 	}
 
 .stopka .kontakty .kontakt{
+			width:60px;
+			height:60px;
 			margin:0 auto;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			text-align: center;
+			background-color: transparent;
+			border:none;
+			background-size: cover;
 		}
