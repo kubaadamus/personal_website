@@ -37,7 +37,7 @@ html{
 body{
 	min-width: 200px;
 	margin:0px;
-		background-color: black;
+		background-color: $mainBlack;
 }
 h1, h2, h3, h4, h5{
 	margin:0;
@@ -66,8 +66,9 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 	background-color: black;
 	position: relative;
 	overflow: hidden;
+	padding-top:80px;
 	@mixin tablet{
-		background: none;
+	background: none;
 	}
 
 	.logo{
@@ -179,11 +180,12 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		display: block;
 		width:150px;
 		margin:0 auto;
+		margin-bottom: 10px;
 		text-align: center;
 		background-color:transparent;
 		border:none;
 		color:white;
-		font-size: 1.2rem;
+		font-size: 2.2rem;
 		cursor:pointer;
 		font-family: regular;
 
@@ -362,19 +364,29 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 }
 .dane{
 		display: none;
-		background-color: yellow;
+		background-color: $mainBlack;
 		padding-top:20px;
-		.nazwa{
 
-			width:150px;
+		.nazwa{
+			min-width:150px;
 			margin:0 auto;
 			text-align: center;
+			font-family: regular;
+			color:white;
+			font-size: 2rem;
 
 		}
 		.wroc
 		{
 			display: block;
-			margin: 0 auto;
+			width:100px;
+			margin:0 auto;
+			margin-top:20px;
+			padding-top:5px;
+			padding-bottom:5px;
+			background-color: black;
+			color:white;
+			text-align: center;
 		}
 
 		.galeria{
@@ -382,7 +394,13 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 			margin-bottom:20px;
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: white;
+			background-color: $mainBlack;
+
+
+			@mixin pc{
+				float: left;
+				width:60%;
+			}
 
 			.main{
 				display:flex;
@@ -393,11 +411,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 				background-color: darkgrey;
 
 				@mixin pc{
-					width:50%;
-				}
-
-				@mixin pc{
-					width:60%;
+					width:80%;
 				}
 				.gallery_image{
 					display:none;
@@ -419,16 +433,36 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 				.next{
 					width:40px;
 					height:40px;
-					background-color: red;
+					background-color: transparent;
+					background-image: url('assets/images/global/next.png');
+					background-size: cover;
+					border:none;
 				}
 				.prev{
 					width:40px;
 					height:40px;
-					background-color: red;
+					background-color: transparent;
+					background-image: url('assets/images/global/prev.png');
+					background-size: cover;
+					border:none;
 				}
+
+					.prev, .next{
+						&:hover{
+							transform:scale(1.2); -webkit-transform:scale(1.2); 
+							-moz-transform:scale(1.2); -o-transform:scale(1.2);	
+						}
+					}
+
+
 				.active_photo{
 					display: flex;
 					align-items: center;
+					font-family: Mocna;
+					font-size:1.8rem;
+					margin-right:10px;
+					margin-left: 10px;
+					color:white;
 				}			
 			}
 
@@ -436,8 +470,15 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		.opis{
 			padding:20px;
 			text-align:justify;
-			background-color:blue;
+			background-color:$mainBlack;
 			text-indent: 40px;
+			font-size: 1.1rem;
+
+
+			@mixin pc{
+				float: left;
+			width:30%;
+			}
 
 			.paragraf{
 				color:white;
@@ -451,6 +492,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 .stopka{
 	background-color: black;
 	padding-top: 30px;
+			clear: both;
 	.motto{
 		min-width:150px;
 		margin:0 auto;

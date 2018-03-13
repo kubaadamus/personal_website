@@ -483,7 +483,7 @@ html{
 body{
 	min-width: 200px;
 	margin:0px;
-		background-color: black;
+		background-color: #2a2c2f;
 }
 
 h1, h2, h3, h4, h5{
@@ -520,13 +520,14 @@ button:focus {outline:0;}
 	background-color: black;
 	position: relative;
 	overflow: hidden;
+	padding-top:80px;
 }
 
 @media (min-width: 600px) {
 
 .header
 {
-		background: none
+	background: none
 }
   }
 
@@ -659,11 +660,12 @@ button:focus {outline:0;}
 		display: block;
 		width:150px;
 		margin:0 auto;
+		margin-bottom: 10px;
 		text-align: center;
 		background-color:transparent;
 		border:none;
 		color:white;
-		font-size: 1.2rem;
+		font-size: 2.2rem;
 		cursor:pointer;
 		font-family: regular;
 	}
@@ -887,22 +889,31 @@ button:focus {outline:0;}
 
 .dane{
 		display: none;
-		background-color: yellow;
+		background-color: #2a2c2f;
 		padding-top:20px;
 	}
 
 .dane .nazwa{
-
-			width:150px;
+			min-width:150px;
 			margin:0 auto;
 			text-align: center;
+			font-family: regular;
+			color:white;
+			font-size: 2rem;
 
 		}
 
 .dane .wroc
 		{
 			display: block;
-			margin: 0 auto;
+			width:100px;
+			margin:0 auto;
+			margin-top:20px;
+			padding-top:5px;
+			padding-bottom:5px;
+			background-color: black;
+			color:white;
+			text-align: center;
 		}
 
 .dane .galeria{
@@ -910,9 +921,18 @@ button:focus {outline:0;}
 			margin-bottom:20px;
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: white;
+			background-color: #2a2c2f;
 
 		}
+
+@media (min-width: 1000px) {
+
+.dane .galeria{
+				float: left;
+				width:60%
+
+		}
+  }
 
 .dane .galeria .main{
 				display:-webkit-box;
@@ -932,14 +952,7 @@ button:focus {outline:0;}
 @media (min-width: 1000px) {
 
 .dane .galeria .main{
-					width:50%
-			}
-  }
-
-@media (min-width: 1000px) {
-
-.dane .galeria .main{
-					width:60%
+					width:80%
 			}
   }
 
@@ -972,14 +985,25 @@ button:focus {outline:0;}
 .dane .galeria .gallery_nav .next{
 					width:40px;
 					height:40px;
-					background-color: red;
+					background-color: transparent;
+					background-image: url('assets/images/global/next.png');
+					background-size: cover;
+					border:none;
 				}
 
 .dane .galeria .gallery_nav .prev{
 					width:40px;
 					height:40px;
-					background-color: red;
+					background-color: transparent;
+					background-image: url('assets/images/global/prev.png');
+					background-size: cover;
+					border:none;
 				}
+
+.dane .galeria .gallery_nav .prev:hover,.dane .galeria .gallery_nav .next:hover{
+							transform:scale(1.2); -webkit-transform:scale(1.2); 
+							-moz-transform:scale(1.2); -o-transform:scale(1.2);	
+						}
 
 .dane .galeria .gallery_nav .active_photo{
 					display: -webkit-box;
@@ -988,14 +1012,28 @@ button:focus {outline:0;}
 					-webkit-box-align: center;
 					    -ms-flex-align: center;
 					        align-items: center;
+					font-family: Mocna;
+					font-size:1.8rem;
+					margin-right:10px;
+					margin-left: 10px;
+					color:white;
 				}
 
 .dane .opis{
 			padding:20px;
 			text-align:justify;
-			background-color:blue;
+			background-color:#2a2c2f;
 			text-indent: 40px;
+			font-size: 1.1rem;
 		}
+
+@media (min-width: 1000px) {
+
+.dane .opis{
+				float: left;
+			width:30%
+		}
+  }
 
 .dane .opis .paragraf{
 				color:white;
@@ -1007,6 +1045,7 @@ button:focus {outline:0;}
 .stopka{
 	background-color: black;
 	padding-top: 30px;
+			clear: both;
 }
 
 .stopka .motto{
