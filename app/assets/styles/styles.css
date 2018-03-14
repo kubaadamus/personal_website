@@ -120,7 +120,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 			font-family: Mocna;
 			letter-spacing: 10px;
 			font-size: 2rem;
-
+			margin-left: 10px;
 			@mixin pc{
 				font-size: 5rem;
 			}
@@ -253,7 +253,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		text-align: center;
 		font-size: 1.2rem;
 		font-family: regular;
-    	text-justify: inter-word;
+    	text-align: justify;
 		text-indent: 20px;
 		margin-bottom: 30px;
 		max-width: 60%;
@@ -280,10 +280,89 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		}
 	}
 }
+
+.aktualnosci{
+	padding-top: 30px;
+	background-color: white;
+	padding-left:5%;
+	padding-right: 5%;
+	padding-bottom: 30px;
+
+
+		.naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:black;
+		font-family: Mocna;
+		letter-spacing: 10px;
+		font-size: 1.2rem;
+		text-align: center;
+
+	}
+
+			.nazwa{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:black;
+		font-family: regular;
+		letter-spacing: 5px;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+	.wrapper{
+		display: block;
+		width:100%;
+		margin: 0 auto;
+
+		@mixin pc{
+			width: 60%;
+		}
+		@mixin tv{
+			width: 40%;
+		}
+
+		img{
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+			margin-bottom: 20px;
+
+			@mixin pc{
+				display: inline;
+				max-width: 30%;
+				float: left;
+				margin: 10px;
+				margin-top: 0px;
+			}
+		}
+
+		p{
+			display: block;
+			text-align: justify;
+			text-indent: 30px;
+			font-family: regular;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+			max-width: 80%;
+			margin: 0 auto;
+
+			@mixin tablet{
+				max-width: 100%;
+			}
+		}
+
+	}
+}
+
+
+
 .portfolio{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: white;
+	clear: both;
 	.naglowek{
 		min-width:180px;
 		margin: 0 auto;
@@ -347,8 +426,8 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
    				}
 
    				@mixin tablet{
-   					width: 100px;
-   					height: 100px;
+   					width: 140px;
+   					height: 140px;
    				}
    				@mixin pc{
 				width: 230px;
@@ -525,20 +604,27 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		}
 	}
 	.kontakty{
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
 		width:fit-content;
 		margin:0 auto;
 		font-size: 0.8rem;
 		margin-bottom: 50px;
 		margin-top: 30px;
 
+		@mixin tablet{
+			flex-direction:row;
+			width:300px;
+		}
+
 		.kontakt{
 			width:40px;
 			height:40px;
 			margin:0 auto;
-			margin-left: 20px;
-			margin-right: 20px;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			margin-top:20px;
 			text-align: center;
 			background-color: transparent;
 			border:none;

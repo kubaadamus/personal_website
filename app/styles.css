@@ -580,6 +580,7 @@ button:focus {outline:0;}
 			font-family: Mocna;
 			letter-spacing: 10px;
 			font-size: 2rem;
+			margin-left: 10px;
 		}
 
 @media (min-width: 1000px) {
@@ -728,7 +729,7 @@ button:focus {outline:0;}
 		text-align: center;
 		font-size: 1.2rem;
 		font-family: regular;
-    	text-justify: inter-word;
+    	text-align: justify;
 		text-indent: 20px;
 		margin-bottom: 30px;
 		max-width: 60%;
@@ -763,10 +764,101 @@ button:focus {outline:0;}
 	}
   }
 
+.aktualnosci{
+	padding-top: 30px;
+	background-color: white;
+	padding-left:5%;
+	padding-right: 5%;
+	padding-bottom: 30px;
+}
+
+.aktualnosci .naglowek{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:black;
+		font-family: Mocna;
+		letter-spacing: 10px;
+		font-size: 1.2rem;
+		text-align: center;
+
+	}
+
+.aktualnosci .nazwa{
+		min-width:180px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		color:black;
+		font-family: regular;
+		letter-spacing: 5px;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+
+.aktualnosci .wrapper{
+		display: block;
+		width:100%;
+		margin: 0 auto;
+
+	}
+
+@media (min-width: 1000px) {
+
+.aktualnosci .wrapper{
+			width: 60%
+
+	}
+  }
+
+@media (min-width: 1700px)  {
+
+.aktualnosci .wrapper{
+			width: 40%
+
+	}
+  }
+
+.aktualnosci .wrapper img{
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+
+@media (min-width: 1000px) {
+
+.aktualnosci .wrapper img{
+				display: inline;
+				max-width: 30%;
+				float: left;
+				margin: 10px;
+				margin-top: 0px
+		}
+  }
+
+.aktualnosci .wrapper p{
+			display: block;
+			text-align: justify;
+			text-indent: 30px;
+			font-family: regular;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+			max-width: 80%;
+			margin: 0 auto;
+		}
+
+@media (min-width: 600px) {
+
+.aktualnosci .wrapper p{
+				max-width: 100%
+		}
+  }
+
 .portfolio{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: white;
+	clear: both;
 }
 
 .portfolio .naglowek{
@@ -849,8 +941,8 @@ button:focus {outline:0;}
 @media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   					width: 100px;
-   					height: 100px
+   					width: 140px;
+   					height: 140px
 			}
   }
 
@@ -1074,6 +1166,16 @@ button:focus {outline:0;}
   }
 
 .stopka .kontakty{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:column;
+		        flex-direction:column;
+		-webkit-box-pack:center;
+		    -ms-flex-pack:center;
+		        justify-content:center;
 		width:-webkit-fit-content;
 		width:-moz-fit-content;
 		width:fit-content;
@@ -1083,14 +1185,24 @@ button:focus {outline:0;}
 		margin-top: 30px;
 	}
 
+@media (min-width: 600px) {
+
+.stopka .kontakty{
+			-webkit-box-orient:horizontal;
+			-webkit-box-direction:normal;
+			    -ms-flex-direction:row;
+			        flex-direction:row;
+			width:300px
+	}
+  }
+
 .stopka .kontakty .kontakt{
 			width:40px;
 			height:40px;
 			margin:0 auto;
-			margin-left: 20px;
-			margin-right: 20px;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			margin-top:20px;
 			text-align: center;
 			background-color: transparent;
 			border:none;
