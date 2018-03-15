@@ -58,6 +58,10 @@ a{
 	width:fit-content;
 	height: fit-content;
 }
+hr{
+	margin:0;
+	padding: 0;
+}
 button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
 
 
@@ -203,7 +207,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		background-color:transparent;
 		border:none;
 		color:white;
-		font-size: 2.2rem;
+		font-size: 1.5rem;
 		cursor:pointer;
 		font-family: regular;
 
@@ -250,13 +254,18 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 	}
 	.tekst{
 		margin:0 auto;
-		text-align: center;
 		font-size: 1.2rem;
 		font-family: regular;
-    	text-align: justify;
 		text-indent: 20px;
 		margin-bottom: 30px;
-		max-width: 60%;
+		text-align: justify;
+		max-width: 70%;
+
+		@mixin pc{
+		max-width: 930px;	
+		text-align: center;		
+		}
+
 
 		&:first-letter {
 		    font-size: 150%;
@@ -316,6 +325,10 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		width:100%;
 		margin: 0 auto;
 
+		@mixin tablet{
+			width:50%;
+		}
+
 		@mixin pc{
 			width: 60%;
 		}
@@ -340,13 +353,14 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 		p{
 			display: block;
+			margin: 0 auto;
 			text-align: justify;
 			text-indent: 30px;
 			font-family: regular;
 			font-size: 1.2rem;
 			margin-bottom: 20px;
 			max-width: 80%;
-			margin: 0 auto;
+
 
 			@mixin tablet{
 				max-width: 100%;
@@ -393,6 +407,22 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 			background-color: white;
 			display: flex;
 			flex-direction:column;
+
+			@mixin tablet{
+				flex-direction:row;
+				margin:0 auto;
+				max-width: 700px;
+			}
+
+			@mixin pc{
+				max-width: 1100px;
+			}
+
+			@mixin tv{
+				max-width: 1800px;
+   				
+			}
+
 			.kafelek {
 				position: relative;
 				margin: 0 auto;
@@ -422,6 +452,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
    					@mixin pc{
    						font-size: 1.5rem;
+
    					}
    				}
 
@@ -438,9 +469,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
    					height: 400px;	
    				}
 			}
-			@mixin tablet{
-				flex-direction:row;
-			}
+
 		}
 
 		.kafelki_more{
@@ -463,10 +492,17 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		display: none;
 		background-color: $mainBlack;
 		padding-top:20px;
+		width: 90%;
+		margin: 0 auto;
+
+		@mixin pc{
+			width: 70%;
+		}
 
 		.nazwa{
 			min-width:150px;
 			margin:0 auto;
+			margin-top: 30px;
 			text-align: center;
 			font-family: regular;
 			color:white;
@@ -563,28 +599,19 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 				}			
 			}
 
-		}
-		.opis{
-			padding:20px;
-			text-align:justify;
-			background-color:$mainBlack;
-			text-indent: 40px;
-			font-size: 1.1rem;
-
-
-			@mixin pc{
-				float: left;
-			width:30%;
-			}
-
-			.paragraf{
-				color:white;
-				text-indent: 40px;
-				padding-top:20px;
-				padding-bottom: 20px;
-			}
-		}
+		}	
+	.paragraf{
+		color:white;
+		text-indent: 40px;
+		padding-top:20px;
+		padding-bottom: 20px;
+		text-align: justify;
 	}
+}
+#dane > p:nth-child(4)
+{
+		margin-top: 50px;
+}
 
 .stopka{
 	padding-top: 30px;

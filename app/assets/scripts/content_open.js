@@ -92,11 +92,9 @@ xhr.onload = function(){
 // O P I S Y
 
 
-		var opis = document.getElementById("opis");
+		var opis = document.getElementById("dane");
 		//Usuwamy wszystko ze srodka przed zaladowaniem nowego contentu
-			while (opis.firstChild) {
-	    		opis.removeChild(opis.firstChild);
-			}
+			$( ".paragraf" ).remove();
 		//Ładujemy nowy content
 		var paragrafy = response.getElementsByTagName('paragraf');	
 		var ilosc_paragrafow = $(paragrafy).length;

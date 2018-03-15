@@ -514,6 +514,11 @@ a{
 	height: fit-content;
 }
 
+hr{
+	margin:0;
+	padding: 0;
+}
+
 button:focus {outline:0;}
 
 /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
@@ -674,7 +679,7 @@ button:focus {outline:0;}
 		background-color:transparent;
 		border:none;
 		color:white;
-		font-size: 2.2rem;
+		font-size: 1.5rem;
 		cursor:pointer;
 		font-family: regular;
 	}
@@ -726,16 +731,25 @@ button:focus {outline:0;}
 
 .video .tekst{
 		margin:0 auto;
-		text-align: center;
 		font-size: 1.2rem;
 		font-family: regular;
-    	text-align: justify;
 		text-indent: 20px;
 		margin-bottom: 30px;
-		max-width: 60%;
+		text-align: justify;
+		max-width: 70%;
 
 
 	}
+
+@media (min-width: 1000px) {
+
+.video .tekst{
+		max-width: 930px;	
+		text-align: center
+
+
+	}
+  }
 
 .video .tekst:first-letter {
 		    font-size: 150%;
@@ -802,6 +816,14 @@ button:focus {outline:0;}
 
 	}
 
+@media (min-width: 600px) {
+
+.aktualnosci .wrapper{
+			width:50%
+
+	}
+  }
+
 @media (min-width: 1000px) {
 
 .aktualnosci .wrapper{
@@ -838,13 +860,13 @@ button:focus {outline:0;}
 
 .aktualnosci .wrapper p{
 			display: block;
+			margin: 0 auto;
 			text-align: justify;
 			text-indent: 30px;
 			font-family: regular;
 			font-size: 1.2rem;
 			margin-bottom: 20px;
 			max-width: 80%;
-			margin: 0 auto;
 		}
 
 @media (min-width: 600px) {
@@ -899,7 +921,37 @@ button:focus {outline:0;}
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:column;
 			        flex-direction:column;
+
 		}
+
+@media (min-width: 600px) {
+
+.portfolio .dziedzina .kafelki{
+				-webkit-box-orient:horizontal;
+				-webkit-box-direction:normal;
+				    -ms-flex-direction:row;
+				        flex-direction:row;
+				margin:0 auto;
+				max-width: 700px
+
+		}
+  }
+
+@media (min-width: 1000px) {
+
+.portfolio .dziedzina .kafelki{
+				max-width: 1100px
+
+		}
+  }
+
+@media (min-width: 1700px)  {
+
+.portfolio .dziedzina .kafelki{
+				max-width: 1800px
+
+		}
+  }
 
 .portfolio .dziedzina .kafelki .kafelek {
 				position: relative;
@@ -962,16 +1014,6 @@ button:focus {outline:0;}
 			}
   }
 
-@media (min-width: 600px) {
-
-.portfolio .dziedzina .kafelki{
-				-webkit-box-orient:horizontal;
-				-webkit-box-direction:normal;
-				    -ms-flex-direction:row;
-				        flex-direction:row
-		}
-  }
-
 .portfolio .dziedzina .kafelki_more{
 			display: none;
 		}
@@ -991,11 +1033,21 @@ button:focus {outline:0;}
 		display: none;
 		background-color: #2a2c2f;
 		padding-top:20px;
-	}
+		width: 90%;
+		margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+
+.dane{
+			width: 70%
+}
+  }
 
 .dane .nazwa{
 			min-width:150px;
 			margin:0 auto;
+			margin-top: 30px;
 			text-align: center;
 			font-family: regular;
 			color:white;
@@ -1119,28 +1171,18 @@ button:focus {outline:0;}
 					color:white;
 				}
 
-.dane .opis{
-			padding:20px;
-			text-align:justify;
-			background-color:#2a2c2f;
-			text-indent: 40px;
-			font-size: 1.1rem;
-		}
+.dane .paragraf{
+		color:white;
+		text-indent: 40px;
+		padding-top:20px;
+		padding-bottom: 20px;
+		text-align: justify;
+	}
 
-@media (min-width: 1000px) {
-
-.dane .opis{
-				float: left;
-			width:30%
-		}
-  }
-
-.dane .opis .paragraf{
-				color:white;
-				text-indent: 40px;
-				padding-top:20px;
-				padding-bottom: 20px;
-			}
+#dane > p:nth-child(4)
+{
+		margin-top: 50px;
+}
 
 .stopka{
 	padding-top: 30px;
