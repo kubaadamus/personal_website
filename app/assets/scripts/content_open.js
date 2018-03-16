@@ -4,6 +4,7 @@ var main_images;
 var active_photo = document.getElementById("active_photo");
 var dane = document.getElementById("dane");
 var name_kafelka;
+var zakladka = document.getElementById('zakladka');
 
 //Do kazdego kafelka doładuje jego id takie samo jak jego name
 var kafelki_wszystkie = document.getElementsByClassName('kafelek');
@@ -16,6 +17,21 @@ $( document ).ready(function() {
    			$(kafelki_wszystkie).each(function(){
 				this.setAttribute('id',$(this).attr('name'));
 			});
+
+
+
+//Kazdemu kafelkowi daj jako background imgae obrazek okreslony w name
+
+$('.kafelek').each(function(){
+
+
+var nazwa_kafelka = $(this).attr('name');
+
+$(this).css({'background-image': 'url(assets/images/'+nazwa_kafelka+'.jpg'});
+
+});
+
+			
 });
 
 
@@ -33,7 +49,15 @@ window.addEventListener('click',function(e){
 	name_kafelka = "#"+cel.attr('name');
 
 		aktywny_obraz = 0;
-		$(dane).css({'display':'block'}); // Pokaz w ogole zakładke z danymi
+
+		//Ustaw zakladke na kafelku
+		if(cel.children('div[class="zakladka"]').length == 0)
+		{
+		var zakladka = document.createElement('div');
+		zakladka.setAttribute('class','zakladka');
+		cel.append(zakladka);
+		}
+
 		// Kod, który wykona się po kliknięciu na kafelek w dziedzinie porfolio //
 		var sciezka = 'assets/xmldata/'+cel.attr('name') + '.xml';
 		//alert(sciezka);
@@ -43,12 +67,13 @@ window.addEventListener('click',function(e){
 	}
 
 
-	//zapamietaj id kafelka zeby do niego wrócic
-
 	//Jesli kliknie przycisk wroc to przewin do poprzedniego kafelka
 	if(target_class == 'wroc')
 	{
 		$("html, body").animate({scrollTop: $(name_kafelka).offset().top -250}, 500);
+
+
+		$(dane).slideUp();
 	}
 
 
@@ -119,10 +144,14 @@ $(main_images[aktywny_obraz]).css({
 
 active_photo.childNodes[0].nodeValue = (aktywny_obraz+1) + " / "+ilosc_obrazow;
 
+$(dane).slideDown(function(){
 
+//Przesun widok na dane
+	$("html, body").animate({scrollTop: $('#dane').offset().top }, 1000);
 
-	//Przesun widok na dane
-	$("html, body").animate({scrollTop: $('#dane').offset().top }, 500);
+}); // Pokaz w ogole zakładke z danymi
+
+	
 
 };
 
@@ -173,3 +202,6 @@ window.addEventListener('click',function(e){
 	}
 
 },false);
+
+
+

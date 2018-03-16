@@ -544,11 +544,11 @@ button:focus {outline:0;}
 
 .header
 {
-	background-color: black;
+	background-color: #2a2c2f;
 	position: relative;
 	overflow: hidden;
 	padding-top:80px;
-	padding-bottom: 80px;
+	padding-bottom: 30px;
 }
 
 @media (min-width: 600px) {
@@ -679,7 +679,6 @@ button:focus {outline:0;}
 		background-color:transparent;
 		border:none;
 		color:white;
-		font-size: 1.5rem;
 		cursor:pointer;
 		font-family: regular;
 	}
@@ -714,6 +713,13 @@ button:focus {outline:0;}
 .omnie .tekst:first-letter {
 		    font-size: 150%;
 		}
+
+@media (min-width: 1700px)  {
+
+.omnie .tekst{
+			max-width: 2000px
+	}
+  }
 
 .video{
 	background-color: white;
@@ -835,7 +841,7 @@ button:focus {outline:0;}
 @media (min-width: 1700px)  {
 
 .aktualnosci .wrapper{
-			width: 40%
+			max-width: 850px
 
 	}
   }
@@ -948,7 +954,7 @@ button:focus {outline:0;}
 @media (min-width: 1700px)  {
 
 .portfolio .dziedzina .kafelki{
-				max-width: 1800px
+				max-width: 2500px
 
 		}
   }
@@ -981,12 +987,14 @@ button:focus {outline:0;}
    					background-color:rgba(0,0,0,0.5);
    					color:white;
    					font-size: 0.8rem;
+   					padding-top: 10px;
+   					padding-bottom: 10px;
    				}
 
 @media (min-width: 1000px) {
 
 .portfolio .dziedzina .kafelki .kafelek h3{
-   						font-size: 1.5rem
+   						font-size: 1.2rem
    				}
   }
 
@@ -1021,9 +1029,10 @@ button:focus {outline:0;}
 .portfolio .dziedzina .pokaz_wszystkie{
 			display: block;
 			width:100px;
+			margin:0 auto;
 			padding-top:5px;
 			padding-bottom:5px;
-			margin:0 auto;
+			margin-top: 30px;
 			background-color: black;
 			color:white;
 			text-align: center;
@@ -1181,8 +1190,18 @@ button:focus {outline:0;}
 
 #dane > p:nth-child(4)
 {
-		margin-top: 50px;
+	margin-top: 10px;
+
 }
+
+@media (min-width: 1000px) {
+
+#dane > p:nth-child(4)
+{
+		margin-top: 50px
+
+}
+  }
 
 .stopka{
 	padding-top: 30px;
@@ -1263,3 +1282,31 @@ button:focus {outline:0;}
 								            transform: scale(1.3, 1.3);
 								    
 								}
+
+.stopka .dane_kontaktowe{
+	color:white;
+	margin: 0 auto;
+	margin-top: 30px;
+	max-width:150px;
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+
+.stopka .dane_kontaktowe{
+		max-width: 400px
+}
+  }
+
+/* ====================== K O N T E N T   D Y N A M I C Z N Y =====================================*/
+
+.zakladka{
+	position: absolute;
+	width:30px;
+	height: 30px;
+	right:0;
+	bottom: 0;
+	background-image: url('assets/images/zakladka.png');
+	background-size: cover;
+
+}
