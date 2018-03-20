@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rzeczy>
+		<nazwa>Praca magisterska</nazwa>
+
+		<obraz>assets/images/photo1.jpg</obraz>
+		<obraz>assets/images/photo2.jpg</obraz>
+		<obraz>assets/images/photo3.jpg</obraz>
+		<obraz>assets/images/photo4.jpg</obraz>
+		<obraz>assets/images/photo5.jpg</obraz>
+		<obraz>assets/images/photo6.jpg</obraz>
+
+		<paragraf> 
+		Czy z ziemniaka można zrobić plastik? Na to pytanie próbowałem odpowiedzieć podczas studiów magisterskich, które przeszedłem pod czujnym okiem Prof. dr hab. inż. Tadeusza Spychaja. Wspólnymi siłami dążyliśmy do otrzymania materiału, którego głównym składnikiem polimerowym byłaby skrobia ziemniaczana. Zanim zmienimy zwykłą mąkę w jednorazową torebkę czy pudełko, należy przeprowadzić proces plastyfikacji. Polega on na zmieszaniu skrobi z plastyfikatorem a następnie wytłoczeniu w podwyższonej temperaturze i obecności znacznych sił ścinających. W ten sposób biały proszek znany z kuchni zmienia się w półprzezroczysty, elastyczny materiał, bardzo przyjemny w dotyku.
+		</paragraf>
+		<paragraf>
+		Próbki otrzymane przez wytłaczanie i prasowanie poddaliśmy różnorodnym testom, między innymi: mechanicznym, dyfrakcji rentgenowskiej, skaningowej kalorymetrii różnicowej, przepuszczalności pary wodnej czy przewodnictwa cieplnego. Dziesiątki godzin spędzone zarówno z aparaturą technologiczną jak i badawczą, zaowocowały bardzo przyzwoitymi wynikami opisanymi w mojej pracy magisterskiej pod tytułem "Termoplastyczna skrobia modyfikowana cieczą głęboko eutektyczną oraz nanonapełniaczem o strukturze warstwowej".
+
+		</paragraf>
+
+</rzeczy>

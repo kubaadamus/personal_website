@@ -59,7 +59,7 @@ window.addEventListener('click',function(e){
 		}
 
 		// Kod, który wykona się po kliknięciu na kafelek w dziedzinie porfolio //
-		var sciezka = 'assets/xmldata/'+cel.attr('name') + '.xml';
+		var sciezka = 'assets/xmldata/'+cel.attr('name')+'/'+cel.attr('name') + '.xml';
 		//alert(sciezka);
 		xhr.open('GET', sciezka,true);
 		xhr.send(null);
@@ -120,6 +120,7 @@ xhr.onload = function(){
 		var opis = document.getElementById("dane");
 		//Usuwamy wszystko ze srodka przed zaladowaniem nowego contentu
 			$( ".paragraf" ).remove();
+			$( ".koniec" ).remove();
 		//Ładujemy nowy content
 		var paragrafy = response.getElementsByTagName('paragraf');	
 		var ilosc_paragrafow = $(paragrafy).length;
@@ -128,6 +129,10 @@ xhr.onload = function(){
 
 				var paragraf = document.createElement('p');
 				paragraf.setAttribute("class", "paragraf");
+						if(i==ilosc_paragrafow-1)
+						{
+						paragraf.setAttribute("class", "koniec");	
+						}
 				var tekst_paragrafu = document.createTextNode(paragrafy[i].childNodes[0].nodeValue);
 				paragraf.appendChild(tekst_paragrafu);
 				opis.appendChild(paragraf);
