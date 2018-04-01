@@ -472,6 +472,18 @@ template {
     src: url(assets/fonts/Regular.ttf);
 }
 
+@font-face 
+{
+    font-family: Chuda;
+    src: url(assets/fonts/Chuda.ttf);
+}
+
+@font-face 
+{
+    font-family: Saucer;
+    src: url(assets/fonts/Saucer.otf);
+}
+
 /* ============================================= G L O B A L S =========================================== */
 
 wbr:after { content: "\00200B"; }
@@ -482,7 +494,6 @@ html{
 
 body{
 	min-width: 200px;
-		background-color: #2a2c2f;
 }
 
 h1, h2, h3, h4, h5{
@@ -551,7 +562,7 @@ button:focus {outline:0;}
 	padding-bottom: 30px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
 
 .header
 {
@@ -560,7 +571,7 @@ button:focus {outline:0;}
   }
 
 .header .motto{
-		min-width:150px;
+		min-width:150px;s
 		margin:0 auto;
 		margin-bottom: 30px;
 		text-align: center;
@@ -928,6 +939,12 @@ button:focus {outline:0;}
 			    -ms-flex-direction:column;
 			        flex-direction:column;
 
+								-webkit-transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+
+								        transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
+
 		}
 
 @media (min-width: 600px) {
@@ -969,9 +986,10 @@ button:focus {outline:0;}
    				height: 180px;
    				padding: 0px;
    				border:solid black 1px;
-
-								-webkit-transition-duration: 0.3s;
-						    	transition-duration: 0.3s;
+								-webkit-transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								        transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
 			}
 
 .portfolio .dziedzina .kafelki .kafelek:hover {
@@ -1040,7 +1058,6 @@ button:focus {outline:0;}
 
 .dane{
 		display: none;
-		background-color: #2a2c2f;
 		padding-top:20px;
 		width: 90%;
 		margin: 0 auto;
@@ -1070,7 +1087,7 @@ button:focus {outline:0;}
 			margin-top: 30px;
 			text-align: center;
 			font-family: regular;
-			color:white;
+			color:black;
 			font-size: 2rem;
 
 		}
@@ -1080,7 +1097,6 @@ button:focus {outline:0;}
 			display: block;
 			width:100px;
 			margin:0 auto;
-			margin-top:20px;
 			padding-top:5px;
 			padding-bottom:5px;
 			background-color: black;
@@ -1093,7 +1109,6 @@ button:focus {outline:0;}
 			margin-bottom:20px;
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: #2a2c2f;
 
 		}
 
@@ -1198,11 +1213,11 @@ button:focus {outline:0;}
 					font-size:1.8rem;
 					margin-right:10px;
 					margin-left: 10px;
-					color:white;
+					color:black;
 				}
 
 .dane .paragraf{
-		color:white;
+		color:black;
 		text-indent: 40px;
 		padding-top:20px;
 		padding-bottom: 20px;
@@ -1218,7 +1233,7 @@ button:focus {outline:0;}
 		width:fit-content;
 		margin:0 auto;
 		font-size: 2rem;
-		color:white;
+		color:black;
 		white-space: nowrap;
 		clear: left;
 		margin-top: 20px;
@@ -1229,6 +1244,7 @@ button:focus {outline:0;}
 	padding-top: 30px;
 	padding-bottom: 50px;
 			clear: both;
+			background-color: #2a2c2f;
 }
 
 .stopka .motto{
@@ -1290,7 +1306,7 @@ button:focus {outline:0;}
 			background-color: transparent;
 			border:none;
 			background-size: cover;
-
+			cursor:pointer;
 
 								-webkit-transition-duration: 0.3s;
 						    	transition-duration: 0.3s;

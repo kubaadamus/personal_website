@@ -138,6 +138,10 @@ xhr.onload = function(){
 				opis.appendChild(paragraf);
 		}
 
+
+		//Stworz guzik WROC
+
+
 //Wez wszystkie dzieci image z maina i przydziel pierwszemu z nich display block;
 
 
