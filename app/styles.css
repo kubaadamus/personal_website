@@ -537,8 +537,8 @@ button:focus {outline:0;}
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 .logo{
-		width:150px;
-		height:150px;
+		width:200px;
+		height:200px;
 		margin: 0 auto;
 		margin-bottom: 30px;
 		background-image: url('assets/images/logo_color.png');
@@ -581,13 +581,13 @@ button:focus {outline:0;}
 .header .motto .tytul{
 			color:white;
 			font-family: kaligrafia;
-			font-size: 1rem;
+			font-size: 0.7rem;
 		}
 
 @media (min-width: 1000px) {
 
 .header .motto .tytul{
-				font-size: 2rem
+				font-size: 1.3rem
 		}
   }
 
@@ -625,7 +625,7 @@ button:focus {outline:0;}
 		margin:0 auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		background-color:black;
+		background-color:#e86400;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
@@ -678,7 +678,7 @@ button:focus {outline:0;}
 
 .menu{
 	display: none;
-	background-color: #e86400;
+	background-color: #950000;
 }
 
 .menu .button{
@@ -696,7 +696,7 @@ button:focus {outline:0;}
 	}
 
 .menu .button:hover{
-			background-color:#e86400;
+			background-color:#5b0047;
 		}
 
 .omnie{
@@ -712,6 +712,7 @@ button:focus {outline:0;}
 		text-align: center;
 		margin: 0 auto;
 		margin-bottom: 10px;
+
 	}
 
 .omnie .tekst{
@@ -723,7 +724,7 @@ button:focus {outline:0;}
 	}
 
 .omnie .tekst:first-letter {
-		    font-size: 150%;
+		   
 		}
 
 @media (min-width: 1700px)  {
@@ -745,6 +746,7 @@ button:focus {outline:0;}
 		text-align: center;
 		font-family: regular;
 		padding-bottom: 20px;
+		font-size: 0.8rem;
 	}
 
 .video .tekst{
@@ -958,7 +960,7 @@ button:focus {outline:0;}
 		}
 
 .portfolio .dziedzina .nazwa_dziedziny--blue{
-				background-color: #0566ff;
+				background-color: #00378d;
 
 			}
 
@@ -973,12 +975,12 @@ button:focus {outline:0;}
 			}
 
 .portfolio .dziedzina .nazwa_dziedziny--green{
-				background-color: #1bac3b;
+				background-color: #006e18;
 				
 			}
 
 .portfolio .dziedzina .nazwa_dziedziny--violet{
-				background-color: #9b0078;
+				background-color: #5b0047;
 				
 			}
 

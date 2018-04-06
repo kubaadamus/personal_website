@@ -8,11 +8,11 @@ $Cream_2: #D9C9A4;
 $Cream_3: #B29E6C;
 $Cream_4: #8C7640;
 $mainLatte: #D9C9A4;
-$mainBlue: #0566ff;
-$mainGreen: #1bac3b;
+$mainBlue: #00378d;
+$mainGreen: #006e18;
 $mainOrange: #e86400;
 $mainYellow:#ddce00;
-$mainViolet:#9b0078;
+$mainViolet:#5b0047;
 $mainRed:#950000;
 $darkGrey: #eaece5;
 $lightGrey:#FFFFF0;
@@ -83,8 +83,8 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 
 	.logo{
-		width:150px;
-		height:150px;
+		width:200px;
+		height:200px;
 		margin: 0 auto;
 		margin-bottom: 30px;
 		background-image: url('assets/images/logo_color.png');
@@ -127,9 +127,9 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		.tytul{
 			color:white;
 			font-family: kaligrafia;
-			font-size: 1rem;
+			font-size: 0.7rem;
 			@mixin pc{
-				font-size: 2rem;
+				font-size: 1.3rem;
 			}
 		}
 		.imie{
@@ -159,7 +159,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		margin:0 auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		background-color:black;
+		background-color:$mainOrange;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
@@ -209,7 +209,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 }
 .menu{
 	display: none;
-	background-color: $mainOrange;
+	background-color: $mainRed;
 
 	.button{
 		display: block;
@@ -225,7 +225,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		font-family: regular;
 
 		&:hover{
-			background-color:$mainOrange;
+			background-color:$mainViolet;
 		}
 	}
 }
@@ -241,6 +241,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		text-align: center;
 		margin: 0 auto;
 		margin-bottom: 10px;
+
 	}
 	.tekst{
 		padding: 5px 20px 5px 20px;
@@ -250,7 +251,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		margin:0 auto;
 
 		&:first-letter {
-		    font-size: 150%;
+		   
 		}
 
 		@mixin tv{
@@ -268,6 +269,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		text-align: center;
 		font-family: regular;
 		padding-bottom: 20px;
+		font-size: 0.8rem;
 	}
 	.tekst{
 		margin:0 auto;
