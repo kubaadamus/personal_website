@@ -8,11 +8,15 @@ $Cream_2: #D9C9A4;
 $Cream_3: #B29E6C;
 $Cream_4: #8C7640;
 $mainLatte: #D9C9A4;
-$mainBlue: #F5F5F5;
-$mainGreen: #E7FFF8;
+$mainBlue: #0566ff;
+$mainGreen: #1bac3b;
 $mainOrange: #e86400;
+$mainYellow:#ddce00;
+$mainViolet:#9b0078;
+$mainRed:#950000;
 $darkGrey: #eaece5;
 $lightGrey:#FFFFF0;
+
 /* =============================================  F O N T S  ============================================= */
 @font-face 
 {
@@ -105,7 +109,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 .header
 {
-	background-color: $mainBlack;
+	/*background-color: $mainBlack;*/
 	position: relative;
 	overflow: hidden;
 	padding-top:80px;
@@ -205,13 +209,14 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 }
 .menu{
 	display: none;
-	background-color: $mainBlack;
+	background-color: $mainOrange;
 
 	.button{
 		display: block;
 		width:150px;
 		margin:0 auto;
-		margin-bottom: 10px;
+		padding-bottom: 5px;
+		padding-top: 5px;
 		text-align: center;
 		background-color:transparent;
 		border:none;
@@ -317,8 +322,12 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		color:black;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.2rem;
+		font-size: .8rem;
 		text-align: center;
+
+		@mixin tablet{
+			font-size: 1.2rem;
+		}
 
 	}
 
@@ -329,8 +338,12 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		color:black;
 		font-family: regular;
 		letter-spacing: 5px;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		text-align: center;
+
+		@mixin tablet{
+			font-size: 1rem;
+		}
 	}
 	.wrapper{
 		display: block;
@@ -397,21 +410,53 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		color:black;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.2rem;
+		font-size: 1.0rem;
 		text-align: center;
+
+		@mixin tablet{
+			font-size: 1.8rem;
+		}
+		@mixin pc{
+			font-size: 2.5rem;
+		}
 	}
 	.dziedzina{
 		background-color: white;
 		padding-bottom: 10px;
 		padding-top: 20px;
 		.nazwa_dziedziny{
-			background-image:url('assets/images/dziedzina_background.png');
+			background-color: $mainOrange;
 			margin:0 auto;
 			padding-bottom: 20px;
 			padding-top: 20px;
 			color:white;
 			font-family: regular;
 			text-align: center;
+
+			&--blue{
+				background-color: $mainBlue;
+
+			}
+			&--red{
+				background-color: $mainRed;
+				
+			}
+			&--orange{
+				background-color: $mainOrange;
+				
+			}
+			&--green{
+				background-color: $mainGreen;
+				
+			}
+			&--violet{
+				background-color: $mainViolet;
+				
+			}
+			&--yellow{
+				background-color: $mainYellow;
+				
+			}
 		}
 
 		.kafelki{
@@ -498,14 +543,26 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 		.pokaz_wszystkie{
 			display: block;
-			width:100px;
+			width:150px;
 			margin:0 auto;
-			padding-top:5px;
-			padding-bottom:5px;
+			padding-top:15px;
+			padding-bottom:15px;
 			margin-top: 30px;
-			background-color: black;
-			color:white;
+			background-color: white;
+			color:black;
 			text-align: center;
+			font-size: 1.2rem;
+
+
+											transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
+
+						    	&:hover {
+								    box-shadow: 10px 10px 5px darkGrey;
+								    transform: scale(1.1, 1.1);
+								    
+								}
 		}
 	}
 }
@@ -537,13 +594,26 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		.wroc
 		{
 			display: block;
-			width:100px;
+			width:150px;
 			margin:0 auto;
-			padding-top:5px;
-			padding-bottom:5px;
-			background-color: black;
-			color:white;
+			padding-top:15px;
+			padding-bottom:15px;
+			margin-top: 30px;
+			background-color: white;
+			color:black;
 			text-align: center;
+			font-size: 1.2rem;
+
+
+											transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
+
+						    	&:hover {
+								    box-shadow: 10px 10px 5px darkGrey;
+								    transform: scale(1.1, 1.1);
+								    
+								}
 		}
 
 		.galeria{

@@ -555,7 +555,7 @@ button:focus {outline:0;}
 
 .header
 {
-	background-color: #2a2c2f;
+	/*background-color: $mainBlack;*/
 	position: relative;
 	overflow: hidden;
 	padding-top:80px;
@@ -678,14 +678,15 @@ button:focus {outline:0;}
 
 .menu{
 	display: none;
-	background-color: #2a2c2f;
+	background-color: #e86400;
 }
 
 .menu .button{
 		display: block;
 		width:150px;
 		margin:0 auto;
-		margin-bottom: 10px;
+		padding-bottom: 5px;
+		padding-top: 5px;
 		text-align: center;
 		background-color:transparent;
 		border:none;
@@ -810,10 +811,18 @@ button:focus {outline:0;}
 		color:black;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.2rem;
+		font-size: .8rem;
 		text-align: center;
 
 	}
+
+@media (min-width: 600px) {
+
+.aktualnosci .naglowek{
+			font-size: 1.2rem
+
+	}
+  }
 
 .aktualnosci .nazwa{
 		min-width:180px;
@@ -822,9 +831,16 @@ button:focus {outline:0;}
 		color:black;
 		font-family: regular;
 		letter-spacing: 5px;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		text-align: center;
 	}
+
+@media (min-width: 600px) {
+
+.aktualnosci .nazwa{
+			font-size: 1rem
+	}
+  }
 
 .aktualnosci .wrapper{
 		display: block;
@@ -907,9 +923,23 @@ button:focus {outline:0;}
 		color:black;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.2rem;
+		font-size: 1.0rem;
 		text-align: center;
 	}
+
+@media (min-width: 600px) {
+
+.portfolio .naglowek{
+			font-size: 1.8rem
+	}
+  }
+
+@media (min-width: 1000px) {
+
+.portfolio .naglowek{
+			font-size: 2.5rem
+	}
+  }
 
 .portfolio .dziedzina{
 		background-color: white;
@@ -918,7 +948,7 @@ button:focus {outline:0;}
 	}
 
 .portfolio .dziedzina .nazwa_dziedziny{
-			background-image:url('assets/images/dziedzina_background.png');
+			background-color: #e86400;
 			margin:0 auto;
 			padding-bottom: 20px;
 			padding-top: 20px;
@@ -926,6 +956,36 @@ button:focus {outline:0;}
 			font-family: regular;
 			text-align: center;
 		}
+
+.portfolio .dziedzina .nazwa_dziedziny--blue{
+				background-color: #0566ff;
+
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--red{
+				background-color: #950000;
+				
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--orange{
+				background-color: #e86400;
+				
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--green{
+				background-color: #1bac3b;
+				
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--violet{
+				background-color: #9b0078;
+				
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--yellow{
+				background-color: #ddce00;
+				
+			}
 
 .portfolio .dziedzina .kafelki{
 			padding-top:10px;
@@ -1046,15 +1106,32 @@ button:focus {outline:0;}
 
 .portfolio .dziedzina .pokaz_wszystkie{
 			display: block;
-			width:100px;
+			width:150px;
 			margin:0 auto;
-			padding-top:5px;
-			padding-bottom:5px;
+			padding-top:15px;
+			padding-bottom:15px;
 			margin-top: 30px;
-			background-color: black;
-			color:white;
+			background-color: white;
+			color:black;
 			text-align: center;
+			font-size: 1.2rem;
+
+
+											-webkit-transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+
+
+											        transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
 		}
+
+.portfolio .dziedzina .pokaz_wszystkie:hover {
+								    -webkit-box-shadow: 10px 10px 5px darkGrey;
+								            box-shadow: 10px 10px 5px darkGrey;
+								    -webkit-transform: scale(1.1, 1.1);
+								            transform: scale(1.1, 1.1);
+								    
+								}
 
 .dane{
 		display: none;
@@ -1095,14 +1172,32 @@ button:focus {outline:0;}
 .dane .wroc
 		{
 			display: block;
-			width:100px;
+			width:150px;
 			margin:0 auto;
-			padding-top:5px;
-			padding-bottom:5px;
-			background-color: black;
-			color:white;
+			padding-top:15px;
+			padding-bottom:15px;
+			margin-top: 30px;
+			background-color: white;
+			color:black;
 			text-align: center;
+			font-size: 1.2rem;
+
+
+											-webkit-transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+
+
+											        transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
+								-webkit-transition-duration: 1.0s;
+						    	transition-duration: 1.0s;
 		}
+
+.dane .wroc:hover {
+								    -webkit-box-shadow: 10px 10px 5px darkGrey;
+								            box-shadow: 10px 10px 5px darkGrey;
+								    -webkit-transform: scale(1.1, 1.1);
+								            transform: scale(1.1, 1.1);
+								    
+								}
 
 .dane .galeria{
 			margin-top:20px;
