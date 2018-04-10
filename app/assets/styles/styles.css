@@ -11,7 +11,7 @@ $mainLatte: #D9C9A4;
 $mainBlue: #00378d;
 $mainGreen: #006e18;
 $mainOrange: #e86400;
-$mainYellow:#ddce00;
+$mainYellow:#e9af00;
 $mainViolet:#5b0047;
 $mainRed:#950000;
 $darkGrey: #eaece5;
@@ -77,6 +77,18 @@ hr{
 }
 button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
 
+
+.parralax{
+position:relative;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+background-attachment:fixed;
+}
 
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
@@ -209,7 +221,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 }
 .menu{
 	display: none;
-	background-color: $mainRed;
+	background-color: $mainBlack;
 
 	.button{
 		display: block;
@@ -225,7 +237,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		font-family: regular;
 
 		&:hover{
-			background-color:$mainViolet;
+			background-color:$mainOrange;
 		}
 	}
 }
@@ -233,7 +245,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: $darkGrey;
+	background-color:$darkGrey;
 	font-family: regular;
 
 	.naglowek{
@@ -249,10 +261,6 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		text-align: justify;
 		max-width: 60%;
 		margin:0 auto;
-
-		&:first-letter {
-		   
-		}
 
 		@mixin tv{
 			max-width: 1000px;
@@ -285,10 +293,6 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 		text-align: center;		
 		}
 
-
-		&:first-letter {
-		    font-size: 150%;
-		}
 
 
 	}
@@ -408,19 +412,37 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 	.naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 20px;
-		color:black;
+		padding-bottom: 120px;
+		padding-top: 120px;
+		color:white;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.0rem;
+		font-size: 0.8rem;
 		text-align: center;
+			/*Parralax background*/
+			position:relative;
+			background-position:center;
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-image:url('assets/images/i10.jpg');
+			/*-----------------*/
+
+		@mixin phone{
+			font-size: 1.9rem;
+		}
 
 		@mixin tablet{
-			font-size: 1.8rem;
+			font-size: 2.7rem;
 		}
 		@mixin pc{
-			font-size: 2.5rem;
+			font-size: 3.3rem;
+			letter-spacing: 2rem;
 		}
+
+
+
+
 	}
 	.dziedzina{
 		background-color: white;
@@ -434,6 +456,8 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 			color:white;
 			font-family: regular;
 			text-align: center;
+
+			font-size: 0.8rem;
 
 			&--blue{
 				background-color: $mainBlue;
@@ -790,9 +814,8 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 	margin: 0 auto;
 	margin-top: 30px;
 	max-width:150px;
-	text-align: center;
 	font-family: regular;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 
 	p{
 		margin-top: 20px;
@@ -800,6 +823,7 @@ button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po k
 
 	@mixin tablet{
 		max-width: 400px;
+		font-size: 1.5rem;
 	}
 }
 }

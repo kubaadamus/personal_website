@@ -534,6 +534,18 @@ button:focus {outline:0;}
 
 /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
 
+.parralax{
+position:relative;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+background-attachment:fixed;
+}
+
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 .logo{
@@ -678,7 +690,7 @@ button:focus {outline:0;}
 
 .menu{
 	display: none;
-	background-color: #950000;
+	background-color: #2a2c2f;
 }
 
 .menu .button{
@@ -696,14 +708,14 @@ button:focus {outline:0;}
 	}
 
 .menu .button:hover{
-			background-color:#5b0047;
+			background-color:#e86400;
 		}
 
 .omnie{
 
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #eaece5;
+	background-color:#eaece5;
 	font-family: regular;
 }
 
@@ -722,10 +734,6 @@ button:focus {outline:0;}
 		max-width: 60%;
 		margin:0 auto;
 	}
-
-.omnie .tekst:first-letter {
-		   
-		}
 
 @media (min-width: 1700px)  {
 
@@ -759,6 +767,7 @@ button:focus {outline:0;}
 		max-width: 70%;
 
 
+
 	}
 
 @media (min-width: 1000px) {
@@ -768,12 +777,9 @@ button:focus {outline:0;}
 		text-align: center
 
 
+
 	}
   }
-
-.video .tekst:first-letter {
-		    font-size: 150%;
-		}
 
 .video iframe{
 		display:block;
@@ -921,25 +927,59 @@ button:focus {outline:0;}
 .portfolio .naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 20px;
-		color:black;
+		padding-bottom: 120px;
+		padding-top: 120px;
+		color:white;
 		font-family: Mocna;
 		letter-spacing: 10px;
-		font-size: 1.0rem;
+		font-size: 0.8rem;
 		text-align: center;
+			/*Parralax background*/
+			position:relative;
+			background-position:center;
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-image:url('assets/images/i10.jpg');
+
+
+
+
 	}
+
+/*-----------------*/
+
+@media (min-width: 400px) {
+
+.portfolio .naglowek{
+			font-size: 1.9rem
+
+
+
+
+	}
+  }
 
 @media (min-width: 600px) {
 
 .portfolio .naglowek{
-			font-size: 1.8rem
+			font-size: 2.7rem
+
+
+
+
 	}
   }
 
 @media (min-width: 1000px) {
 
 .portfolio .naglowek{
-			font-size: 2.5rem
+			font-size: 3.3rem;
+			letter-spacing: 2rem
+
+
+
+
 	}
   }
 
@@ -957,6 +997,8 @@ button:focus {outline:0;}
 			color:white;
 			font-family: regular;
 			text-align: center;
+
+			font-size: 0.8rem;
 		}
 
 .portfolio .dziedzina .nazwa_dziedziny--blue{
@@ -985,7 +1027,7 @@ button:focus {outline:0;}
 			}
 
 .portfolio .dziedzina .nazwa_dziedziny--yellow{
-				background-color: #ddce00;
+				background-color: #e9af00;
 				
 			}
 
@@ -1423,9 +1465,8 @@ button:focus {outline:0;}
 	margin: 0 auto;
 	margin-top: 30px;
 	max-width:150px;
-	text-align: center;
 	font-family: regular;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 }
 
 .stopka .dane_kontaktowe p{
@@ -1435,7 +1476,8 @@ button:focus {outline:0;}
 @media (min-width: 600px) {
 
 .stopka .dane_kontaktowe{
-		max-width: 400px
+		max-width: 400px;
+		font-size: 1.5rem
 }
   }
 
