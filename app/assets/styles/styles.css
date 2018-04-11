@@ -171,7 +171,7 @@ background-attachment:fixed;
 		margin:0 auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		background-color:$mainOrange;
+		background-color:$mainBlack;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
@@ -245,7 +245,7 @@ background-attachment:fixed;
 
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color:$darkGrey;
+	background-color:#e6e6e6;
 	font-family: regular;
 
 	.naglowek{
@@ -257,10 +257,14 @@ background-attachment:fixed;
 	}
 	.tekst{
 		padding: 5px 20px 5px 20px;
-		text-indent: 30px;
-		text-align: justify;
+		text-align: center;
 		max-width: 60%;
 		margin:0 auto;
+
+		@mixin phone{
+			text-align: justify;
+			text-indent: 30px;
+		}
 
 		@mixin tv{
 			max-width: 1000px;
@@ -268,7 +272,7 @@ background-attachment:fixed;
 	}
 }
 .video{
-	background-color: white;
+	background-color: #f4f4f4;
 	padding-top:20px;
 	.naglowek{
 		min-width:180px;
@@ -277,22 +281,23 @@ background-attachment:fixed;
 		text-align: center;
 		font-family: regular;
 		padding-bottom: 20px;
-		font-size: 0.8rem;
+		font-size: 1.0rem;
 	}
 	.tekst{
 		margin:0 auto;
-		font-size: 1.2rem;
 		font-family: regular;
-		text-indent: 20px;
 		margin-bottom: 30px;
-		text-align: justify;
-		max-width: 70%;
+		text-align: center;
+		max-width: 60%;
 
-		@mixin pc{
-		max-width: 930px;	
-		text-align: center;		
+		@mixin phone{
+			text-align: justify;
+			text-indent: 30px;
 		}
 
+		@mixin tv{
+			max-width: 1000px;
+		}
 
 
 	}
@@ -315,7 +320,7 @@ background-attachment:fixed;
 
 .aktualnosci{
 	padding-top: 30px;
-	background-color: white;
+	background-color: #f4f4f4;
 	padding-left:5%;
 	padding-right: 5%;
 	padding-bottom: 30px;
@@ -324,12 +329,11 @@ background-attachment:fixed;
 		.naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 20px;
 		color:black;
-		font-family: Mocna;
-		letter-spacing: 10px;
-		font-size: .8rem;
 		text-align: center;
+		font-family: regular;
+		padding-bottom: 20px;
+		font-size: 1.0rem;
 
 		@mixin tablet{
 			font-size: 1.2rem;
@@ -337,20 +341,19 @@ background-attachment:fixed;
 
 	}
 
-			.nazwa{
+		.nazwa{
 		min-width:180px;
 		margin: 0 auto;
 		padding-bottom: 20px;
 		color:black;
 		font-family: regular;
-		letter-spacing: 5px;
 		font-size: 0.6rem;
 		text-align: center;
 
-		@mixin tablet{
-			font-size: 1rem;
+			@mixin tablet{
+				font-size: 1rem;
+			}
 		}
-	}
 	.wrapper{
 		display: block;
 		width:100%;
@@ -372,6 +375,7 @@ background-attachment:fixed;
 			max-width: 100%;
 			margin: 0 auto;
 			margin-bottom: 20px;
+			border: 1px solid black;
 
 			@mixin pc{
 				display: inline;
@@ -388,7 +392,6 @@ background-attachment:fixed;
 			text-align: justify;
 			text-indent: 30px;
 			font-family: regular;
-			font-size: 1.2rem;
 			margin-bottom: 20px;
 			max-width: 80%;
 
@@ -414,19 +417,11 @@ background-attachment:fixed;
 		margin: 0 auto;
 		padding-bottom: 120px;
 		padding-top: 120px;
-		color:white;
+		color:$mainBlack;
 		font-family: Mocna;
 		letter-spacing: 10px;
 		font-size: 0.8rem;
 		text-align: center;
-			/*Parralax background*/
-			position:relative;
-			background-position:center;
-			background-size:cover;
-			background-repeat:no-repeat;
-			background-attachment:fixed;
-			background-image:url('assets/images/i10.jpg');
-			/*-----------------*/
 
 		@mixin phone{
 			font-size: 1.9rem;
@@ -445,11 +440,10 @@ background-attachment:fixed;
 
 	}
 	.dziedzina{
-		background-color: white;
+		background-color: transparent;
 		padding-bottom: 10px;
-		padding-top: 20px;
 		.nazwa_dziedziny{
-			background-color: $mainOrange;
+			background-color: transparent;
 			margin:0 auto;
 			padding-bottom: 20px;
 			padding-top: 20px;
@@ -488,7 +482,7 @@ background-attachment:fixed;
 		.kafelki{
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: white;
+			background-color: transparent;
 			display: flex;
 			flex-direction:column;
 
@@ -761,7 +755,7 @@ background-attachment:fixed;
 		text-align: center;
 		color:white;
 		font-family: kaligrafia;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 
 		@mixin tablet{
 			font-size: 2rem;
@@ -777,9 +771,12 @@ background-attachment:fixed;
 		margin-bottom: 50px;
 		margin-top: 30px;
 
+		@mixin phone{
+			flex-direction:row;
+			width:180px;
+		}
 
 		@mixin tablet{
-			flex-direction:row;
 			width:300px;
 		}
 

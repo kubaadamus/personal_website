@@ -637,7 +637,7 @@ background-attachment:fixed;
 		margin:0 auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		background-color:#e86400;
+		background-color:#2a2c2f;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
@@ -715,7 +715,7 @@ background-attachment:fixed;
 
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color:#eaece5;
+	background-color:#e6e6e6;
 	font-family: regular;
 }
 
@@ -729,11 +729,18 @@ background-attachment:fixed;
 
 .omnie .tekst{
 		padding: 5px 20px 5px 20px;
-		text-indent: 30px;
-		text-align: justify;
+		text-align: center;
 		max-width: 60%;
 		margin:0 auto;
 	}
+
+@media (min-width: 400px) {
+
+.omnie .tekst{
+			text-align: justify;
+			text-indent: 30px
+	}
+  }
 
 @media (min-width: 1700px)  {
 
@@ -743,7 +750,7 @@ background-attachment:fixed;
   }
 
 .video{
-	background-color: white;
+	background-color: #f4f4f4;
 	padding-top:20px;
 }
 
@@ -754,28 +761,33 @@ background-attachment:fixed;
 		text-align: center;
 		font-family: regular;
 		padding-bottom: 20px;
-		font-size: 0.8rem;
+		font-size: 1.0rem;
 	}
 
 .video .tekst{
 		margin:0 auto;
-		font-size: 1.2rem;
 		font-family: regular;
-		text-indent: 20px;
 		margin-bottom: 30px;
-		text-align: justify;
-		max-width: 70%;
-
+		text-align: center;
+		max-width: 60%;
 
 
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 400px) {
 
 .video .tekst{
-		max-width: 930px;	
-		text-align: center
+			text-align: justify;
+			text-indent: 30px
 
+
+	}
+  }
+
+@media (min-width: 1700px)  {
+
+.video .tekst{
+			max-width: 1000px
 
 
 	}
@@ -806,7 +818,7 @@ background-attachment:fixed;
 
 .aktualnosci{
 	padding-top: 30px;
-	background-color: white;
+	background-color: #f4f4f4;
 	padding-left:5%;
 	padding-right: 5%;
 	padding-bottom: 30px;
@@ -815,12 +827,11 @@ background-attachment:fixed;
 .aktualnosci .naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 20px;
 		color:black;
-		font-family: Mocna;
-		letter-spacing: 10px;
-		font-size: .8rem;
 		text-align: center;
+		font-family: regular;
+		padding-bottom: 20px;
+		font-size: 1.0rem;
 
 	}
 
@@ -838,16 +849,15 @@ background-attachment:fixed;
 		padding-bottom: 20px;
 		color:black;
 		font-family: regular;
-		letter-spacing: 5px;
 		font-size: 0.6rem;
 		text-align: center;
-	}
+		}
 
 @media (min-width: 600px) {
 
 .aktualnosci .nazwa{
-			font-size: 1rem
-	}
+				font-size: 1rem
+		}
   }
 
 .aktualnosci .wrapper{
@@ -886,6 +896,7 @@ background-attachment:fixed;
 			max-width: 100%;
 			margin: 0 auto;
 			margin-bottom: 20px;
+			border: 1px solid black;
 		}
 
 @media (min-width: 1000px) {
@@ -905,7 +916,6 @@ background-attachment:fixed;
 			text-align: justify;
 			text-indent: 30px;
 			font-family: regular;
-			font-size: 1.2rem;
 			margin-bottom: 20px;
 			max-width: 80%;
 		}
@@ -929,25 +939,16 @@ background-attachment:fixed;
 		margin: 0 auto;
 		padding-bottom: 120px;
 		padding-top: 120px;
-		color:white;
+		color:#2a2c2f;
 		font-family: Mocna;
 		letter-spacing: 10px;
 		font-size: 0.8rem;
 		text-align: center;
-			/*Parralax background*/
-			position:relative;
-			background-position:center;
-			background-size:cover;
-			background-repeat:no-repeat;
-			background-attachment:fixed;
-			background-image:url('assets/images/i10.jpg');
 
 
 
 
 	}
-
-/*-----------------*/
 
 @media (min-width: 400px) {
 
@@ -984,13 +985,12 @@ background-attachment:fixed;
   }
 
 .portfolio .dziedzina{
-		background-color: white;
+		background-color: transparent;
 		padding-bottom: 10px;
-		padding-top: 20px;
 	}
 
 .portfolio .dziedzina .nazwa_dziedziny{
-			background-color: #e86400;
+			background-color: transparent;
 			margin:0 auto;
 			padding-bottom: 20px;
 			padding-top: 20px;
@@ -1034,7 +1034,7 @@ background-attachment:fixed;
 .portfolio .dziedzina .kafelki{
 			padding-top:10px;
 			padding-bottom: 10px;
-			background-color: white;
+			background-color: transparent;
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -1393,7 +1393,7 @@ background-attachment:fixed;
 		text-align: center;
 		color:white;
 		font-family: kaligrafia;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 	}
 
 @media (min-width: 600px) {
@@ -1423,13 +1423,20 @@ background-attachment:fixed;
 		margin-top: 30px;
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
 
 .stopka .kontakty{
 			-webkit-box-orient:horizontal;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:row;
 			        flex-direction:row;
+			width:180px
+	}
+  }
+
+@media (min-width: 600px) {
+
+.stopka .kontakty{
 			width:300px
 	}
   }
