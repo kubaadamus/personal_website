@@ -728,7 +728,6 @@ background-attachment:fixed;
 		text-align: justify;
 		line-height: 150%;
 		font-family: regular;
-		font-size: 1.1rem;
 	}
 	.koniec{
 		width:fit-content;
@@ -755,7 +754,6 @@ background-attachment:fixed;
 		text-align: center;
 		color:white;
 		font-family: kaligrafia;
-		font-size: 1.1rem;
 
 		@mixin tablet{
 			font-size: 2rem;
