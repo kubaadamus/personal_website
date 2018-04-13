@@ -9,8 +9,8 @@
 <body>
 <!===================================== H E A D E R ===========================================>
 <div class="header">
-<video autoplay muted loop class="bgvid" poster="assets/images/black.jpg">
-  <source src="video/intro.webm" type="video/mp4">
+<video autoplay muted loop class="bgvid" id="bgvid" poster="assets/images/black.jpg">
+
 </video>
 	<div class="logo"></div>
 	<div class="motto">
@@ -21,8 +21,8 @@
 		<button class="wyswietlfilm">WYŚWIETL FILM</button>
 	</a>
 	<button class="menu_open_button" id="menu_open_button"></button>
-</div>
-<!===================================== M E N U ===========================================>
+
+	<!===================================== M E N U ===========================================>
 <div class="menu" id="menu">
 	<a href="#omnie">
 		<button class="button">O mnie</button>
@@ -34,6 +34,8 @@
 		<button class="button">Kontakt</button>
 	</a>
 </div>
+</div>
+
 <!===================================== O M N I E ===========================================>
 <div class="omnie"  id="omnie">
 	<div class="naglowek"><h1>O MNIE</h1></div>
@@ -84,7 +86,7 @@
 
 	<!=============== GRAFIKA 3D ====================>
 	<div class="dziedzina" >
-		<div class="nazwa_dziedziny nazwa_dziedziny--red">
+		<div class="nazwa_dziedziny nazwa_dziedziny--black">
 			<h1>GRAFIKA3D</h1>
 		</div>
 
@@ -131,7 +133,7 @@
 
 <!=============== SZKOLENIA ====================>
 	<div class="dziedzina" >
-		<div class="nazwa_dziedziny nazwa_dziedziny--yellow">
+		<div class="nazwa_dziedziny nazwa_dziedziny--black">
 			<h1>KURS TWORZENNIA ASSETÓW 3D</h1>
 		</div>
 
@@ -165,7 +167,7 @@
 
 		<!=============== MUZYKA ====================>
 	<div class="dziedzina" >
-		<div class="nazwa_dziedziny nazwa_dziedziny--violet">
+		<div class="nazwa_dziedziny nazwa_dziedziny--black">
 			<h1>MUZYKA</h1>
 		</div>
 
@@ -215,7 +217,7 @@
 
 	<!=============== ELEKTROTECHNIKA ====================>
 	<div class="dziedzina" >
-		<div class="nazwa_dziedziny nazwa_dziedziny--blue">
+		<div class="nazwa_dziedziny nazwa_dziedziny--black">
 			<h1>ELEKTRO<wbr>TECHNIKA</h1>
 		</div>
 
@@ -267,13 +269,11 @@
 		</div>
 	</div>
 	<!- K O N I E C ->
-
-
 			
 
 		<!=============== TECHNOLOGIA CHEMICZNA ====================>
 	<div class="dziedzina" >
-		<div class="nazwa_dziedziny nazwa_dziedziny--green">
+		<div class="nazwa_dziedziny nazwa_dziedziny--black">
 			<h1>TECHNOLOGIA <wbr>CHEMICZNA</h1>
 		</div>
 
@@ -346,7 +346,6 @@
 	<div class="dane_kontaktowe">
 		<p>Jakub Adamus</p>
 		<p>e-mail:<wbr> jakubadamus1991<wbr>@gmail.com</p>
-		<p>kom: 727432787</p>
 		<p>gg: 1767602</p>
 	</div>
 	<div class="kontakty">
@@ -354,7 +353,6 @@
 		<button class="kontakt" style="background-image: url(assets/images/global/fb.png)" onclick="window.location.href='https://www.facebook.com/jakub.adamus.52'"></button>
 		<button class="kontakt" style="background-image: url(assets/images/global/gmail.png)" onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jakubadamus1991@gmail.com'"></button>
 	</div>
-		<div class="logo"></div>
 
 
 </div>
@@ -367,6 +365,7 @@
 <script type="text/javascript" src="assets/scripts/content_open.js"></script>
 <script type="text/javascript" src="assets/scripts/scroll.js"></script>
 <script type="text/javascript" src="assets/scripts/show_more.js"></script>
+<script type="text/javascript" src="assets/scripts/header_bgvideo.js"></script>
 
 </body>
 </html>

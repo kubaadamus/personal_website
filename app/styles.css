@@ -552,7 +552,7 @@ background-attachment:fixed;
 		width:200px;
 		height:200px;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		background-image: url('assets/images/logo_color.png');
 		background-size: cover;
 
@@ -570,8 +570,7 @@ background-attachment:fixed;
 	/*background-color: $mainBlack;*/
 	position: relative;
 	overflow: hidden;
-	padding-top:80px;
-	padding-bottom: 30px;
+	padding-top:40px;
 }
 
 @media (min-width: 1000px) {
@@ -665,6 +664,7 @@ background-attachment:fixed;
 		background-size: cover;
 		border:none;
 		cursor:pointer;
+		margin-bottom: 30px;
 
 		-webkit-transition-duration: 0.4s;
     	transition-duration: 0.4s;
@@ -690,7 +690,7 @@ background-attachment:fixed;
 
 .menu{
 	display: none;
-	background-color: #2a2c2f;
+	background-color: rgba(0,0,0,0.2);
 }
 
 .menu .button{
@@ -913,8 +913,8 @@ background-attachment:fixed;
 .aktualnosci .wrapper p{
 			display: block;
 			margin: 0 auto;
-			text-align: justify;
-			text-indent: 30px;
+			text-align: center;
+			
 			font-family: regular;
 			margin-bottom: 20px;
 			max-width: 80%;
@@ -923,7 +923,9 @@ background-attachment:fixed;
 @media (min-width: 600px) {
 
 .aktualnosci .wrapper p{
-				max-width: 100%
+				max-width: 100%;
+				text-align: justify;
+				text-indent: 30px
 		}
   }
 
@@ -937,8 +939,8 @@ background-attachment:fixed;
 .portfolio .naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 120px;
-		padding-top: 120px;
+		padding-bottom: 80px;
+		padding-top: 80px;
 		color:#2a2c2f;
 		font-family: Mocna;
 		letter-spacing: 10px;
@@ -1028,6 +1030,11 @@ background-attachment:fixed;
 
 .portfolio .dziedzina .nazwa_dziedziny--yellow{
 				background-color: #e9af00;
+				
+			}
+
+.portfolio .dziedzina .nazwa_dziedziny--black{
+				background-color: #2a2c2f;
 				
 			}
 
@@ -1154,7 +1161,7 @@ background-attachment:fixed;
 			margin:0 auto;
 			padding-top:15px;
 			padding-bottom:15px;
-			margin-top: 30px;
+			margin-bottom: 12px;
 			background-color: white;
 			color:black;
 			text-align: center;
@@ -1363,7 +1370,6 @@ background-attachment:fixed;
 		text-align: justify;
 		line-height: 150%;
 		font-family: regular;
-		font-size: 1.1rem;
 	}
 
 .dane .koniec{
@@ -1384,16 +1390,14 @@ background-attachment:fixed;
 	padding-bottom: 50px;
 			clear: both;
 			background-color: #2a2c2f;
-}
+	}
 
 .stopka .motto{
 		min-width:150px;
-		margin:0 auto;
 		margin-bottom: 30px;
 		text-align: center;
 		color:white;
 		font-family: kaligrafia;
-		font-size: 1.1rem;
 	}
 
 @media (min-width: 600px) {
@@ -1403,7 +1407,28 @@ background-attachment:fixed;
 	}
   }
 
-.stopka .kontakty{
+.stopka .dane_kontaktowe{
+		color:white;
+		margin: 0 auto;
+		margin-top: 30px;
+		max-width:150px;
+		font-family: regular;
+		font-size: 1.0rem;
+	}
+
+.stopka .dane_kontaktowe p{
+			margin-top: 20px;
+		}
+
+@media (min-width: 600px) {
+
+.stopka .dane_kontaktowe{
+			max-width: 400px;
+			font-size: 1.5rem
+	}
+  }
+
+.kontakty{
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -1425,7 +1450,7 @@ background-attachment:fixed;
 
 @media (min-width: 400px) {
 
-.stopka .kontakty{
+.kontakty{
 			-webkit-box-orient:horizontal;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:row;
@@ -1436,12 +1461,12 @@ background-attachment:fixed;
 
 @media (min-width: 600px) {
 
-.stopka .kontakty{
+.kontakty{
 			width:300px
 	}
   }
 
-.stopka .kontakty .kontakt{
+.kontakty .kontakt{
 			width:40px;
 			height:40px;
 			margin:0 auto;
@@ -1461,32 +1486,11 @@ background-attachment:fixed;
 
 		}
 
-.stopka .kontakty .kontakt:hover {
+.kontakty .kontakt:hover {
 								    -webkit-transform: scale(1.3, 1.3);
 								            transform: scale(1.3, 1.3);
 								    
 								}
-
-.stopka .dane_kontaktowe{
-	color:white;
-	margin: 0 auto;
-	margin-top: 30px;
-	max-width:150px;
-	font-family: regular;
-	font-size: 1.0rem;
-}
-
-.stopka .dane_kontaktowe p{
-		margin-top: 20px;
-	}
-
-@media (min-width: 600px) {
-
-.stopka .dane_kontaktowe{
-		max-width: 400px;
-		font-size: 1.5rem
-}
-  }
 
 /* ====================== K O N T E N T   D Y N A M I C Z N Y =====================================*/
 
@@ -1500,3 +1504,4 @@ background-attachment:fixed;
 	background-size: cover;
 
 }
+

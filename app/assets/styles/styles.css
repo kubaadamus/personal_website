@@ -98,7 +98,7 @@ background-attachment:fixed;
 		width:200px;
 		height:200px;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		background-image: url('assets/images/logo_color.png');
 		background-size: cover;
 
@@ -124,8 +124,7 @@ background-attachment:fixed;
 	/*background-color: $mainBlack;*/
 	position: relative;
 	overflow: hidden;
-	padding-top:80px;
-	padding-bottom: 30px;
+	padding-top:40px;
 	@mixin pc{
 	background: none;
 	}
@@ -198,6 +197,7 @@ background-attachment:fixed;
 		background-size: cover;
 		border:none;
 		cursor:pointer;
+		margin-bottom: 30px;
 
 		-webkit-transition-duration: 0.4s;
     	transition-duration: 0.4s;
@@ -221,7 +221,7 @@ background-attachment:fixed;
 }
 .menu{
 	display: none;
-	background-color: $mainBlack;
+	background-color: rgba(0,0,0,0.2);
 
 	.button{
 		display: block;
@@ -389,8 +389,8 @@ background-attachment:fixed;
 		p{
 			display: block;
 			margin: 0 auto;
-			text-align: justify;
-			text-indent: 30px;
+			text-align: center;
+			
 			font-family: regular;
 			margin-bottom: 20px;
 			max-width: 80%;
@@ -398,6 +398,8 @@ background-attachment:fixed;
 
 			@mixin tablet{
 				max-width: 100%;
+				text-align: justify;
+				text-indent: 30px;
 			}
 		}
 
@@ -415,8 +417,8 @@ background-attachment:fixed;
 	.naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 120px;
-		padding-top: 120px;
+		padding-bottom: 80px;
+		padding-top: 80px;
 		color:$mainBlack;
 		font-family: Mocna;
 		letter-spacing: 10px;
@@ -475,6 +477,10 @@ background-attachment:fixed;
 			}
 			&--yellow{
 				background-color: $mainYellow;
+				
+			}
+			&--black{
+				background-color: $mainBlack;
 				
 			}
 		}
@@ -567,7 +573,7 @@ background-attachment:fixed;
 			margin:0 auto;
 			padding-top:15px;
 			padding-bottom:15px;
-			margin-top: 30px;
+			margin-bottom: 12px;
 			background-color: white;
 			color:black;
 			text-align: center;
@@ -749,7 +755,6 @@ background-attachment:fixed;
 			background-color: $mainBlack;
 	.motto{
 		min-width:150px;
-		margin:0 auto;
 		margin-bottom: 30px;
 		text-align: center;
 		color:white;
@@ -758,6 +763,24 @@ background-attachment:fixed;
 		@mixin tablet{
 			font-size: 2rem;
 		}
+	}
+		.dane_kontaktowe{
+		color:white;
+		margin: 0 auto;
+		margin-top: 30px;
+		max-width:150px;
+		font-family: regular;
+		font-size: 1.0rem;
+
+		p{
+			margin-top: 20px;
+		}
+
+		@mixin tablet{
+			max-width: 400px;
+			font-size: 1.5rem;
+		}
+	}
 	}
 	.kontakty{
 		display: flex;
@@ -804,24 +827,6 @@ background-attachment:fixed;
 		}
 	}
 
-.dane_kontaktowe{
-	color:white;
-	margin: 0 auto;
-	margin-top: 30px;
-	max-width:150px;
-	font-family: regular;
-	font-size: 1.0rem;
-
-	p{
-		margin-top: 20px;
-	}
-
-	@mixin tablet{
-		max-width: 400px;
-		font-size: 1.5rem;
-	}
-}
-}
 
 
 /* ====================== K O N T E N T   D Y N A M I C Z N Y =====================================*/
@@ -836,3 +841,4 @@ background-attachment:fixed;
 	background-size: cover;
 
 }
+
