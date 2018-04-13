@@ -50,6 +50,7 @@ html{
 }
 body{
 	min-width: 200px;
+	background-image: url('assets/images/grid.png');
 }
 h1, h2, h3, h4, h5{
 	margin:0;
@@ -108,9 +109,22 @@ background-attachment:fixed;
 		&:hover {-webkit-filter: brightness(350%); }
 	}
 
+.hidden{
+	display: none;
+}
 
+.podzial{
+	background-color: black;
+	max-width: 75%;
+	height: 2px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
-
+	@mixin tablet{
+		max-width: 35%;
+	}
+}
 
 
 
@@ -242,10 +256,9 @@ background-attachment:fixed;
 	}
 }
 .omnie{
-
+	background-color: transparent;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color:#e6e6e6;
 	font-family: regular;
 
 	.naglowek{
@@ -260,7 +273,7 @@ background-attachment:fixed;
 		text-align: center;
 		max-width: 60%;
 		margin:0 auto;
-
+		background-color: white;
 		@mixin phone{
 			text-align: justify;
 			text-indent: 30px;
@@ -272,8 +285,8 @@ background-attachment:fixed;
 	}
 }
 .video{
-	background-color: #f4f4f4;
 	padding-top:20px;
+	background-color: transparent;
 	.naglowek{
 		min-width:180px;
 		margin: 0 auto;
@@ -312,19 +325,18 @@ background-attachment:fixed;
 			height:36vw;
 		}
 		@mixin tv{
-			width:30%;
-			height:20vw;
+			width:40%;
+			height:24vw;
 		}
 	}
 }
 
 .aktualnosci{
 	padding-top: 30px;
-	background-color: #f4f4f4;
 	padding-left:5%;
 	padding-right: 5%;
 	padding-bottom: 30px;
-
+	background-color: transparent;
 
 		.naglowek{
 		min-width:180px;
@@ -411,7 +423,7 @@ background-attachment:fixed;
 .portfolio{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: white;
+	background-color: transparent;
 	clear: both;
 
 	.naglowek{
@@ -420,25 +432,13 @@ background-attachment:fixed;
 		padding-bottom: 80px;
 		padding-top: 80px;
 		color:$mainBlack;
-		font-family: Mocna;
+		font-family: regular;
 		letter-spacing: 10px;
 		font-size: 0.8rem;
 		text-align: center;
-
 		@mixin phone{
 			font-size: 1.9rem;
 		}
-
-		@mixin tablet{
-			font-size: 2.7rem;
-		}
-		@mixin pc{
-			font-size: 3.3rem;
-			letter-spacing: 2rem;
-		}
-
-
-
 
 	}
 	.dziedzina{
@@ -529,11 +529,16 @@ background-attachment:fixed;
 						    	&:hover {
 								    box-shadow: 10px 10px 5px darkGrey;
 								    transform: scale(1.1, 1.1);
+
+								    h3{
+								    	display: block;
+								    }
 								    
 								}
 
 
    				h3{
+   					display: none;
    					pointer-events: none;
    					background-color:rgba(0,0,0,0.5);
    					color:white;
@@ -574,6 +579,7 @@ background-attachment:fixed;
 			padding-top:15px;
 			padding-bottom:15px;
 			margin-bottom: 12px;
+			margin-top: 12px;
 			background-color: white;
 			color:black;
 			text-align: center;

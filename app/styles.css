@@ -494,6 +494,7 @@ html{
 
 body{
 	min-width: 200px;
+	background-image: url('assets/images/grid.png');
 }
 
 h1, h2, h3, h4, h5{
@@ -562,6 +563,26 @@ background-attachment:fixed;
 	}
 
 .logo:hover {-webkit-filter: brightness(350%); }
+
+.hidden{
+	display: none;
+}
+
+.podzial{
+	background-color: black;
+	max-width: 75%;
+	height: 2px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+
+.podzial{
+		max-width: 35%
+}
+  }
 
 /* ============================================ N O R M A L ============================================ */
 
@@ -712,10 +733,9 @@ background-attachment:fixed;
 		}
 
 .omnie{
-
+	background-color: transparent;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color:#e6e6e6;
 	font-family: regular;
 }
 
@@ -732,6 +752,7 @@ background-attachment:fixed;
 		text-align: center;
 		max-width: 60%;
 		margin:0 auto;
+		background-color: white;
 	}
 
 @media (min-width: 400px) {
@@ -750,8 +771,8 @@ background-attachment:fixed;
   }
 
 .video{
-	background-color: #f4f4f4;
 	padding-top:20px;
+	background-color: transparent;
 }
 
 .video .naglowek{
@@ -811,17 +832,17 @@ background-attachment:fixed;
 @media (min-width: 1700px)  {
 
 .video iframe{
-			width:30%;
-			height:20vw
+			width:40%;
+			height:24vw
 	}
   }
 
 .aktualnosci{
 	padding-top: 30px;
-	background-color: #f4f4f4;
 	padding-left:5%;
 	padding-right: 5%;
 	padding-bottom: 30px;
+	background-color: transparent;
 }
 
 .aktualnosci .naglowek{
@@ -932,7 +953,7 @@ background-attachment:fixed;
 .portfolio{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: white;
+	background-color: transparent;
 	clear: both;
 }
 
@@ -942,13 +963,10 @@ background-attachment:fixed;
 		padding-bottom: 80px;
 		padding-top: 80px;
 		color:#2a2c2f;
-		font-family: Mocna;
+		font-family: regular;
 		letter-spacing: 10px;
 		font-size: 0.8rem;
 		text-align: center;
-
-
-
 
 	}
 
@@ -956,32 +974,6 @@ background-attachment:fixed;
 
 .portfolio .naglowek{
 			font-size: 1.9rem
-
-
-
-
-	}
-  }
-
-@media (min-width: 600px) {
-
-.portfolio .naglowek{
-			font-size: 2.7rem
-
-
-
-
-	}
-  }
-
-@media (min-width: 1000px) {
-
-.portfolio .naglowek{
-			font-size: 3.3rem;
-			letter-spacing: 2rem
-
-
-
 
 	}
   }
@@ -1111,7 +1103,12 @@ background-attachment:fixed;
 								    
 								}
 
+.portfolio .dziedzina .kafelki .kafelek:hover h3{
+								    	display: block;
+								    }
+
 .portfolio .dziedzina .kafelki .kafelek h3{
+   					display: none;
    					pointer-events: none;
    					background-color:rgba(0,0,0,0.5);
    					color:white;
@@ -1162,6 +1159,7 @@ background-attachment:fixed;
 			padding-top:15px;
 			padding-bottom:15px;
 			margin-bottom: 12px;
+			margin-top: 12px;
 			background-color: white;
 			color:black;
 			text-align: center;
