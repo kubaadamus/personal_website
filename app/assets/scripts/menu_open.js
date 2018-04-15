@@ -6,3 +6,23 @@ menu_open_button.addEventListener('click',function(){
 },false);
 
 
+
+$( window ).resize(function() {
+
+	if($( window ).width()>1000)
+	{
+	$(menu).slideDown();	
+	}
+  
+
+});
+
+
+
+
+var wyswietlfilm = document.getElementById('wyswietlfilm');
+var film = document.getElementById('film');
+
+wyswietlfilm.addEventListener('click',function(){
+	$(film).slideToggle();
+},false);

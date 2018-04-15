@@ -18,7 +18,7 @@
 		<h3 class="slogan">Web developer / Grafik 3D</h3>
 	</div>
 	<a href="#film">
-		<button class="wyswietlfilm">WYŚWIETL FILM</button>
+		<button class="wyswietlfilm" id="wyswietlfilm">WYŚWIETL FILM</button>
 	</a>
 	<button class="menu_open_button" id="menu_open_button"></button>
 
@@ -34,11 +34,11 @@
 		<button class="button">Kontakt</button>
 	</a>
 
-	<form>
+	<form action="logowanie.php" method="post">
 	<label>E-Learning</label>
-		<label>Login:</label><input/>
-		<label>Hasło:</label><input/>
-		<button>Zaloguj</button>
+		<label>Login:</label><input type="text" name="login" />
+		<label>Hasło:</label><input type="text" name="password" />
+		<button type="submit">Zaloguj</button>
 	</form>
 
 </div>
@@ -66,9 +66,10 @@
 		
 	</p>
 	<iframe class="film" src="https://www.youtube.com/embed/MtvloiPeveA?t=21" frameborder="0" allowfullscreen="1"></iframe>
+	<hr class="podzial" />
 </div>
-<!=============K O N I E C   V I D E O ==================>
 
+<!=============K O N I E C   V I D E O ==================>
 <! ========================================== U M I E J E T N O S C I ===================================>
 
 <img src="assets/images/kawa.png" class="kawa transition hidden" />
@@ -151,7 +152,6 @@
 		</div>
 
 		<div class="kafelki">
-
 				<button class="kafelek" name="G3D_akustyk">
 					<h3>Gitara akustyczna</h3>
 				</button>
@@ -168,7 +168,25 @@
 								<button class="kafelek" name="G3D_pierscionki">
 									<h3>Pierścionki</h3>
 								</button>
-			
+		</div>
+
+		<div class="kafelki">
+				<button class="kafelek" name="G3D_akustyk">
+					<h3>Gitara akustyczna</h3>
+				</button>
+
+						<button class="kafelek" name="G3D_smartfon">
+							<h3>Smartfon</h3>
+						</button>
+
+							<button class="kafelek" name="G3D_elektryk">
+								<h3>Gitara eletryczna</h3>
+							</button>
+
+
+								<button class="kafelek" name="G3D_pierscionki">
+									<h3>Pierścionki</h3>
+								</button>
 		</div>
 
 		<button class="pokaz_wszystkie" value="-1">Więcej</button>
