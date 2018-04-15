@@ -495,6 +495,7 @@ html{
 body{
 	min-width: 200px;
 	background-image: url('assets/images/grid.png');
+	overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5{
@@ -810,6 +811,11 @@ background-attachment:fixed;
 				}
   }
 
+.intro{
+	position: relative;
+	overflow: hidden;
+}
+
 .omnie{
 	background-color: transparent;
 	padding-top: 20px;
@@ -924,24 +930,56 @@ background-attachment:fixed;
 	position: absolute;
 	width:200px;
 	height: 200px;
-	right:100px;
 	z-index: -10;
+	right:-250px;
 }
+
+@media (min-width: 600px) {
+
+.kawa{
+	right:-100px
+}
+  }
+
+@media (min-width: 1000px) {
+
+.kawa{
+	right:-40px;
+	width:300px;
+	height: 300px
+}
+  }
 
 @media (min-width: 1700px)  {
 
 .kawa{
-		right: 300px
+		right: 200px
 }
   }
 
 .laptop{
 	position: absolute;
-	width:800px;
-	height: 448px;
-	left:-500px;
+	width:600px;
+	height: 348px;
+	left:-600px;
 	z-index: -10;
+	-webkit-transform: rotate(-20deg);
+	        transform: rotate(-20deg);
 }
+
+@media (min-width: 600px) {
+
+.laptop{
+		left:-450px
+}
+  }
+
+@media (min-width: 1000px) {
+
+.laptop{
+		left:-400px
+}
+  }
 
 @media (min-width: 1700px)  {
 
@@ -950,23 +988,69 @@ background-attachment:fixed;
 }
   }
 
-.kawa, .laptop, .notes{
-	display: none;
+.notes{
+	position: absolute;
+	width:344px;
+	height: 449px;
+	right:-400px;
+	bottom:100px;
+	z-index: -10;
 }
+
+@media (min-width: 600px) {
+
+.notes{
+		right:-280px
+}
+  }
 
 @media (min-width: 1000px) {
 
-.kawa, .laptop, .notes{
-		display: block
+.notes{
+		right:-200px
+}
+  }
+
+@media (min-width: 1700px)  {
+
+.notes{
+		right:50px
+}
+  }
+
+.calculator{
+	position: absolute;
+	width:245px;
+	height:475px;
+	left:-600px;
+	z-index: -10;
+	bottom: 100px;
+}
+
+@media (min-width: 600px) {
+
+.calculator{
+		left:-200px
+}
+  }
+
+@media (min-width: 1000px) {
+
+.calculator{
+		left:-100px
+}
+  }
+
+@media (min-width: 1700px)  {
+
+.calculator{
+		left:40px
 }
   }
 
 .umiejetnosci{
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	max-width: 400px;
-	margin: 0 auto;
+	position: relative;
+	width: 100%;
 	overflow: hidden;
 
 }
@@ -987,6 +1071,15 @@ background-attachment:fixed;
 			text-align: left
 		}
   }
+
+.umiejetnosci .lista{
+		overflow: hidden;
+		width:-webkit-fit-content;
+		width:-moz-fit-content;
+		width:fit-content;
+		max-width: 400px;
+		margin: 0 auto;
+	}
 
 .umiejetnosci .umiem{
 		display: block;

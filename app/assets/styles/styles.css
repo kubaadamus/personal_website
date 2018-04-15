@@ -51,6 +51,7 @@ html{
 body{
 	min-width: 200px;
 	background-image: url('assets/images/grid.png');
+	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5{
 	margin:0;
@@ -315,6 +316,10 @@ background-attachment:fixed;
 			}
 		}
 }
+.intro{
+	position: relative;
+	overflow: hidden;
+}
 .omnie{
 	background-color: transparent;
 	padding-top: 20px;
@@ -400,38 +405,91 @@ background-attachment:fixed;
 	position: absolute;
 	width:200px;
 	height: 200px;
-	right:100px;
 	z-index: -10;
+	right:-250px;
+
+	@mixin tablet{
+	right:-100px;
+	}
+
+	@mixin pc{
+	right:-40px;
+	width:300px;
+	height: 300px;
+	}
 
 	@mixin tv{
-		right: 300px;
+		right: 200px;
 	}
 }
 
 .laptop{
 	position: absolute;
-	width:800px;
-	height: 448px;
-	left:-500px;
+	width:600px;
+	height: 348px;
+	left:-600px;
 	z-index: -10;
+	transform: rotate(-20deg);
+
+	@mixin tablet{
+		left:-450px;
+	}
+
+	@mixin pc{
+		left:-400px;
+	}
 
 	@mixin tv{
 		left:-200px;
 	}
 }
 
-.kawa, .laptop, .notes{
-	display: none;
+.notes{
+	position: absolute;
+	width:344px;
+	height: 449px;
+	right:-400px;
+	bottom:100px;
+	z-index: -10;
 
+	@mixin tablet{
+		right:-280px;
+	}
 
 	@mixin pc{
-		display: block;
+		right:-200px;
+	}
+
+	@mixin tv{
+		right:50px;
 	}
 }
+
+.calculator{
+	position: absolute;
+	width:245px;
+	height:475px;
+	left:-600px;
+	z-index: -10;
+	bottom: 100px;
+
+
+	@mixin tablet{
+		left:-200px;
+	}
+
+	@mixin pc{
+		left:-100px;
+	}
+
+	@mixin tv{
+		left:40px;
+	}
+}
+
 .umiejetnosci{
-	width: fit-content;
-	max-width: 400px;
-	margin: 0 auto;
+	position: relative;
+	width: 100%;
 	overflow: hidden;
 	h4{
 		min-width:180px;
@@ -446,6 +504,12 @@ background-attachment:fixed;
 			text-align: left;
 		}
 		}
+	.lista{
+		overflow: hidden;
+		width:fit-content;
+		max-width: 400px;
+		margin: 0 auto;
+	}
 	.umiem{
 		display: block;
 				@mixin tablet{
