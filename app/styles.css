@@ -558,8 +558,8 @@ background-attachment:fixed;
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 .logo{
-		width:100px;
-		height:100px;
+		width:200px;
+		height:200px;
 		margin: 0 auto;
 		margin-bottom: 20px;
 		background-image: url('assets/images/logo_color.png');
@@ -573,10 +573,6 @@ background-attachment:fixed;
 .logo:hover {
 			-webkit-filter: brightness(200%); 
 		}
-
-.hidden{
-	display: none;
-}
 
 .podzial{
 	background-color: black;
@@ -645,7 +641,7 @@ background-attachment:fixed;
 @media (min-width: 1000px) {
 
 .header .motto .imie{
-				font-size: 3rem
+				font-size: 5rem
 		}
   }
 
@@ -700,12 +696,23 @@ background-attachment:fixed;
 
 		-webkit-transition-duration: 0.4s;
     	transition-duration: 0.4s;
+
+
 	}
 
 .header .menu_open_button:hover {
-		    background-color: #e86400;
 		    color: white;
+		    cursor:pointer;
 		}
+
+@media (min-width: 1000px) {
+
+.header .menu_open_button{
+			display: none
+
+
+	}
+  }
 
 .header .bgvid {
  position: absolute;
@@ -723,11 +730,31 @@ background-attachment:fixed;
 .menu{
 	display: none;
 	background-color: rgba(0,0,0,0.2);
+	text-align: center;
 }
+
+.menu form{
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		margin:0 auto;
+	}
+
+.menu form input{
+			display: block;
+		}
+
+.menu form button{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+.menu form label{
+			color:white;
+		}
 
 .menu .button{
 		display: block;
-		width:150px;
 		margin:0 auto;
 		padding-bottom: 5px;
 		padding-top: 5px;
@@ -742,6 +769,42 @@ background-attachment:fixed;
 .menu .button:hover{
 			background-color:#e86400;
 		}
+
+@media (min-width: 1000px) {
+
+.menu .button{
+			display: inline-block;
+			margin-left: 3%
+	}
+  }
+
+@media (min-width: 1000px) {
+
+.menu{
+			display: block;
+			margin-top: 200px
+}
+
+			.menu form{
+				display: inline-block;
+				float:right;
+				margin-right: 30px;
+			}
+
+				.menu form input{
+					display: inline-block;
+					background-color: #2a2c2f;
+					border-width: 1px;
+				}
+				.menu form button{
+					margin-left: 0;
+					margin-top: 0px;
+					margin-bottom: 0px;
+					background-color: #2a2c2f;
+					border-width: 1px;
+					color:white;
+				}
+  }
 
 .omnie{
 	background-color: transparent;
@@ -1020,16 +1083,15 @@ background-attachment:fixed;
 			border: 1px solid black;
 			-webkit-box-shadow: 0px 0 5px 0px #000000;
 			        box-shadow: 0px 0 5px 0px #000000;
+			max-width: 100%;
+			max-height: 400px;
 		}
 
 @media (min-width: 1000px) {
 
 .aktualnosci .wrapper img{
-				display: inline;
-				max-width: 30%;
-				float: left;
-				margin: 10px;
-				margin-top: 0px
+
+				margin: 10 auto
 		}
   }
 
@@ -1053,7 +1115,6 @@ background-attachment:fixed;
   }
 
 .portfolio{
-	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: transparent;
 	clear: both;
@@ -1062,13 +1123,13 @@ background-attachment:fixed;
 .portfolio .naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 80px;
-		padding-top: 80px;
 		color:#2a2c2f;
 		font-family: regular;
 		letter-spacing: 10px;
 		font-size: 0.6rem;
 		text-align: center;
+		margin-bottom: 40px;
+		margin-top: 20px;
 
 	}
 
@@ -1492,7 +1553,6 @@ background-attachment:fixed;
 	padding-bottom: 50px;
 			clear: both;
 			background-color: #2a2c2f;
-			background-image: url('assets/images/grid.png');
 			background-size: 12px;
 			-webkit-box-shadow: 0px -3px 10px 0px #000000;
 			        box-shadow: 0px -3px 10px 0px #000000;
@@ -1611,3 +1671,6 @@ background-attachment:fixed;
 
 }
 
+.hidden{
+	display: none;
+}

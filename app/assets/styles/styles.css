@@ -103,8 +103,8 @@ background-attachment:fixed;
 
 
 	.logo{
-		width:100px;
-		height:100px;
+		width:200px;
+		height:200px;
 		margin: 0 auto;
 		margin-bottom: 20px;
 		background-image: url('assets/images/logo_color.png');
@@ -118,9 +118,7 @@ background-attachment:fixed;
 		}
 	}
 
-.hidden{
-	display: none;
-}
+
 
 .podzial{
 	background-color: black;
@@ -173,7 +171,7 @@ background-attachment:fixed;
 			font-size: 2rem;
 			margin-left: 10px;
 			@mixin pc{
-				font-size: 3rem;
+				font-size: 5rem;
 			}
 		}
 		.slogan{
@@ -226,9 +224,15 @@ background-attachment:fixed;
     	transition-duration: 0.4s;
 
     	&:hover {
-		    background-color: $mainOrange;
 		    color: white;
+		    cursor:pointer;
 		}
+
+		@mixin pc{
+			display: none;
+		}
+
+
 	}
 .bgvid {
  position: absolute;
@@ -245,10 +249,25 @@ background-attachment:fixed;
 .menu{
 	display: none;
 	background-color: rgba(0,0,0,0.2);
+	text-align: center;
+	form{
+		width: fit-content;
+		margin:0 auto;
+
+		input{
+			display: block;
+		}
+		button{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		label{
+			color:white;
+		}
+	}
 
 	.button{
 		display: block;
-		width:150px;
 		margin:0 auto;
 		padding-bottom: 5px;
 		padding-top: 5px;
@@ -262,7 +281,35 @@ background-attachment:fixed;
 		&:hover{
 			background-color:$mainOrange;
 		}
+		@mixin pc{
+			display: inline-block;
+			margin-left: 3%;
+		}
 	}
+		@mixin pc{
+			display: block;
+			margin-top: 200px;
+
+			form{
+				display: inline-block;
+				float:right;
+				margin-right: 30px;
+
+				input{
+					display: inline-block;
+					background-color: $mainBlack;
+					border-width: 1px;
+				}
+				button{
+					margin-left: 0;
+					margin-top: 0px;
+					margin-bottom: 0px;
+					background-color: $mainBlack;
+					border-width: 1px;
+					color:white;
+				}
+			}
+		}
 }
 .omnie{
 	background-color: transparent;
@@ -462,12 +509,11 @@ background-attachment:fixed;
 			margin-bottom: 20px;
 			border: 1px solid black;
 			box-shadow: 0px 0 5px 0px #000000;
+			max-width: 100%;
+			max-height: 400px;
 			@mixin pc{
-				display: inline;
-				max-width: 30%;
-				float: left;
-				margin: 10px;
-				margin-top: 0px;
+
+				margin: 10 auto;
 			}
 		}
 
@@ -494,7 +540,6 @@ background-attachment:fixed;
 
 
 .portfolio{
-	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: transparent;
 	clear: both;
@@ -503,13 +548,13 @@ background-attachment:fixed;
 	.naglowek{
 		min-width:180px;
 		margin: 0 auto;
-		padding-bottom: 80px;
-		padding-top: 80px;
 		color:$mainBlack;
 		font-family: regular;
 		letter-spacing: 10px;
 		font-size: 0.6rem;
 		text-align: center;
+		margin-bottom: 40px;
+		margin-top: 20px;
 		@mixin phone{
 			font-size: 1.7rem;
 		}
@@ -834,7 +879,6 @@ background-attachment:fixed;
 	padding-bottom: 50px;
 			clear: both;
 			background-color: $mainBlack;
-			background-image: url('assets/images/grid.png');
 			background-size: 12px;
 			box-shadow: 0px -3px 10px 0px #000000;
 	.motto{
@@ -926,3 +970,6 @@ background-attachment:fixed;
 
 }
 
+.hidden{
+	display: none;
+}
