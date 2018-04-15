@@ -963,6 +963,7 @@ background-attachment:fixed;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
+	max-width: 400px;
 	margin: 0 auto;
 	overflow: hidden;
 
@@ -1149,7 +1150,7 @@ background-attachment:fixed;
   }
 
 .portfolio .dziedzina{
-		background-color: transparent;
+		background-color: rgba(0,0,0,0.05);
 		padding-bottom: 10px;
 	}
 
@@ -1251,15 +1252,21 @@ background-attachment:fixed;
   }
 
 .portfolio .dziedzina .kafelki .kafelek {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack:center;
+				    -ms-flex-pack:center;
+				        justify-content:center;
 				position: relative;
 				margin: 0 auto;
 				margin-top:10px;
 				margin-bottom:10px;
-				background-size: cover;
 				width: 180px;
    				height: 180px;
    				padding: 0px;
    				border:solid black 1px;
+   				overflow: hidden;
    				-webkit-box-shadow: 0px 0 10px 0px #000000;
    				        box-shadow: 0px 0 10px 0px #000000;
 								-webkit-transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
@@ -1277,8 +1284,29 @@ background-attachment:fixed;
 								}
 
 .portfolio .dziedzina .kafelki .kafelek:hover h3{
+								    	position: absolute;
 								    	display: block;
+								    	top:0px;
 								    }
+
+.portfolio .dziedzina .kafelki .kafelek picture{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack:center;
+				    -ms-flex-pack:center;
+				        justify-content:center;
+				}
+
+.portfolio .dziedzina .kafelki .kafelek img{
+					display: block;
+					position: absolute;
+					top:0;
+					left: 50%;
+					height:100%;
+					-webkit-transform:translateX(-50%);
+					        transform:translateX(-50%);
+				}
 
 .portfolio .dziedzina .kafelki .kafelek h3{
    					display: none;

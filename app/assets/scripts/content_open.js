@@ -21,7 +21,7 @@ $( document ).ready(function() {
 
 
 //Kazdemu kafelkowi daj jako background imgae obrazek okreslony w name
-
+/*
 $('.kafelek').each(function(){
 
 
@@ -34,7 +34,7 @@ $(this).css({'background-image': 'url(assets/images/'+nazwa_kafelka+'.jpg'});
 			
 });
 
-
+*/
 
 
 

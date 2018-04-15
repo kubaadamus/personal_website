@@ -428,6 +428,7 @@ background-attachment:fixed;
 }
 .umiejetnosci{
 	width: fit-content;
+	max-width: 400px;
 	margin: 0 auto;
 	overflow: hidden;
 	h4{
@@ -568,7 +569,7 @@ background-attachment:fixed;
 
 	}
 	.dziedzina{
-		background-color: transparent;
+		background-color: rgba(0,0,0,0.05);
 		padding-bottom: 10px;
 		.nazwa_dziedziny{
 			background-color: transparent;
@@ -639,15 +640,17 @@ background-attachment:fixed;
 			}
 
 			.kafelek {
+				display: flex;
+				justify-content:center;
 				position: relative;
 				margin: 0 auto;
 				margin-top:10px;
 				margin-bottom:10px;
-				background-size: cover;
 				width: 180px;
    				height: 180px;
    				padding: 0px;
    				border:solid black 1px;
+   				overflow: hidden;
    				box-shadow: 0px 0 10px 0px #000000;
 								transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								-webkit-transition-duration: 1.0s;
@@ -658,11 +661,25 @@ background-attachment:fixed;
 								    transform: scale(1.1, 1.1);
 
 								    h3{
+								    	position: absolute;
 								    	display: block;
+								    	top:0px;
 								    }
 								    
 								}
+				picture{
+				display: flex;
+				justify-content:center;
+				}
 
+				img{
+					display: block;
+					position: absolute;
+					top:0;
+					left: 50%;
+					height:100%;
+					transform:translateX(-50%);
+				}
 
    				h3{
    					display: none;
