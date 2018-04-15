@@ -731,6 +731,8 @@ background-attachment:fixed;
 	display: none;
 	background-color: rgba(0,0,0,0.2);
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .menu form{
@@ -1123,7 +1125,6 @@ background-attachment:fixed;
   }
 
 .portfolio{
-	padding-bottom: 20px;
 	background-color: transparent;
 	clear: both;
 }
@@ -1385,26 +1386,19 @@ background-attachment:fixed;
 .dane{
 		display: none;
 		padding-top:20px;
-		width: 90%;
 		margin: 0 auto;
 		padding-bottom: 30px;
+		-webkit-box-shadow: 0px -3px 10px 0px #000000;
+		        box-shadow: 0px -3px 10px 0px #000000;
+		background-color: rgba(0,0,0,0.3);
+		background-image: url('assets/images/grid.png');
 
 }
 
 @media (min-width: 1000px) {
-
-.dane{
-			width: 70%
-
-}
   }
 
 @media (min-width: 1700px)  {
-
-.dane{
-			width:50%
-
-}
   }
 
 .dane .nazwa{
@@ -1459,19 +1453,12 @@ background-attachment:fixed;
 @media (min-width: 1000px) {
 
 .dane .galeria{
-			margin: 0 auto;
-			float:left;
-			width: 50%
+			margin: 0 auto
 
 		}
   }
 
 @media (min-width: 1700px)  {
-
-.dane .galeria{
-				width: 50%
-
-		}
   }
 
 .dane .galeria .main{
@@ -1487,12 +1474,22 @@ background-attachment:fixed;
 				width:95%;
 				margin: 0 auto;
 				background-color: darkgrey;
+   				border:solid black 1px;
+   				-webkit-box-shadow: 0px 0 10px 0px #000000;
+   				        box-shadow: 0px 0 10px 0px #000000;
 			}
 
 @media (min-width: 1000px) {
 
 .dane .galeria .main{
-					width:80%
+   					width: 80%
+			}
+  }
+
+@media (min-width: 1700px)  {
+
+.dane .galeria .main{
+					width:60%
 			}
   }
 
@@ -1562,13 +1559,22 @@ background-attachment:fixed;
 
 .dane .paragraf{
 		color:black;
-		text-indent: 40px;
 		padding-top:20px;
 		padding-bottom: 20px;
-		text-align: justify;
+		text-align: center;
 		line-height: 150%;
 		font-family: regular;
+		max-width: 90%;
+		margin: 0 auto;
 	}
+
+@media (min-width: 1000px) {
+
+.dane .paragraf{
+			max-width: 800px;
+			margin: 0 auto
+	}
+  }
 
 .dane .koniec{
 		width:-webkit-fit-content;

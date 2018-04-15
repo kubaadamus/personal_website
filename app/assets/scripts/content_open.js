@@ -13,12 +13,13 @@ var kafelki_wszystkie = document.getElementsByClassName('kafelek');
 
 
 
+
 $( document ).ready(function() {
    			$(kafelki_wszystkie).each(function(){
-				this.setAttribute('id',$(this).attr('name'));
+   				this.setAttribute('id',$(this).attr('name'));	
 			});
 
-
+});
 
 //Kazdemu kafelkowi daj jako background imgae obrazek okreslony w name
 /*
@@ -32,7 +33,7 @@ $(this).css({'background-image': 'url(assets/images/'+nazwa_kafelka+'.jpg'});
 });
 
 			
-});
+
 
 */
 
@@ -41,12 +42,15 @@ $(this).css({'background-image': 'url(assets/images/'+nazwa_kafelka+'.jpg'});
 
 window.addEventListener('click',function(e){
 	//Jesli uzytkownik kliknie na kafelek//
-	var cel = $(e.target);
+
+	var cel = $(e.target).parent().parent();
 	var target_class = cel.attr('class');
+
 
 	if(target_class == 'kafelek')
 	{
 	name_kafelka = "#"+cel.attr('name');
+
 
 		aktywny_obraz = 0;
 
@@ -67,12 +71,12 @@ window.addEventListener('click',function(e){
 	}
 
 
+
+
 	//Jesli kliknie przycisk wroc to przewin do poprzedniego kafelka
-	if(target_class == 'wroc')
+	if($(e.target).attr('class') == 'wroc')
 	{
 		$("html, body").animate({scrollTop: $(name_kafelka).offset().top -250}, 500);
-
-
 		$(dane).slideUp();
 	}
 
@@ -166,6 +170,7 @@ $(dane).slideDown(function(){
 
 
 window.addEventListener('click',function(e){
+
 
 	if($(e.target).attr('class') == 'main' || $(e.target).attr('class') == 'gallery_image' || $(e.target).attr('class') == 'next' || $(e.target).attr('class') == 'prev')
 	{

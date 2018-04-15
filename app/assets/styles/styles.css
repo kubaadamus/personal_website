@@ -250,6 +250,8 @@ background-attachment:fixed;
 	display: none;
 	background-color: rgba(0,0,0,0.2);
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	form{
 		width: fit-content;
 		margin:0 auto;
@@ -548,7 +550,6 @@ background-attachment:fixed;
 
 
 .portfolio{
-	padding-bottom: 20px;
 	background-color: transparent;
 	clear: both;
 
@@ -745,16 +746,15 @@ background-attachment:fixed;
 .dane{
 		display: none;
 		padding-top:20px;
-		width: 90%;
 		margin: 0 auto;
 		padding-bottom: 30px;
-
+		box-shadow: 0px -3px 10px 0px #000000;
+		background-color: rgba(0,0,0,0.3);
+		background-image: url('assets/images/grid.png');
 		@mixin pc{
-			width: 70%;
 		}
 
 		@mixin tv{
-			width:50%;
 		}
 
 		.nazwa{
@@ -799,14 +799,12 @@ background-attachment:fixed;
 			padding-bottom: 10px;
 
 
+
 			@mixin pc{
 			margin: 0 auto;
-			float:left;
-			width: 50%;
 			}
 
 			@mixin tv{
-				width: 50%;
 			}
 
 			.main{
@@ -816,9 +814,14 @@ background-attachment:fixed;
 				width:95%;
 				margin: 0 auto;
 				background-color: darkgrey;
+   				border:solid black 1px;
+   				box-shadow: 0px 0 10px 0px #000000;
 
-				@mixin pc{
-					width:80%;
+   				@mixin pc{
+   					width: 80%;
+   				}
+				@mixin tv{
+					width:60%;
 				}
 				.gallery_image{
 					display:none;
@@ -878,12 +881,18 @@ background-attachment:fixed;
 		}	
 	.paragraf{
 		color:black;
-		text-indent: 40px;
 		padding-top:20px;
 		padding-bottom: 20px;
-		text-align: justify;
+		text-align: center;
 		line-height: 150%;
 		font-family: regular;
+		max-width: 90%;
+		margin: 0 auto;
+
+		@mixin pc{
+			max-width: 800px;
+			margin: 0 auto;
+		}
 	}
 	.koniec{
 		width:fit-content;
