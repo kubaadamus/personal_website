@@ -1,60 +1,3 @@
-<?php
-        $login = $_POST['login'];
-        $pass = $_POST['password'];
-
-		$user = 'Kubaadamus1991';
-		$DBpassword = 'Kubaadamus1991';
-		$db = 'jakubadamus';
-		$host = 'mysql.cba.pl';
-		$port = 3360;
-
-		$zarejestrowany=false;
-
-		$database = mysqli_connect($host,$user,$DBpassword,$db) OR die('Niedaradyyy' . mysqli_connect_error());
-
-		// REJESTRACJA UŻYTKOWANIKA //
-			//$query = "INSERT INTO Tabela_1 VALUES('".$login."','".$pass."','null')";
-			//mysqli_query($database,$query);
-		// LOGOWANIE UŻYTKOWNIKA  //
-			$query_login = "SELECT imie, nazwisko FROM Tabela_1
-            WHERE imie = '$login' 
-            AND nazwisko = '$pass'";
-
-            $response = mysqli_query($database,$query_login);
-
-            if($response){
-            	while($row = mysqli_fetch_array($response)){
-            		$zarejestrowany = true;
-            		echo $row['imie'];
-            		echo $row['nazwisko'];
-            		echo $row['id'];
-            	}
-            }
-
-/*
-		echo $user;
-        echo $password;
-        echo $db;
-        echo $host;
-        echo $port;
-
-
-		echo $login;
-        echo $pass;
-
-
-        if ($database) {
-		  echo 'conected';
-		} else {
-		  echo 'not conected';
-		}
-		*/
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,24 +14,18 @@
 </video>
 	<div class="logo"></div>
 	<div class="motto">
-		<h1 class="imie">JAKUB ADAMUS</h1>
+		<h1 class="imie">REJESTRACJA</h1>
 		<h3 class="slogan">Full stack web developer / Grafik 3D / Programista</h3>
 	</div>
 </div>
 <!===================================== O M N I E ===========================================>
 <div class="omnie omnie--padding"  id="omnie">
 
-	<?php if($zarejestrowany) : ?>
-    	<div class="naglowek"><h1>WITAJ <?php echo $login?> !</h1></div>
-	<?php else : ?>
-	    <h1><a href="rejestracja.php">ZAREJESTRUJ SIĘ</a></h1>
-	<?php endif; ?>
-
-	<div class="naglowek"><h1>PLATFORMA E - LEARNIN<wbr>GOWA W BUDOWIE</h1></div>
-
-	<p class="tekst ">
-		W tym miejscu powstaje niewielka platforma e-learningowa na której ukażą się wkrótce moje materiały szkoleniowe
-	</p>
+		<form action="rejestracja_confirmed.php" method="post">
+			<label>E-learning login: </label><input type="text" name="login" />
+			<label>Hasło: </label><input type="text" name="password" />
+			<button type="submit">Zaloguj</button>
+		</form>
 </div>
 <!===============K O N I E C   O M N I E ====================>
 <!===================================== F O O T E R ===========================================>
@@ -114,6 +51,11 @@
 
 <!======================================== S K R Y P T Y ======================================>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<script type="text/javascript" src="assets/scripts/menu_open.js"></script>
+<script type="text/javascript" src="assets/scripts/content_open.js"></script>
+<script type="text/javascript" src="assets/scripts/scroll.js"></script>
+<script type="text/javascript" src="assets/scripts/show_more.js"></script>
+<script type="text/javascript" src="assets/scripts/header_bgvideo.js"></script>
+<script type="text/javascript" src="assets/scripts/slides.js"></script>
 </body>
 </html>
