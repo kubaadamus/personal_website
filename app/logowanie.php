@@ -8,16 +8,27 @@
 		$host = 'mysql.cba.pl';
 		$port = 3360;
 
-
-
-
 		$database = mysqli_connect($host,$user,$DBpassword,$db) OR die('Niedaradyyy' . mysqli_connect_error());
 
+		// REJESTRACJA UŻYTKOWANIKA //
+			//$query = "INSERT INTO Tabela_1 VALUES('".$login."','".$pass."','null')";
+			//mysqli_query($database,$query);
+		// LOGOWANIE UŻYTKOWNIKA  //
+			$query_login = "SELECT imie, nazwisko FROM Tabela_1
+            WHERE imie = '$login' 
+            AND nazwisko = '$pass'";
 
-		$query = "INSERT INTO Tabela_1 VALUES('".$login."','".$pass."','null')";
+            $response = mysqli_query($database,$query_login);
 
-		mysqli_query($database,$query);
+            if($response){
+            	while($row = mysqli_fetch_array($response)){
+            		echo $row['imie'];
+            		echo $row['nazwisko'];
+            		echo $row['id'];
+            	}
+            }
 
+/*
 		echo $user;
         echo $password;
         echo $db;
@@ -28,11 +39,13 @@
 		echo $login;
         echo $pass;
 
+
         if ($database) {
 		  echo 'conected';
 		} else {
 		  echo 'not conected';
 		}
+		*/
 
 ?>
 
