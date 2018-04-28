@@ -14,10 +14,10 @@ window.addEventListener('click',function(e){
 			//alert($(e.target).attr('value'));
 
 			if($(e.target).attr('value')==1)
-			$(e.target).html("Mniej");
+			$(e.target).html(".");
 
 			if($(e.target).attr('value')==-1)
-			$(e.target).html("Więcej");
+			$(e.target).html("...");
 
 		});
 

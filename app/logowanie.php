@@ -1,7 +1,42 @@
 <?php
         $login = $_POST['login'];
-        $password = $_POST['password'];
+        $pass = $_POST['password'];
+
+		$user = 'Kubaadamus1991';
+		$DBpassword = 'Kubaadamus1991';
+		$db = 'jakubadamus';
+		$host = 'mysql.cba.pl';
+		$port = 3360;
+
+
+
+
+		$database = mysqli_connect($host,$user,$DBpassword,$db) OR die('Niedaradyyy' . mysqli_connect_error());
+
+
+		$query = "INSERT INTO Tabela_1 VALUES('".$login."','".$pass."','null')";
+
+		mysqli_query($database,$query);
+
+		echo $user;
+        echo $password;
+        echo $db;
+        echo $host;
+        echo $port;
+
+
+		echo $login;
+        echo $pass;
+
+        if ($database) {
+		  echo 'conected';
+		} else {
+		  echo 'not conected';
+		}
+
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -21,7 +56,7 @@
 	<div class="logo"></div>
 	<div class="motto">
 		<h1 class="imie">JAKUB ADAMUS</h1>
-		<h3 class="slogan">Web developer / Grafik 3D</h3>
+		<h3 class="slogan">Full stack web developer / Grafik 3D / Programista</h3>
 	</div>
 </div>
 <!===================================== O M N I E ===========================================>

@@ -50,7 +50,9 @@ html{
 }
 body{
 	min-width: 200px;
+
 	background-image: url('assets/images/grid.png');
+
 	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5{
@@ -98,6 +100,15 @@ background-attachment:fixed;
 			/*Animacja zwiększania brightnessa po najechaniu myszą*/
 		-webkit-transition-duration: 2.4s;
     	transition-duration: 2.4s;
+
+    	&--fast{
+    		-webkit-transition-duration: 0.8s;
+    		transition-duration: 0.8s;
+    	}
+}
+
+.underline{
+	text-decoration: underline;
 }
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
@@ -107,8 +118,8 @@ background-attachment:fixed;
 		width:200px;
 		height:200px;
 		margin: 0 auto;
-		margin-bottom: 20px;
-		background-image: url('assets/images/logo_color.png');
+		margin-bottom: 40px;
+		background-image: url('assets/images/logo2.png');
 		background-size: cover;
 
 		/*Animacja zwiększania brightnessa po najechaniu myszą*/
@@ -138,7 +149,26 @@ background-attachment:fixed;
 
 /* ============================================ N O R M A L ============================================ */
 
+.wbudowie{
 
+
+	background-color: $mainRed;
+
+	text-align: center;
+	color: white;
+  	z-index: -1;
+  	opacity: 0.8;
+  	font-size: 1rem;
+
+  	@mixin pc{
+  	position: absolute;
+  	width: 1500px;
+  	padding: 20px 0px;
+  	transform: translate(-600px, 150px) rotate(-45deg);
+  	font-size: 1.5rem;
+  	}
+
+}
 
 
 .header
@@ -146,9 +176,15 @@ background-attachment:fixed;
 	box-shadow: 0px 3px 12px 0px #000000;
 	position: relative;
 	overflow: hidden;
-	padding-top:40px;
+	min-width: 101%;
+
+	@mixin phone{
+	padding-top: 0px;
+	}
+
 	@mixin pc{
 	background: none;
+	padding-bottom: 30px;
 	}
 
 
@@ -172,7 +208,7 @@ background-attachment:fixed;
 			font-size: 2rem;
 			margin-left: 10px;
 			@mixin pc{
-				font-size: 5rem;
+				font-size: 7rem;
 			}
 		}
 		.slogan{
@@ -189,7 +225,7 @@ background-attachment:fixed;
 	.wyswietlfilm{
 		display: block;
 		width:150px;
-		margin:0 auto;
+		margin:50px auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		background-color:$mainBlack;
@@ -204,13 +240,16 @@ background-attachment:fixed;
     	transition-duration: 0.4s;
 
     	&:hover {
-		    background-color: $mainOrange;
+		    background-color: $mainRed;
 		    color: white;
 		}
 
 	}
 	.menu_open_button{
 		display: block;
+		position: absolute;
+		top:30px;
+		right:40px;
 		width:40px;
 		height:40px;
 		margin:0 auto;
@@ -228,6 +267,7 @@ background-attachment:fixed;
 		    color: white;
 		    cursor:pointer;
 		}
+
 
 		@mixin pc{
 			display: none;
@@ -248,19 +288,22 @@ background-attachment:fixed;
 }
 }
 .menu{
-	display: none;
 	background-color: rgba(0,0,0,0.2);
-	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	font-size: 0.8rem;
 	form{
 		width: fit-content;
 		margin:0 auto;
+		text-align: center;
 
 		input{
 			display: block;
+			margin: 0 auto;
 		}
 		button{
+			width: 100px;
+			margin: 0 auto;
 			margin-top: 10px;
 			margin-bottom: 10px;
 			background-color: $mainBlack;
@@ -285,7 +328,7 @@ background-attachment:fixed;
 		font-family: regular;
 
 		&:hover{
-			background-color:$mainOrange;
+			background-color:$mainRed;
 		}
 		@mixin pc{
 			display: inline-block;
@@ -294,7 +337,7 @@ background-attachment:fixed;
 	}
 		@mixin pc{
 			display: block;
-			margin-top: 100px;
+			margin-bottom: 30px;
 
 			form{
 				display: inline-block;
@@ -315,10 +358,15 @@ background-attachment:fixed;
 				}
 			}
 		}
+
+		@mixin pc_large{
+			font-size: 1.0rem;
+		}
 }
 .intro{
 	position: relative;
 	overflow: hidden;
+
 }
 .omnie{
 	background-color: transparent;
@@ -389,7 +437,7 @@ background-attachment:fixed;
 		margin:0 auto;
 		width: 90%;
 		height:250px;
-
+		box-shadow: 0px 0 15px 0px #000000;
 		@mixin tablet{
 			width:60%;
 			height:36vw;
@@ -401,21 +449,33 @@ background-attachment:fixed;
 	}
 }
 
+.kawa, .laptop, .notes, .calculator{
+box-shadow: 0px 0 10px 3px #000000;
+width: 450px;
+background-color: black;
+border: 1px solid black;
+
+@mixin pc{
+	width: 300px;
+}
+
+@mixin tv_large{
+	width: 400px;
+}
+
+}
+
 .kawa{
 	position: absolute;
-	width:200px;
-	height: 200px;
-	z-index: -10;
-	right:-250px;
-
-	@mixin tablet{
-	right:-100px;
-	}
+	right:-650px;
+	transform: rotate(3deg);
 
 	@mixin pc{
 	right:-40px;
-	width:300px;
-	height: 300px;
+	}
+
+	@mixin pc_large{
+	right: 50px;
 	}
 
 	@mixin tv{
@@ -425,39 +485,35 @@ background-attachment:fixed;
 
 .laptop{
 	position: absolute;
-	width:600px;
-	height: 348px;
 	left:-600px;
-	z-index: -10;
-	transform: rotate(-20deg);
+	transform: rotate(-5deg);
 
-	@mixin tablet{
-		left:-450px;
-	}
 
 	@mixin pc{
-		left:-400px;
+		left:-30px;
+	}
+
+	@mixin pc_large{
+		left: 50px;
 	}
 
 	@mixin tv{
-		left:-200px;
+		left:120px;
 	}
 }
 
 .notes{
 	position: absolute;
-	width:344px;
-	height: 449px;
-	right:-400px;
-	bottom:100px;
-	z-index: -10;
-
-	@mixin tablet{
-		right:-280px;
-	}
+	right:-600px;
+	bottom:230px;
+	transform: rotate(-7deg);
 
 	@mixin pc{
-		right:-200px;
+		right:-100px;
+	}
+
+	@mixin pc_large{
+		right: -20px;
 	}
 
 	@mixin tv{
@@ -467,23 +523,20 @@ background-attachment:fixed;
 
 .calculator{
 	position: absolute;
-	width:245px;
-	height:475px;
 	left:-600px;
-	z-index: -10;
-	bottom: 100px;
-
-
-	@mixin tablet{
-		left:-200px;
-	}
+	bottom: 230px;
+	transform: rotate(3deg);
 
 	@mixin pc{
 		left:-100px;
 	}
 
+	@mixin pc_large{
+		left: -20px;
+	}
+
 	@mixin tv{
-		left:40px;
+		left:90px;
 	}
 }
 
@@ -783,16 +836,12 @@ background-attachment:fixed;
 
 		.pokaz_wszystkie{
 			display: block;
-			width:150px;
+			width:110px;
 			margin:0 auto;
-			padding-top:15px;
-			padding-bottom:15px;
-			margin-bottom: 12px;
-			margin-top: 12px;
 			background-color: white;
 			color:black;
 			text-align: center;
-			font-size: 1.2rem;
+			font-size: 4rem;
 			box-shadow: 0px 0 10px 0px #9e9e9e9c;
 
 											transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
@@ -824,11 +873,11 @@ background-attachment:fixed;
 		.nazwa{
 			min-width:150px;
 			margin:0 auto;
-			margin-top: 30px;
+			margin-top: 5px;
 			text-align: center;
 			font-family: regular;
 			color:black;
-			font-size: 2rem;
+			font-size: 1.2rem;
 
 		}
 		.wroc
@@ -836,9 +885,6 @@ background-attachment:fixed;
 			display: block;
 			width:150px;
 			margin:0 auto;
-			padding-top:15px;
-			padding-bottom:15px;
-			margin-top: 30px;
 			background-color: white;
 			color:black;
 			text-align: center;
@@ -859,7 +905,6 @@ background-attachment:fixed;
 		.galeria{
 			margin-top:20px;
 			margin-bottom:20px;
-			padding-top:10px;
 			padding-bottom: 10px;
 
 
@@ -879,13 +924,13 @@ background-attachment:fixed;
 				margin: 0 auto;
 				background-color: darkgrey;
    				border:solid black 1px;
-   				box-shadow: 0px 0 10px 0px #000000;
+   				box-shadow: 0px 0 15px 0px #000000;
 
    				@mixin pc{
-   					width: 80%;
+   					width: 50%;
    				}
 				@mixin tv{
-					width:60%;
+					width:40%;
 				}
 				.gallery_image{
 					display:none;
@@ -960,6 +1005,7 @@ background-attachment:fixed;
 	}
 	.koniec{
 		width:fit-content;
+		max-width: 50px;
 		margin:0 auto;
 		font-size: 2rem;
 		color:black;
@@ -1069,4 +1115,20 @@ background-attachment:fixed;
 
 .hidden{
 	display: none;
+}
+
+.cube{
+transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
+								-webkit-transition-duration: 0.3s;
+						    	transition-duration: 0.3s;
+
+	position: absolute;
+	top:100px;
+	left: 100px;
+	width:200px;
+	height: 200px;
+	z-index: 10;
+	font-size: 3rem;
+	background-color: red;
+	border:1px solid black;
 }

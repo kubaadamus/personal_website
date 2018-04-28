@@ -10,14 +10,29 @@
   }
 }
 
+
+
 @define-mixin pc {
   @media (min-width: 1000px) {
     @mixin-content;
   }
 }
 
+
+@define-mixin pc_large {
+  @media (min-width: 1280px) {
+    @mixin-content;
+  }
+}
+
 @define-mixin tv {
   @media (min-width: 1700px)  {
+    @mixin-content;
+  }
+}
+
+@define-mixin tv_large {
+  @media (min-width: 2200px)  {
     @mixin-content;
   }
 }

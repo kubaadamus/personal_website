@@ -7,46 +7,54 @@
 	<title></title>
 </head>
 <body>
+<div class="cube hidden" id="cube"></div>
 <!===================================== H E A D E R ===========================================>
 <div class="header">
+	<!==================== STRONA W BUDOWIE =======================>
+	<div class="wbudowie">
+	STRONA W BUDOWIE
+	</div>
+	<!===================================== M E N U ===========================================>
+	<div class="menu" id="menu">
+		<a href="#omnie" class="hidden">
+			<button class="button transition--fast">O mnie</button>
+		</a>
+		<a href="#aktualnosci">
+			<button class="button transition--fast">Na czasie</button>
+		</a>
+		<a href="#portfolio">
+			<button class="button transition--fast">Portfolio</button>
+		</a>
+		<a href="#stopka">
+			<button class="button transition--fast">Kontakt</button>
+		</a>
+
+		<form action="logowanie.php" method="post">
+			<label>E-learning login: </label><input type="text" name="login" />
+			<label>Hasło: </label><input type="text" name="password" />
+			<button type="submit">Zaloguj</button>
+		</form>
+
+	</div>
 <video autoplay muted loop class="bgvid" id="bgvid" poster="assets/images/black.jpg">
 
 </video>
 	<div class="logo"></div>
 	<div class="motto">
 		<h1 class="imie">JAKUB ADAMUS</h1>
-		<h3 class="slogan">Web developer / Grafik 3D / Programista</h3>
+		<h3 class="slogan">Full stack web developer / Grafik 3D / Programista</h3>
 	</div>
-	<a href="#film">
+	<a href="#film" class="hidden">
 		<button class="wyswietlfilm" id="wyswietlfilm">WYŚWIETL FILM</button>
 	</a>
 	<button class="menu_open_button" id="menu_open_button"></button>
 
-	<!===================================== M E N U ===========================================>
-<div class="menu" id="menu">
-	<a href="#omnie">
-		<button class="button">O mnie</button>
-	</a>
-	<a href="#portfolio">
-		<button class="button">Portfolio</button>
-	</a>
-	<a href="#stopka">
-		<button class="button">Kontakt</button>
-	</a>
 
-	<form action="logowanie.php" method="post">
-	<label>E-Learning</label>
-		<label>Login:</label><input type="text" name="login" />
-		<label>Hasło:</label><input type="text" name="password" />
-		<button type="submit">Zaloguj</button>
-	</form>
-
-</div>
 </div>
 	
 <!===================================== O M N I E ===========================================>
-<div class="intro">
-<div class="omnie"  id="omnie">
+<div class="intro ">
+<div class="omnie hidden"  id="omnie">
 	<div class="naglowek"><h1>O MNIE</h1></div>
 	<p class="tekst ">
 		Odkąd sięgam pamięcią, śrubokręt i taśma klejąca były moimi ulubionymi zabawkami. Już jako szkrab spędzałem długie godziny na rozkręcaniu przekaźników elektrycznych, które dziadek (elektryk automatyk) nieopatrznie zostawiał w zasięgu mojego wzroku. Fascynacja urządzeniami elektrycznymi z biegiem lat rozwijała się prowadząc mnie od prostej elektroniki analogowej poprzez pojedyncze elementy cyfrowe aż do programowania mikrokontrolerów i tworzenia współpracujących z nimi aplikacji. 
@@ -73,10 +81,10 @@
 <!=============K O N I E C   V I D E O ==================>
 <! ========================================== U M I E J E T N O S C I ===================================>
 
-<img src="assets/images/kawa.png" class="kawa transition" />
-<img src="assets/images/laptop.png" class="laptop transition" />
-<img src="assets/images/notes.png" class="notes transition" />
-<img src="assets/images/calculator.png" class="calculator transition" />
+<img src="assets/images/wenecja.jpg" class="kawa transition" />
+<img src="assets/images/M_offensywa.jpg" class="laptop transition" />
+<img src="assets/images/gary2.jpg" class="notes transition" />
+<img src="assets/images/gita.png" class="calculator transition" />
 
 <div class="umiejetnosci">
 
@@ -94,6 +102,7 @@
 		<li> Git</li>
 		<li> Gulp</li>
 		<li> NPM</li>
+		<li> PostCSS</li>
 		<li> PHP</li>
 		<li> C++</li>
 		<li> C#</li>
@@ -108,9 +117,12 @@
 <h4>UCZĘ SIĘ</h4>
 	<ul>
 		<li> NodeJs</li>
-		<li> MySql</li>
+		<li> TypeScript</li>
+		<li> Angular4</li>
+		<li> React</li>
+		<li> MySQL</li>
 		<li> Babel</li>
-		<li> AngularJs</li>
+		<li> Webpack</li>
 	</ul>
 </div>
 </div>
@@ -190,38 +202,7 @@
 								</button>
 		</div>
 
-		<div class="kafelki">
-				<button class="kafelek" name="G3D_akustyk">
-									<picture>
-									<img src='assets/images/G3D_akustyk.jpg'/>
-									</picture>
-					<h3>Gitara akustyczna</h3>
-				</button>
-
-						<button class="kafelek" name="G3D_smartfon">
-									<picture>
-									<img src='assets/images/G3D_smartfon.jpg'/>
-									</picture>
-							<h3>Smartfon</h3>
-						</button>
-
-							<button class="kafelek" name="G3D_elektryk">
-									<picture>
-									<img src='assets/images/G3D_elektryk.jpg'/>
-									</picture>
-								<h3>Gitara eletryczna</h3>
-							</button>
-
-
-								<button class="kafelek" name="G3D_pierscionki">
-									<picture>
-									<img src='assets/images/G3D_pierscionki.jpg'/>
-									</picture>
-									<h3>Pierścionki</h3>
-								</button>
-		</div>
-
-		<button class="pokaz_wszystkie" value="-1">Więcej</button>
+		<button class="pokaz_wszystkie" value="-1">...</button>
 
 
 		<!=============== Wiecej ====================>
@@ -276,7 +257,7 @@
 							<h3>Pistolet</h3>
 						</button>					
 		</div>
-		<button class="pokaz_wszystkie" value="-1">Więcej</button>
+		<button class="pokaz_wszystkie" value="-1">...</button>
 
 
 		<!=============== Wiecej ====================>
@@ -328,7 +309,7 @@
 			
 		</div>
 
-		<button class="pokaz_wszystkie" value="-1">Więcej</button>
+		<button class="pokaz_wszystkie" value="-1">...</button>
 
 
 		<!=============== Wiecej ====================>
@@ -392,7 +373,7 @@
 			
 		</div>
 
-		<button class="pokaz_wszystkie" value="-1">Więcej</button>
+		<button class="pokaz_wszystkie" value="-1">...</button>
 
 
 		<!=============== Wiecej ====================>
@@ -448,7 +429,7 @@
 			
 		</div>
 
-		<button class="pokaz_wszystkie" value="-1">Więcej</button>
+		<button class="pokaz_wszystkie" value="-1">...</button>
 
 
 		<!=============== Wiecej ====================>
@@ -507,6 +488,8 @@
 
 
 
+
+
 <!======================================== S K R Y P T Y ======================================>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/scripts/menu_open.js"></script>
@@ -515,5 +498,7 @@
 <script type="text/javascript" src="assets/scripts/show_more.js"></script>
 <script type="text/javascript" src="assets/scripts/header_bgvideo.js"></script>
 <script type="text/javascript" src="assets/scripts/slides.js"></script>
+<script type="text/javascript" src="assets/scripts/animation.js"></script>
+<script type="text/javascript" src="assets/scripts/MojSlider.js"></script>
 </body>
 </html>

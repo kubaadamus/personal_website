@@ -13,10 +13,12 @@ $( window ).resize(function() {
 	{
 	$(menu).slideDown();	
 	}
-  
+	else{
+	$(menu).slideUp();	
+	}
+
 
 });
-
 
 
 
