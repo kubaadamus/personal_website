@@ -567,6 +567,10 @@ background-attachment:fixed;
 	text-decoration: underline;
 }
 
+.hidden{
+	display: none;
+}
+
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 .logo{
@@ -869,6 +873,98 @@ background-attachment:fixed;
 			font-size: 1.0rem
 }
   }
+
+.skille{
+	width: 100%;
+}
+
+.skille h1{
+		text-align:center;
+		padding:20px;
+	}
+
+.skille .row{
+		height:150px;
+		width:70%;
+		margin:0 auto;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-pack:center;
+		    -ms-flex-pack:center;
+		        justify-content:center;
+		-webkit-box-align:center;
+		    -ms-flex-align:center;
+		        align-items:center;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+
+.skille .icon{
+		width:20px;
+		height:20px;
+		margin:5px;
+	}
+
+.skille .icon--margin{
+			margin:5px;
+		}
+
+@media (min-width: 400px) {
+
+.skille .icon{
+			width:50px;
+			height:50px;
+			margin:10px
+	}
+			.skille .icon--margin{
+				margin:10px;
+			}
+  }
+
+@media (min-width: 600px) {
+
+.skille .icon{
+			width:60px;
+			height:60px;
+			margin:10px
+	}
+			.skille .icon--margin{
+				margin:15px;
+			}
+  }
+
+@media (min-width: 1000px) {
+
+.skille .icon{
+			width:100px;
+			height:100px;
+			margin:10px
+	}
+			.skille .icon--margin{
+				margin:15px;
+			}
+  }
+
+@media (min-width: 1700px)  {
+
+.skille .icon{
+			width:100px;
+			height:100px;
+			margin:40px
+	}
+			.skille .icon--margin{
+				margin:70px;
+			}
+  }
+
+.skille .icon img{
+			height:100%;
+			margin:0 auto;
+			display:block;
+		}
 
 .intro{
 	position: relative;
@@ -1386,8 +1482,10 @@ border: 1px solid black;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:column;
 			        flex-direction:column;
+			
 
 								-webkit-transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
+			
 
 								        transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								-webkit-transition-duration: 1.0s;
@@ -1509,16 +1607,16 @@ border: 1px solid black;
 @media (min-width: 1000px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-				width: 230px;
-   				height: 230px
+				width: 430px;
+   				height: 430px
 			}
   }
 
 @media (min-width: 1700px)  {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   				   	width:270px;
-   					height:270px
+   				   	width:570px;
+   					height:570px
 			}
   }
 
@@ -1875,10 +1973,6 @@ border: 1px solid black;
 	background-image: url('assets/images/zakladka.png');
 	background-size: cover;
 
-}
-
-.hidden{
-	display: none;
 }
 
 .cube{

@@ -110,6 +110,9 @@ background-attachment:fixed;
 .underline{
 	text-decoration: underline;
 }
+.hidden{
+	display: none;
+}
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 
@@ -363,6 +366,78 @@ background-attachment:fixed;
 			font-size: 1.0rem;
 		}
 }
+.skille{
+	width: 100%;
+	h1{
+		text-align:center;
+		padding:20px;
+	}
+
+	.row{
+		height:150px;
+		width:70%;
+		margin:0 auto;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction: row;
+	}
+	.icon{
+		width:20px;
+		height:20px;
+		margin:5px;
+		&--margin{
+			margin:5px;
+		}
+
+
+		@mixin phone{
+			width:50px;
+			height:50px;
+			margin:10px;
+			&--margin{
+				margin:10px;
+			}
+		}
+
+		@mixin tablet{
+			width:60px;
+			height:60px;
+			margin:10px;
+			&--margin{
+				margin:15px;
+			}
+		}
+
+		@mixin pc{
+			width:100px;
+			height:100px;
+			margin:10px;
+			&--margin{
+				margin:15px;
+			}
+		}
+
+		@mixin tv{
+			width:100px;
+			height:100px;
+			margin:40px;
+			&--margin{
+				margin:70px;
+			}
+		}
+
+		img{
+			height:100%;
+			margin:0 auto;
+			display:block;
+		}
+	}
+}
+
+
+
+
 .intro{
 	position: relative;
 	overflow: hidden;
@@ -736,6 +811,7 @@ border: 1px solid black;
 			background-color: transparent;
 			display: flex;
 			flex-direction:column;
+			
 
 								transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								-webkit-transition-duration: 1.0s;
@@ -819,12 +895,12 @@ border: 1px solid black;
    					height: 140px;
    				}
    				@mixin pc{
-				width: 230px;
-   				height: 230px;
+				width: 430px;
+   				height: 430px;
    				}   				
    				@mixin tv{
-   				   	width:270px;
-   					height:270px;	
+   				   	width:570px;
+   					height:570px;	
    				}
 			}
 
@@ -1113,9 +1189,7 @@ border: 1px solid black;
 
 }
 
-.hidden{
-	display: none;
-}
+
 
 .cube{
 transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
