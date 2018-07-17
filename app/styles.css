@@ -694,7 +694,7 @@ background-attachment:fixed;
 @media (min-width: 1000px) {
 
 .header .motto .imie{
-				font-size: 4rem
+				font-size: 3rem
 		}
   }
 
@@ -702,12 +702,27 @@ background-attachment:fixed;
 			color:white;
 			font-family: kaligrafia;
 			font-size: 1rem;
+			margin-bottom:40px;
 		}
+
+@media (min-width: 400px) {
+
+.header .motto .slogan{
+				font-size: 1.2rem
+		}
+  }
+
+@media (min-width: 600px) {
+
+.header .motto .slogan{
+				font-size: 1.8rem
+		}
+  }
 
 @media (min-width: 1000px) {
 
 .header .motto .slogan{
-				font-size: 2rem
+				font-size: 3rem
 		}
   }
 
@@ -1453,13 +1468,26 @@ border: 1px solid black;
 	text-align: center;
 	   -webkit-box-shadow: 0px 0 10px 0px #000000;
 	           box-shadow: 0px 0 10px 0px #000000;
-	font-size: 1.2rem;
-	letter-spacing: 10px;
+	font-size: 0.6rem;
 }
+
+.nazwa_dziedziny--round_bottom{
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+	}
+
+.nazwa_dziedziny--round_top{
+		border-top-left-radius:50%;
+		border-top-right-radius:50%;
+	}
 
 .nazwa_dziedziny--black{
 		background-color: #1f2123;
 		
+	}
+
+.nazwa_dziedziny--wide{
+		width:100%;
 	}
 
 .portfolio{
@@ -1468,15 +1496,15 @@ border: 1px solid black;
 }
 
 .portfolio hr{
-		width:300px;
-		position: absolute;
+		width:200px;
+		max-width:40%;
+		position: relative;
 		left:50%;
 		-webkit-transform:translateX(-50%);
 		        transform:translateX(-50%);
 	}
 
 .portfolio .dziedzina{
-		background-color: rgba(0,0,0,0.05);
 		padding-bottom: 10px;
 	}
 
@@ -1491,11 +1519,7 @@ border: 1px solid black;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:column;
 			        flex-direction:column;
-			
-
 								-webkit-transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
-			
-
 								        transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								-webkit-transition-duration: 1.0s;
 						    	transition-duration: 1.0s;
@@ -1858,6 +1882,138 @@ border: 1px solid black;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
+
+.zycie{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	color:black;
+	font-family: regular;
+	padding-bottom: 50px;
+}
+
+@media (min-width: 1000px) {
+
+.zycie{
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row
+}
+  }
+
+.zycie .cv{
+		width:70%;
+		margin:0 auto;
+	}
+
+@media (min-width: 1000px) {
+
+.zycie .cv{
+			width:50%;
+			padding-left:40px
+	}
+  }
+
+@media (min-width: 600px) {
+
+.zycie .cv .opis{
+				text-align: justify
+		}
+  }
+
+.zycie .cv .opis img{
+				position: relative;
+				display:block;
+				margin:0 auto;
+				padding:20px;
+				width:100px;
+				border-radius: 50%;
+				
+			}
+
+.zycie .galeria{
+		width:-webkit-fit-content;
+		width:-moz-fit-content;
+		width:fit-content;
+		margin:0 auto;
+
+	}
+
+@media (min-width: 1000px) {
+
+.zycie .galeria{
+			width:50%
+
+	}
+  }
+
+.zycie .galeria .row{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: relative;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+
+@media (min-width: 400px) {
+
+.zycie .galeria .row{
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row
+		}
+  }
+
+@media (min-width: 1000px) {
+
+.zycie .galeria .row{
+				-webkit-transform:translateY(25%);
+				        transform:translateY(25%)
+		}
+  }
+
+.zycie .galeria .row .miniatura{
+				margin:10px;
+				width:90px;
+				height:90px;
+				overflow: hidden;
+			}
+
+@media (min-width: 400px) {
+
+.zycie .galeria .row .miniatura{
+					width:80px;
+					height:80px
+			}
+  }
+
+@media (min-width: 1000px) {
+
+.zycie .galeria .row .miniatura{
+					width:100px;
+					height:100px
+			}
+  }
+
+.zycie .galeria .row .miniatura img{
+					width:100%;
+
+				}
 
 .stopka{
 	padding-top: 30px;
