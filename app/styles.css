@@ -494,8 +494,8 @@ html{
 
 body{
 	min-width: 200px;
+	background-color: rgb(255, 255, 255);
 
-	background-image: url('assets/images/grid.png');
 
 	overflow-x: hidden;
 }
@@ -578,6 +578,7 @@ background-attachment:fixed;
 		height:200px;
 		margin: 0 auto;
 		margin-bottom: 40px;
+		margin-top: 100px;
 		background-image: url('assets/images/logo2.png');
 		background-size: cover;
 
@@ -640,7 +641,7 @@ background-attachment:fixed;
 	        box-shadow: 0px 3px 12px 0px #000000;
 	position: relative;
 	overflow: hidden;
-	min-width: 101%;
+	min-width: 100%;
 }
 
 @media (min-width: 400px) {
@@ -656,7 +657,7 @@ background-attachment:fixed;
 .header
 {
 	background: none;
-	padding-bottom: 30px
+	padding-bottom: 120px
 }
   }
 
@@ -682,17 +683,18 @@ background-attachment:fixed;
   }
 
 .header .motto .imie{
-			color:white;
-			font-family: Mocna;
+			color: rgb(255, 255, 255);
+			font-family: regular;
 			letter-spacing: 10px;
-			font-size: 2rem;
+			font-size: 1.4rem;
 			margin-left: 10px;
+			margin-bottom:50px;
 		}
 
 @media (min-width: 1000px) {
 
 .header .motto .imie{
-				font-size: 7rem
+				font-size: 4rem
 		}
   }
 
@@ -715,7 +717,7 @@ background-attachment:fixed;
 		margin:50px auto;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		background-color:#2a2c2f;
+		background-color:#1f2123;
 		margin-bottom: 20px;
 		text-align: center;
 		color:white;
@@ -736,8 +738,8 @@ background-attachment:fixed;
 .header .menu_open_button{
 		display: block;
 		position: absolute;
-		top:30px;
-		right:40px;
+		top:15px;
+		right:20px;
 		width:40px;
 		height:40px;
 		margin:0 auto;
@@ -806,9 +808,10 @@ background-attachment:fixed;
 			margin: 0 auto;
 			margin-top: 10px;
 			margin-bottom: 10px;
-			background-color: #2a2c2f;
+			background-color: #1f2123;
 			border-width: 1px;
 			color:white;
+			font-family:regular;
 		}
 
 .menu form label{
@@ -861,7 +864,7 @@ background-attachment:fixed;
 					margin-left: 0;
 					margin-top: 0px;
 					margin-bottom: 0px;
-					background-color: #2a2c2f;
+					background-color: #1f2123;
 					border-width: 1px;
 					color:white;
 				}
@@ -874,18 +877,52 @@ background-attachment:fixed;
 }
   }
 
-.skille{
-	width: 100%;
+.naglowek{
+	min-width:180px;
+	margin: 0 auto;
+	color:#1f2123;
+	font-family: regular;
+	letter-spacing: 10px;
+	font-size: 0.6rem;
+	text-align: center;
+	margin-bottom: 40px;
+	padding-top:20px;
+
 }
+
+.skille{
+	
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+
+@media (min-width: 1000px) {
+
+.skille{
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row
+}
+  }
 
 .skille h1{
 		text-align:center;
 		padding:20px;
+		font-family: regular;
 	}
 
 .skille .row{
-		height:150px;
-		width:70%;
+		height:70px;
 		margin:0 auto;
 		display:-webkit-box;
 		display:-ms-flexbox;
@@ -902,10 +939,23 @@ background-attachment:fixed;
 		        flex-direction: row;
 	}
 
+@media (min-width: 600px) {
+
+.skille .row{
+			height:90px
+	}
+  }
+
+@media (min-width: 1000px) {
+
+.skille .row{
+			height:150px
+	}
+  }
+
 .skille .icon{
-		width:20px;
-		height:20px;
-		margin:5px;
+		width:33px;
+		height:33px;
 	}
 
 .skille .icon--margin{
@@ -927,6 +977,7 @@ background-attachment:fixed;
 @media (min-width: 600px) {
 
 .skille .icon{
+		
 			width:60px;
 			height:60px;
 			margin:10px
@@ -939,8 +990,8 @@ background-attachment:fixed;
 @media (min-width: 1000px) {
 
 .skille .icon{
-			width:100px;
-			height:100px;
+			width:70px;
+			height:70px;
 			margin:10px
 	}
 			.skille .icon--margin{
@@ -1392,84 +1443,42 @@ border: 1px solid black;
 		}
   }
 
+.nazwa_dziedziny{
+	background-color: transparent;
+	margin:0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	color:white;
+	font-family: regular;
+	text-align: center;
+	   -webkit-box-shadow: 0px 0 10px 0px #000000;
+	           box-shadow: 0px 0 10px 0px #000000;
+	font-size: 1.2rem;
+	letter-spacing: 10px;
+}
+
+.nazwa_dziedziny--black{
+		background-color: #1f2123;
+		
+	}
+
 .portfolio{
 	background-color: transparent;
 	clear: both;
 }
 
-.portfolio .naglowek{
-		min-width:180px;
-		margin: 0 auto;
-		color:#2a2c2f;
-		font-family: regular;
-		letter-spacing: 10px;
-		font-size: 0.6rem;
-		text-align: center;
-		margin-bottom: 40px;
-		margin-top: 20px;
-
+.portfolio hr{
+		width:300px;
+		position: absolute;
+		left:50%;
+		-webkit-transform:translateX(-50%);
+		        transform:translateX(-50%);
 	}
-
-@media (min-width: 400px) {
-
-.portfolio .naglowek{
-			font-size: 1.7rem
-
-	}
-  }
 
 .portfolio .dziedzina{
 		background-color: rgba(0,0,0,0.05);
 		padding-bottom: 10px;
 	}
-
-.portfolio .dziedzina .nazwa_dziedziny{
-			background-color: transparent;
-			margin:0 auto;
-			padding-bottom: 20px;
-			padding-top: 20px;
-			color:white;
-			font-family: regular;
-			text-align: center;
-   			-webkit-box-shadow: 0px 0 10px 0px #000000;
-   			        box-shadow: 0px 0 10px 0px #000000;
-			font-size: 0.8rem;
-		}
-
-.portfolio .dziedzina .nazwa_dziedziny--blue{
-				background-color: #00378d;
-
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--red{
-				background-color: #950000;
-				
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--orange{
-				background-color: #e86400;
-				
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--green{
-				background-color: #006e18;
-				
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--violet{
-				background-color: #5b0047;
-				
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--yellow{
-				background-color: #e9af00;
-				
-			}
-
-.portfolio .dziedzina .nazwa_dziedziny--black{
-				background-color: #2a2c2f;
-				
-			}
 
 .portfolio .dziedzina .kafelki{
 			padding-top:10px;
@@ -1547,8 +1556,8 @@ border: 1px solid black;
 			}
 
 .portfolio .dziedzina .kafelki .kafelek:hover {
-								    -webkit-box-shadow: 5px 5px 10px #2a2c2f;
-								            box-shadow: 5px 5px 10px #2a2c2f;
+								    -webkit-box-shadow: 5px 5px 10px #1f2123;
+								            box-shadow: 5px 5px 10px #1f2123;
 								    -webkit-transform: scale(1.1, 1.1);
 								            transform: scale(1.1, 1.1);
 								    
@@ -1599,24 +1608,24 @@ border: 1px solid black;
 @media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   					width: 140px;
-   					height: 140px
+   					width: 200px;
+   					height: 200px
 			}
   }
 
 @media (min-width: 1000px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-				width: 430px;
-   				height: 430px
+				width: 300px;
+   				height: 300px
 			}
   }
 
 @media (min-width: 1700px)  {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   				   	width:570px;
-   					height:570px
+   				   	width:450px;
+   					height:450px
 			}
   }
 
@@ -1626,12 +1635,12 @@ border: 1px solid black;
 
 .portfolio .dziedzina .pokaz_wszystkie{
 			display: block;
-			width:110px;
+			width:50px;
 			margin:0 auto;
 			background-color: white;
 			color:black;
 			text-align: center;
-			font-size: 4rem;
+			font-size: 2rem;
 			-webkit-box-shadow: 0px 0 10px 0px #9e9e9e9c;
 			        box-shadow: 0px 0 10px 0px #9e9e9e9c;
 
@@ -1656,8 +1665,6 @@ border: 1px solid black;
 		padding-bottom: 30px;
 		-webkit-box-shadow: 0px -3px 10px 0px #000000;
 		        box-shadow: 0px -3px 10px 0px #000000;
-		background-color: rgba(0,0,0,0.3);
-		background-image: url('assets/images/grid.png');
 
 }
 
@@ -1856,7 +1863,7 @@ border: 1px solid black;
 	padding-top: 30px;
 	padding-bottom: 50px;
 			clear: both;
-			background-color: #2a2c2f;
+			background-color: #1f2123;
 			background-size: 12px;
 			-webkit-box-shadow: 0px -3px 10px 0px #000000;
 			        box-shadow: 0px -3px 10px 0px #000000;

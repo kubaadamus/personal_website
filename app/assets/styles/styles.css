@@ -2,7 +2,7 @@
 @import "_mixins";
 
 /* ========================================== V A R I A B L E S ========================================== */
-$mainBlack: #2a2c2f;
+$mainBlack: #1f2123;
 $Cream: #FFF8E7;
 $Cream_2: #D9C9A4;
 $Cream_3: #B29E6C;
@@ -50,8 +50,8 @@ html{
 }
 body{
 	min-width: 200px;
+	background-color: rgb(255, 255, 255);
 
-	background-image: url('assets/images/grid.png');
 
 	overflow-x: hidden;
 }
@@ -122,6 +122,7 @@ background-attachment:fixed;
 		height:200px;
 		margin: 0 auto;
 		margin-bottom: 40px;
+		margin-top: 100px;
 		background-image: url('assets/images/logo2.png');
 		background-size: cover;
 
@@ -179,7 +180,7 @@ background-attachment:fixed;
 	box-shadow: 0px 3px 12px 0px #000000;
 	position: relative;
 	overflow: hidden;
-	min-width: 101%;
+	min-width: 100%;
 
 	@mixin phone{
 	padding-top: 0px;
@@ -187,7 +188,7 @@ background-attachment:fixed;
 
 	@mixin pc{
 	background: none;
-	padding-bottom: 30px;
+	padding-bottom: 120px;
 	}
 
 
@@ -205,13 +206,14 @@ background-attachment:fixed;
 			}
 		}
 		.imie{
-			color:white;
-			font-family: Mocna;
+			color: rgb(255, 255, 255);
+			font-family: regular;
 			letter-spacing: 10px;
-			font-size: 2rem;
+			font-size: 1.4rem;
 			margin-left: 10px;
+			margin-bottom:50px;
 			@mixin pc{
-				font-size: 7rem;
+				font-size: 4rem;
 			}
 		}
 		.slogan{
@@ -251,8 +253,8 @@ background-attachment:fixed;
 	.menu_open_button{
 		display: block;
 		position: absolute;
-		top:30px;
-		right:40px;
+		top:15px;
+		right:20px;
 		width:40px;
 		height:40px;
 		margin:0 auto;
@@ -312,6 +314,7 @@ background-attachment:fixed;
 			background-color: $mainBlack;
 			border-width: 1px;
 			color:white;
+			font-family:regular;
 		}
 		label{
 			color:white;
@@ -366,30 +369,54 @@ background-attachment:fixed;
 			font-size: 1.0rem;
 		}
 }
+.naglowek{
+	min-width:180px;
+	margin: 0 auto;
+	color:$mainBlack;
+	font-family: regular;
+	letter-spacing: 10px;
+	font-size: 0.6rem;
+	text-align: center;
+	margin-bottom: 40px;
+	padding-top:20px;
+
+}
 .skille{
+	
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	@mixin pc{
+		flex-direction: row;
+	}
 	h1{
 		text-align:center;
 		padding:20px;
+		font-family: regular;
 	}
 
+
 	.row{
-		height:150px;
-		width:70%;
+		height:70px;
 		margin:0 auto;
 		display:flex;
 		justify-content:center;
 		align-items:center;
 		flex-direction: row;
+		@mixin tablet{
+			height:90px;
+		}
+		@mixin pc{
+			height:150px;
+		}
 	}
 	.icon{
-		width:20px;
-		height:20px;
-		margin:5px;
+		width:33px;
+		height:33px;
 		&--margin{
 			margin:5px;
 		}
-
 
 		@mixin phone{
 			width:50px;
@@ -401,6 +428,7 @@ background-attachment:fixed;
 		}
 
 		@mixin tablet{
+		
 			width:60px;
 			height:60px;
 			margin:10px;
@@ -410,8 +438,8 @@ background-attachment:fixed;
 		}
 
 		@mixin pc{
-			width:100px;
-			height:100px;
+			width:70px;
+			height:70px;
 			margin:10px;
 			&--margin{
 				margin:15px;
@@ -739,71 +767,39 @@ border: 1px solid black;
 	}
 }
 
-
+.nazwa_dziedziny{
+	background-color: transparent;
+	margin:0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	color:white;
+	font-family: regular;
+	text-align: center;
+	   box-shadow: 0px 0 10px 0px #000000;
+	font-size: 1.2rem;
+	letter-spacing: 10px;
+	&--black{
+		background-color: $mainBlack;
+		
+	}
+}
 
 .portfolio{
 	background-color: transparent;
 	clear: both;
 
-
-	.naglowek{
-		min-width:180px;
-		margin: 0 auto;
-		color:$mainBlack;
-		font-family: regular;
-		letter-spacing: 10px;
-		font-size: 0.6rem;
-		text-align: center;
-		margin-bottom: 40px;
-		margin-top: 20px;
-		@mixin phone{
-			font-size: 1.7rem;
-		}
-
+	hr{
+		width:300px;
+		position: absolute;
+		left:50%;
+		transform:translateX(-50%);
 	}
+
+	
 	.dziedzina{
 		background-color: rgba(0,0,0,0.05);
 		padding-bottom: 10px;
-		.nazwa_dziedziny{
-			background-color: transparent;
-			margin:0 auto;
-			padding-bottom: 20px;
-			padding-top: 20px;
-			color:white;
-			font-family: regular;
-			text-align: center;
-   			box-shadow: 0px 0 10px 0px #000000;
-			font-size: 0.8rem;
 
-			&--blue{
-				background-color: $mainBlue;
-
-			}
-			&--red{
-				background-color: $mainRed;
-				
-			}
-			&--orange{
-				background-color: $mainOrange;
-				
-			}
-			&--green{
-				background-color: $mainGreen;
-				
-			}
-			&--violet{
-				background-color: $mainViolet;
-				
-			}
-			&--yellow{
-				background-color: $mainYellow;
-				
-			}
-			&--black{
-				background-color: $mainBlack;
-				
-			}
-		}
 
 		.kafelki{
 			padding-top:10px;
@@ -891,16 +887,16 @@ border: 1px solid black;
    				}
 
    				@mixin tablet{
-   					width: 140px;
-   					height: 140px;
+   					width: 200px;
+   					height: 200px;
    				}
    				@mixin pc{
-				width: 430px;
-   				height: 430px;
+				width: 300px;
+   				height: 300px;
    				}   				
    				@mixin tv{
-   				   	width:570px;
-   					height:570px;	
+   				   	width:450px;
+   					height:450px;	
    				}
 			}
 
@@ -912,12 +908,12 @@ border: 1px solid black;
 
 		.pokaz_wszystkie{
 			display: block;
-			width:110px;
+			width:50px;
 			margin:0 auto;
 			background-color: white;
 			color:black;
 			text-align: center;
-			font-size: 4rem;
+			font-size: 2rem;
 			box-shadow: 0px 0 10px 0px #9e9e9e9c;
 
 											transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
@@ -938,8 +934,6 @@ border: 1px solid black;
 		margin: 0 auto;
 		padding-bottom: 30px;
 		box-shadow: 0px -3px 10px 0px #000000;
-		background-color: rgba(0,0,0,0.3);
-		background-image: url('assets/images/grid.png');
 		@mixin pc{
 		}
 
