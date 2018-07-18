@@ -700,7 +700,7 @@ background-attachment:fixed;
 
 .header .motto .slogan{
 			color:white;
-			font-family: kaligrafia;
+			font-family: regular;
 			font-size: 1rem;
 			margin-bottom:40px;
 		}
@@ -1465,11 +1465,19 @@ border: 1px solid black;
 	padding-top: 20px;
 	color:white;
 	font-family: regular;
-	text-align: center;
+	font-size: 0.6rem;
 	   -webkit-box-shadow: 0px 0 10px 0px #000000;
 	           box-shadow: 0px 0 10px 0px #000000;
-	font-size: 0.6rem;
 }
+
+.nazwa_dziedziny h1{
+		width:-webkit-fit-content;
+		width:-moz-fit-content;
+		width:fit-content;
+		position:relative;
+		margin:0 auto;
+		letter-spacing: 10px;
+	   }
 
 .nazwa_dziedziny--round_bottom{
 		border-bottom-left-radius:50%;
@@ -1939,7 +1947,7 @@ border: 1px solid black;
 			padding-bottom: 30px;
 		}
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
 
 .zycie .cv .opis{
 				text-align: justify
