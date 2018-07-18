@@ -1101,26 +1101,31 @@ border: 1px solid black;
 
 .zycie{
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
+	justify-content: center;
 	color:black;
 	font-family: regular;
 	padding-bottom: 50px;
 	@mixin pc{
 		flex-direction: row;
 	}
-
-
-	.cv{
-		width:70%;
+	p{
+		text-indent: 30px;
+		max-width: 500px;
 		margin:0 auto;
-
+	}
+	.cv{
+		margin: 0 auto;
+		width:fit-content;
 		@mixin pc{
-			width:50%;
+			margin:0px;
 			padding-left:40px;
 		}
 
 		.opis{
+			padding-left:20px;
+			padding-right: 20px;
+			padding-bottom: 30px;
 			@mixin tablet{
 				text-align: justify;
 			}
@@ -1137,10 +1142,10 @@ border: 1px solid black;
 		}
 	}
 	.galeria{
+		margin: 0 auto;
 		width:fit-content;
-		margin:0 auto;
 		@mixin pc{
-			width:50%;
+			margin:0px;
 		}
 		.row{
 			display: flex;
@@ -1148,6 +1153,7 @@ border: 1px solid black;
 			justify-content: center;
 			flex-direction: column;
 			@mixin phone{
+
 				flex-direction: row;
 			}
 			@mixin pc{
@@ -1156,12 +1162,16 @@ border: 1px solid black;
 
 			.miniatura{
 				margin:10px;
-				width:90px;
-				height:90px;
+				width:150px;
+				height:150px;
 				overflow: hidden;
 				@mixin phone{
 					width:80px;
 					height:80px;
+				}
+				@mixin tablet{
+					width:120px;
+					height: 120px;
 				}
 				@mixin pc{
 					width:100px;
@@ -1199,6 +1209,7 @@ border: 1px solid black;
 		}
 	}
 		.dane_kontaktowe{
+			text-align: center;
 		color:white;
 		margin: 0 auto;
 		margin-top: 30px;

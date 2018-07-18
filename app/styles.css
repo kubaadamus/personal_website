@@ -1887,13 +1887,13 @@ border: 1px solid black;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	color:black;
 	font-family: regular;
 	padding-bottom: 50px;
@@ -1909,18 +1909,32 @@ border: 1px solid black;
 }
   }
 
-.zycie .cv{
-		width:70%;
+.zycie p{
+		text-indent: 30px;
+		max-width: 500px;
 		margin:0 auto;
+	}
+
+.zycie .cv{
+		margin: 0 auto;
+		width:-webkit-fit-content;
+		width:-moz-fit-content;
+		width:fit-content;
 	}
 
 @media (min-width: 1000px) {
 
 .zycie .cv{
-			width:50%;
+			margin:0px;
 			padding-left:40px
 	}
   }
+
+.zycie .cv .opis{
+			padding-left:20px;
+			padding-right: 20px;
+			padding-bottom: 30px;
+		}
 
 @media (min-width: 600px) {
 
@@ -1940,17 +1954,17 @@ border: 1px solid black;
 			}
 
 .zycie .galeria{
+		margin: 0 auto;
 		width:-webkit-fit-content;
 		width:-moz-fit-content;
 		width:fit-content;
-		margin:0 auto;
 
 	}
 
 @media (min-width: 1000px) {
 
 .zycie .galeria{
-			width:50%
+			margin:0px
 
 	}
   }
@@ -1972,9 +1986,13 @@ border: 1px solid black;
 @media (min-width: 400px) {
 
 .zycie .galeria .row{
+
 				-webkit-box-orient: horizontal;
+
 				-webkit-box-direction: normal;
+
 				    -ms-flex-direction: row;
+
 				        flex-direction: row
 		}
   }
@@ -1989,8 +2007,8 @@ border: 1px solid black;
 
 .zycie .galeria .row .miniatura{
 				margin:10px;
-				width:90px;
-				height:90px;
+				width:150px;
+				height:150px;
 				overflow: hidden;
 			}
 
@@ -1999,6 +2017,14 @@ border: 1px solid black;
 .zycie .galeria .row .miniatura{
 					width:80px;
 					height:80px
+			}
+  }
+
+@media (min-width: 600px) {
+
+.zycie .galeria .row .miniatura{
+					width:120px;
+					height: 120px
 			}
   }
 
@@ -2041,6 +2067,7 @@ border: 1px solid black;
   }
 
 .stopka .dane_kontaktowe{
+			text-align: center;
 		color:white;
 		margin: 0 auto;
 		margin-top: 30px;
