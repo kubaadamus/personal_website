@@ -7,7 +7,7 @@ $Cream: #FFF8E7;
 $Cream_2: #D9C9A4;
 $Cream_3: #B29E6C;
 $Cream_4: #8C7640;
-$mainLatte: #D9C9A4;
+$mainLatte: #f0ebdd;
 $mainBlue: #00378d;
 $mainGreen: #006e18;
 $mainOrange: #e86400;
@@ -112,6 +112,17 @@ background-attachment:fixed;
 }
 .hidden{
 	display: none;
+}
+.background--latte{
+	background-color: $mainLatte;
+	&--top{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#77725c+0,efe0b6+1,f0ebdd+27 */
+background: #77725c; /* Old browsers */
+background: -moz-linear-gradient(top, #77725c 0%, #efe0b6 1%, #f0ebdd 27%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #77725c 0%,#efe0b6 1%,#f0ebdd 27%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #77725c 0%,#efe0b6 1%,#f0ebdd 27%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77725c', endColorstr='#f0ebdd',GradientType=0 ); /* IE6-9 */
+	}
 }
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
@@ -219,17 +230,17 @@ background-attachment:fixed;
 		.slogan{
 			color:white;
 			font-family: regular;
-			font-size: 1rem;
+			font-size: 0.8rem;
 			margin-bottom:40px;
 			@mixin phone{
-				font-size: 1.2rem;
+				font-size: 1.0rem;
 			}
 			@mixin tablet{
-				font-size: 1.8rem;
+				font-size: 1.6rem;
 			}
 
 			@mixin pc{
-				font-size: 3rem;
+				font-size: 2.7rem;
 			}
 		}
 
@@ -787,7 +798,7 @@ border: 1px solid black;
 		width:fit-content;
 		position:relative;
 		margin:0 auto;
-		letter-spacing: 10px;
+
 	   }
 
 	&--round_bottom{
@@ -1114,7 +1125,6 @@ border: 1px solid black;
 	justify-content: center;
 	color:black;
 	font-family: regular;
-	padding-bottom: 50px;
 	@mixin pc{
 		flex-direction: row;
 	}
@@ -1128,15 +1138,17 @@ border: 1px solid black;
 		width:fit-content;
 		@mixin pc{
 			margin:0px;
-			padding-left:40px;
+
 		}
 
 		.opis{
 			padding-left:20px;
 			padding-right: 20px;
-			padding-bottom: 30px;
 			@mixin phone{
 				text-align: justify;
+			}
+			@mixin pc{
+				line-height: 2rem;
 			}
 		
 			img{
@@ -1144,59 +1156,116 @@ border: 1px solid black;
 				display:block;
 				margin:0 auto;
 				padding:20px;
-				width:100px;
-				border-radius: 50%;
+				width:120px;
+				border-radius: 10%;
+
+				@mixin phone{
+					width:250px;
+
+					&.paragraph_end{
+						width:100px;
+					}
+				}
 				
 			}
 		}
 	}
-	.galeria{
-		margin: 0 auto;
+	.timeline{
+		position: relative;
 		width:fit-content;
+		margin:0 auto;
+		img{
+			width:50px;
+		}
 		@mixin pc{
-			margin:0px;
+			padding-right:20px;
 		}
-		.row{
-			display: flex;
-			position: relative;
-			justify-content: center;
-			flex-direction: column;
-			@mixin phone{
-
-				flex-direction: row;
-			}
+		ul{
+			list-style-image: url('assets/images/hat.png');
 			@mixin pc{
-				transform:translateY(25%);
+				transform:translateY(220px);	
 			}
 
-			.miniatura{
-				margin:10px;
-				width:150px;
-				height:150px;
-				overflow: hidden;
-				@mixin phone{
-					width:80px;
-					height:80px;
-				}
-				@mixin tablet{
-					width:120px;
-					height: 120px;
-				}
-				@mixin pc{
-					width:100px;
-					height:100px;
-				}
-				img{
-					width:100%;
-
-				}
-			}
+			li{
+				margin: 10px 0;
+			  }
+		
 		}
+		.born{
+			list-style-image: url('assets/images/born.png');
+		}
+		.star{
+			list-style-image: url('assets/images/star.png');
+		}
+		@mixin pc{
+			margin:0px;	
+		}
+	}
+	
+}
 
+.konkrety{
+	position: relative;
+	max-width:500px;
+	font-family: regular;
+	line-height: 30px;
+	padding-left:20px;
+	padding-right:20px;
+	@mixin pc{
+		padding-top: 80px;
+		max-width:fit-content;
+	}
+	@mixin tablet{
+		margin:0 auto;
 	}
 }
 
+.galeria{
+	margin: 0 auto;
+	width:fit-content;
+	padding-bottom:60px;
+	padding-top: 20px;
+	@mixin pc{
+	}
+	.row{
+		display: flex;
+		position: relative;
+		justify-content: center;
+		flex-direction: column;
+		@mixin phone{
 
+			flex-direction: row;
+		}
+		@mixin pc{
+			transform:translateY(25%);
+		}
+
+		.miniatura{
+			margin:10px;
+			width:150px;
+			height:150px;
+			overflow: hidden;
+			box-shadow: 0px 0px 10px 0px #000000;
+			@mixin phone{
+				width:80px;
+				height:80px;
+			}
+			@mixin tablet{
+				width:120px;
+				height: 120px;
+			}
+			@mixin pc{
+				width:200px;
+				height:200px;
+			}
+			img{
+				width:100%;
+
+			}
+		}
+	}
+
+}
 
 
 .stopka{
@@ -1256,32 +1325,32 @@ border: 1px solid black;
 		}
 
 
-		.kontakt{
-			width:40px;
-			height:40px;
-			margin:0 auto;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			margin-top:20px;
-			text-align: center;
-			background-color: transparent;
-			border:none;
-			background-size: cover;
-			cursor:pointer;
 
-								-webkit-transition-duration: 0.3s;
-						    	transition-duration: 0.3s;
-
-						    	&:hover {
-								    transform: scale(1.3, 1.3);
-								    
-								}
-				    
-
-
-		}
 	}
+	.kontakt{
+		width:40px;
+		height:40px;
+		margin:0 auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-top:20px;
+		text-align: center;
+		background-color: transparent;
+		border:none;
+		background-size: cover;
+		cursor:pointer;
 
+							-webkit-transition-duration: 0.3s;
+							transition-duration: 0.3s;
+
+							&:hover {
+								transform: scale(1.3, 1.3);
+								
+							}
+				
+
+
+	}
 
 
 /* ====================== K O N T E N T   D Y N A M I C Z N Y =====================================*/
