@@ -1589,8 +1589,11 @@ border: 1px solid black;
 
 .portfolio .dziedzina .kafelki .kafelek:hover h3{
 								    	position: absolute;
-								    	display: block;
-								    	top:0px;
+										display: block;
+										top:0px;
+										width: 100%;
+										height: 100%;
+										
 								    }
 
 .portfolio .dziedzina .kafelki .kafelek picture{
