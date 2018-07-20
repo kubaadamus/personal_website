@@ -530,10 +530,13 @@ a{
 }
 
 hr{
-	margin:0;
+	width:200px;
+	max-width:40%;
+	margin:0 auto;
 	padding: 0;
 	-webkit-box-shadow: 0px 0 10px 0px #9e9e9e9c;
 	        box-shadow: 0px 0 10px 0px #9e9e9e9c;
+	height:1px;
 }
 
 button:focus {outline:0;}
@@ -572,15 +575,15 @@ background-attachment:fixed;
 }
 
 .background--latte{
-	background-color: #f0ebdd;
+	background-color: #F4F3F2;
 }
 
 .background--latte--top{
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#77725c+0,efe0b6+1,f0ebdd+27 */
-background: #77725c; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-background: -webkit-gradient(linear, left top, left bottom, from(#77725c),color-stop(1%, #efe0b6),color-stop(27%, #f0ebdd));
-background: linear-gradient(to bottom, #77725c 0%,#efe0b6 1%,#f0ebdd 27%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77725c', endColorstr='#f0ebdd',GradientType=0 ); /* IE6-9 */
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0ebdd+2,f4f2ed+5,f4f3f2+100 */
+background: #f0ebdd; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #f0ebdd),color-stop(5%, #f4f2ed),to(#f4f3f2));
+background: linear-gradient(to bottom, #f0ebdd 2%,#f4f2ed 5%,#f4f3f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ebdd', endColorstr='#f4f3f2',GradientType=0 ); /* IE6-9 */
 	}
 
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
@@ -640,9 +643,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77725c', end
   	position: absolute;
   	width: 1500px;
   	padding: 20px 0px;
-  	-webkit-transform: translate(-600px, 150px) rotate(-45deg);
-  	        transform: translate(-600px, 150px) rotate(-45deg);
-  	font-size: 1.5rem
+  	-webkit-transform: translate(-700px, 30px) rotate(-45deg);
+  	        transform: translate(-700px, 30px) rotate(-45deg);
+  	font-size: .8rem
 
 }
   }
@@ -912,14 +915,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77725c', end
 	letter-spacing: 10px;
 	font-size: 0.6rem;
 	text-align: center;
-	margin-bottom: 40px;
-	padding-top:20px;
+	margin-bottom: 10px;
+	padding-top:40px;
 
 }
 
+.page_holder{
+    text-align:center;
+}
+
 .skille{
-	
-	width: 100%;
+	width:100%;
+	margin:0 auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -930,6 +937,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77725c', end
 	-webkit-box-pack: space-evenly;
 	    -ms-flex-pack: space-evenly;
 	        justify-content: space-evenly;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 @media (min-width: 1000px) {
@@ -1478,9 +1488,17 @@ border: 1px solid black;
 	color:white;
 	font-family: regular;
 	font-size: 0.6rem;
+	text-align: center;
 	   -webkit-box-shadow: 0px 0 10px 0px #000000;
 	           box-shadow: 0px 0 10px 0px #000000;
 }
+
+@media (min-width: 1000px) {
+
+.nazwa_dziedziny{
+		letter-spacing: 8px
+}
+  }
 
 .nazwa_dziedziny h1{
 		width:-webkit-fit-content;
@@ -1519,9 +1537,8 @@ border: 1px solid black;
 		width:200px;
 		max-width:40%;
 		position: relative;
-		left:50%;
-		-webkit-transform:translateX(-50%);
-		        transform:translateX(-50%);
+		margin:0 auto;
+
 	}
 
 .portfolio .dziedzina{
@@ -1529,6 +1546,7 @@ border: 1px solid black;
 	}
 
 .portfolio .dziedzina .kafelki{
+			position: relative;
 			padding-top:10px;
 			padding-bottom: 10px;
 			background-color: transparent;
@@ -1539,6 +1557,9 @@ border: 1px solid black;
 			-webkit-box-direction:normal;
 			    -ms-flex-direction:column;
 			        flex-direction:column;
+			-webkit-box-pack:center;
+			    -ms-flex-pack:center;
+			        justify-content:center;
 								-webkit-transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								        transition-timing-function: cubic-bezier(0.05,-0.03, 0.15, 1.06);
 								-webkit-transition-duration: 1.0s;
@@ -1574,6 +1595,28 @@ border: 1px solid black;
 
 		}
   }
+
+.portfolio .dziedzina .kafelki .prev{
+				display: none;
+				width:100px;
+				height:100px;
+				position: absolute;
+				left:0px;
+				top:50%;
+				-webkit-transform: translateY(-50%);
+				        transform: translateY(-50%);
+			}
+
+.portfolio .dziedzina .kafelki .next{
+				display: none;
+				width:100px;
+				height:100px;
+				position: absolute;
+				right:0px;
+				top:50%;
+				-webkit-transform: translateY(-50%);
+				        transform: translateY(-50%);
+			}
 
 .portfolio .dziedzina .kafelki .kafelek {
 				display: -webkit-box;
@@ -1613,7 +1656,7 @@ border: 1px solid black;
 										top:0px;
 										width: 100%;
 										height: 100%;
-										
+										font-family: regular;
 								    }
 
 .portfolio .dziedzina .kafelki .kafelek picture{
@@ -1638,7 +1681,7 @@ border: 1px solid black;
 .portfolio .dziedzina .kafelki .kafelek h3{
    					display: none;
    					pointer-events: none;
-   					background-color:rgba(0,0,0,0.5);
+   					background-color:rgba(0,0,0,0.8);
    					color:white;
    					font-size: 0.8rem;
    					padding-top: 10px;
@@ -1655,24 +1698,24 @@ border: 1px solid black;
 @media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   					width: 200px;
-   					height: 200px
+   					width: 150px;
+   					height: 150px
 			}
   }
 
 @media (min-width: 1000px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-				width: 300px;
-   				height: 300px
+				width: 200px;
+   				height: 200px
 			}
   }
 
 @media (min-width: 1700px)  {
 
 .portfolio .dziedzina .kafelki .kafelek {
-   				   	width:450px;
-   					height:450px
+   				   	width:250px;
+   					height:250px
 			}
   }
 
