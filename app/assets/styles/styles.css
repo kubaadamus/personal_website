@@ -3,19 +3,8 @@
 
 /* ========================================== V A R I A B L E S ========================================== */
 $mainBlack: #1f2123;
-$Cream: #FFF8E7;
-$Cream_2: #D9C9A4;
-$Cream_3: #B29E6C;
-$Cream_4: #8C7640;
 $mainLatte: #F4F3F2;
-$mainBlue: #00378d;
-$mainGreen: #006e18;
-$mainOrange: #e86400;
-$mainYellow:#e9af00;
-$mainViolet:#5b0047;
 $mainRed:#950000;
-$darkGrey: #eaece5;
-$lightGrey:#FFFFF0;
 
 /* =============================================  F O N T S  ============================================= */
 @font-face 
@@ -25,23 +14,8 @@ $lightGrey:#FFFFF0;
 }
 @font-face 
 {
-    font-family: Mocna;
-    src: url(assets/fonts/Mocna.ttf);
-}
-@font-face 
-{
     font-family: Regular;
     src: url(assets/fonts/Regular.ttf);
-}
-@font-face 
-{
-    font-family: Chuda;
-    src: url(assets/fonts/Chuda.ttf);
-}
-@font-face 
-{
-    font-family: Saucer;
-    src: url(assets/fonts/Saucer.otf);
 }
 /* ============================================= G L O B A L S =========================================== */
 wbr:after { content: "\00200B"; }
@@ -51,10 +25,11 @@ html{
 body{
 	min-width: 200px;
 	background-color: rgb(255, 255, 255);
-
-
 	overflow-x: hidden;
 }
+/* DLA IE 11*/
+_:-ms-fullscreen, :root body { background-color:red; }
+
 h1, h2, h3, h4, h5{
 	margin:0;
 	padding:0;
@@ -84,8 +59,6 @@ hr{
 	height:1px;
 }
 button:focus {outline:0;} /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
-
-
 .parralax{
 position:relative;
 background-position:center;
@@ -411,7 +384,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ebdd', end
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	justify-content: center;
+	justify-content: space-evenly;
 	@mixin pc{
 		flex-direction: row;
 	}
@@ -791,7 +764,7 @@ border: 1px solid black;
 }
 
 .nazwa_dziedziny{
-	background-color: transparent;
+	background-color: $mainBlack;
 	margin:0 auto;
 	padding-bottom: 20px;
 	padding-top: 20px;

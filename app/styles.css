@@ -462,26 +462,8 @@ template {
 
 @font-face 
 {
-    font-family: Mocna;
-    src: url(assets/fonts/Mocna.ttf);
-}
-
-@font-face 
-{
     font-family: Regular;
     src: url(assets/fonts/Regular.ttf);
-}
-
-@font-face 
-{
-    font-family: Chuda;
-    src: url(assets/fonts/Chuda.ttf);
-}
-
-@font-face 
-{
-    font-family: Saucer;
-    src: url(assets/fonts/Saucer.otf);
 }
 
 /* ============================================= G L O B A L S =========================================== */
@@ -495,10 +477,12 @@ html{
 body{
 	min-width: 200px;
 	background-color: rgb(255, 255, 255);
-
-
 	overflow-x: hidden;
 }
+
+/* DLA IE 11*/
+
+_:-ms-fullscreen, :root body { background-color:red; }
 
 h1, h2, h3, h4, h5{
 	margin:0;
@@ -937,9 +921,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ebdd', end
 	-webkit-box-pack: space-evenly;
 	    -ms-flex-pack: space-evenly;
 	        justify-content: space-evenly;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: space-evenly;
 }
 
 @media (min-width: 1000px) {
@@ -1481,7 +1463,7 @@ border: 1px solid black;
   }
 
 .nazwa_dziedziny{
-	background-color: transparent;
+	background-color: #1f2123;
 	margin:0 auto;
 	padding-bottom: 20px;
 	padding-top: 20px;
