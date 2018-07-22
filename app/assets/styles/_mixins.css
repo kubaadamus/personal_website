@@ -1,4 +1,8 @@
-
+@define-mixin phone_small {
+  @media (min-width: 300px) {
+    @mixin-content;
+  }
+}
 @define-mixin phone {
   @media (min-width: 400px) {
     @mixin-content;

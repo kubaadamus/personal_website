@@ -16,20 +16,26 @@
 <body>
 	<!===================================== H E A D E R ===========================================>
 	<div class="header">
+		<video autoplay muted loop class="backwideo" poster="assets/images/black.jpg">
+			<source src="video/intro.webm" type="video/mp4">
+		</video>
 		<div class="wbudowie">STRONA W BUDOWIE</div>
-		<video autoplay muted loop class="bgvid" id="bgvid" poster="assets/images/black.jpg"></video>
-		<div class="logo"></div>
-		<div class="motto">
+		<div class="lang_container">
+			<img id="pl" class="transition" src="assets/images/pl.gif" alt="">
+			<img id="eng" class="transition" src="assets/images/eng.png" alt="">
+		</div>
+		<div class="head">
+			<div class="logo"></div>
 			<h1 class="slogan">Full stack web developer / Programista / Grafik&nbsp;3D</h1>
 		</div>
 	</div>
 	<!===================================== S K I L L E  ===========================================>
 	<div class="nazwa_dziedziny nazwa_dziedziny--round_bottom">
-		<h1>WARSZTAT</h1>
+		<h1 id="warsztat">WARSZTAT</h1>
 	</div>
 	<div class="skille">
 		<div class="uzywam">
-			<h1>UŻYWAM</h1>
+			<h1 id="uzywam">UŻYWAM</h1>
 			<div class="row">
 				<div class="icon">
 					<img src="assets/images/tech/html5.png" alt="">
@@ -85,7 +91,7 @@
 			</div>
 		</div>
 		<div class="uczesie">
-			<h1>UCZĘ SIĘ</h1>
+			<h1 id="uczesie">UCZĘ SIĘ</h1>
 			<div class="row">
 				<div class="icon icon--margin">
 					<img src="assets/images/tech/typescript.png" alt="">
@@ -176,7 +182,7 @@
 		<!=============== PROGRAMOWANIE ====================>
 		<div class="dziedzina">
 			<div class="naglowek">
-				<h1>PROGRA<wbr/>MOWANIE</h1>
+				<h1 id="kodzenie">PROGRA<wbr/>MOWANIE</h1>
 			</div>
 			<hr/>
 			<div class="kafelki">
@@ -234,7 +240,7 @@
 		<!=============== GRAFIKA 3D ====================>
 		<div class="dziedzina">
 			<div class="naglowek">
-				<h1>GRAFIKA 3D</h1>
+				<h1 id="grafika">GRAFIKA 3D</h1>
 			</div>
 			<hr/>
 			<div class="kafelki">
@@ -281,30 +287,29 @@
 		<!- K O N I E C ->
 		<!=============== ŻYCIE ====================>
 		<div class="nazwa_dziedziny">
-			<h1>ŻYCIE</h1>
+			<h1 id="zycie">ŻYCIE</h1>
 		</div>
 		<div class="zycie background--latte--top">
 			<div class="cv">
 				<div class="opis">
 					<img src="assets/images/gita.png" alt="">
-					<p>Odkąd sięgam pamięcią, śrubokręt i&nbsp;taśma klejąca były moimi ulubionymi zabawkami. Już jako szkrab spędzałem długie
+					<p id="zycie_paragraf_1">Odkąd sięgam pamięcią, śrubokręt i&nbsp;taśma klejąca były moimi ulubionymi zabawkami. Już jako szkrab spędzałem długie
 						godziny na rozkręcaniu przekaźników elektrycznych, które dziadek (elektryk automatyk) nieopatrznie zostawiał w zasięgu
 						mojego wzroku. Fascynacja technologią z&nbsp;biegiem lat rozwijała się prowadząc mnie od prostej elektroniki analogowej
 						poprzez pojedyncze elementy cyfrowe aż do programowania mikrokontrolerów i&nbsp;tworzenia współpracujących z nimi aplikacji.
 					</p>
 					<br/>
-					<p>Dziś jako magister inżynier technologii chemicznej polimerów i&nbsp;zaangażowany, praktykujący pasjonata elektroniki
+					<p id="zycie_paragraf_2">Dziś jako magister inżynier technologii chemicznej polimerów i&nbsp;zaangażowany, praktykujący pasjonata elektroniki
 						/ programowania rozglądam się za możliwościami wykorzystania swojej wiedzy i&nbsp; dośwadczenia w praktyce. </p>
 				</div>
 			</div>
 			<div class="timeline">
-				<ul>
-					<img src="assets/images/timeline.png" alt="">
+				<ul id="timeline_pl">
 					<li class="born">
 						<b>01.06.1991</b> - Narodziny
 					</li>
 					<li>
-						<b>1998-2004</b> - Szkoła podstawowa nr 71
+						<b>1998-2004</b> - Szkoła podstawowa (nr 71 im. Bogusława X i Anny Jagiellonki)
 					</li>
 					<li class="star">
 						<b>~2000</b> - Pierwszy kontakt z HTML i CSS
@@ -343,49 +348,93 @@
 						<b>2018</b>- Rozpoczecie pracy jako nauczyciel grafiki 3D (Zachodniopomorska Szkoła Biznesu)
 					</li>
 				</ul>
+				<ul class="hidden" id="timeline_eng">
+					<li class="born">
+						<b>01.06.1991</b> - Birth
+					</li>
+					<li>
+						<b>1998-2004</b> - Primary school nr 71 (nr 71 im. Bogusława X i Anny Jagiellonki)
+					</li>
+					<li class="star">
+						<b>~2000</b> - First contact with HTML and CSS
+					</li>
+					<li>
+						<b>2004-2007</b> - Middle school 24 im. Władysława Orkana in Szczecin
+					</li>
+					<li class="star">
+						<b>2005</b> - Mastered visual programming (The Games Factory)
+					</li>
+					<li>
+						<b>2007-2010</b> - High school (III im. M. Kopernika in Szczecin)
+					</li>
+					<li class="star">
+						<b>2008</b> - First attempts to C++ programming
+					</li>
+					<li>
+						<b>2010-2014</b> - Engineering studies (ZUT - Chemical Engineering of Polymers)
+					</li>
+					<li class="star">
+						<b>2011</b> - Undersood the basics of analog electronics
+					</li>
+					<li class="star">
+						<b>2013</b> - Joined a post-punk rock band Offensywa (drummer)
+					</li>
+					<li>
+						<b>2014-2016</b> - Postgraduate studies (ZUT - Chemical Engineering of Polymers)
+					</li>
+					<li class="star">
+						<b>2014-2015</b> - Mastered C++, C#, XNA, Understood basics of AVR microcontrollers programming
+					</li>
+					<li>
+						<b>2017</b>- Doctoral studies (ZUT - Chemical Engineering of Polymers)
+					</li>
+					<li>
+						<b>2018</b>- Began teaching 3D graphics (West Pomeranian Business School)
+					</li>
+				</ul>
 			</div>
 		</div>
+
 		<div class="background--latte">
+				<div class="kurtyna"></div>
 			<div class="galeria">
-				<div class="row">
+
+				<div class="row" id="row">
+
 					<div class="miniatura">
 						<img src="assets/images/gallery/gary2.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/offensywa.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/mistrz.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/wenecja.jpg" alt="">
 					</div>
-				</div>
-				<div class="row">
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/gary1.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/gary3.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/palki.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/lot.jpg" alt="">
 					</div>
-				</div>
-				<div class="row">
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/gary4.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/elektro.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/chorwacja.jpg" alt="">
 					</div>
-					<div class="miniatura">
+					<div class="miniatura ">
 						<img src="assets/images/gallery/gary6.jpg" alt="">
 					</div>
 				</div>
@@ -393,11 +442,12 @@
 		</div>
 		<!- K O N I E C ->
 	</div>
+	
 	<!-zakonczenie portfolio->
 	<!===================================== F O O T E R ===========================================>
 	<div class="background--latte">
 		<div class="nazwa_dziedziny nazwa_dziedziny--round_top">
-			<h1>KONTAKT</h1>
+			<h1 id="kontakt">KONTAKT</h1>
 		</div>
 	</div>
 	<div class="stopka" id="stopka">
@@ -410,13 +460,16 @@
 			<button class="kontakt" style="background-image: url(assets/images/global/facebook.png)" onclick="window.open('https://www.facebook.com/jakub.adamus.52','_blank');"></button>
 			<button class="kontakt" style="background-image: url(assets/images/global/gmail.png)" onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jakubadamus1991@gmail.com'"></button>
 		</div>
-		<div class="motto">
+		<div class="motto" id="motto">
 			Stwórzmy razem coś niezwykłego!
 		</div>
 	</div>
 	<!======================================== S K R Y P T Y ======================================>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/header_bgvideo.js"></script>
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
+	<script type="text/javascript" src="assets/scripts/lang.js"></script>
+	<script type="text/javascript" src="assets/scripts/gallery.js"></script>
+	
 </body>
 
 </html>

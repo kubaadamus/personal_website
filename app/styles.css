@@ -466,6 +466,11 @@ template {
 
 /* ============================================= G L O B A L S =========================================== */
 
+*{
+	-ms-touch-action: manipulation;
+	    touch-action: manipulation;
+}
+
 wbr:after {
 	content: "\00200B";
 }
@@ -525,8 +530,8 @@ hr {
 	max-width: 40%;
 	margin: 0 auto;
 	padding: 0;
-	-webkit-box-shadow: 0px 0 10px 0px #9e9e9e9c;
-	        box-shadow: 0px 0 10px 0px #9e9e9e9c;
+	-webkit-box-shadow: 0px 1px 10px 0px #9e9e9e9c;
+	        box-shadow: 0px 1px 10px 0px #9e9e9e9c;
 	height: 1px;
 }
 
@@ -537,14 +542,17 @@ button:focus {
 /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
 
 .transition {
-	/*Animacja zwiększania brightnessa po najechaniu myszą*/
-	-webkit-transition-duration: 2.4s;
-	transition-duration: 2.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
+	        transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
+	-webkit-transition-duration: 1.0s;
+	transition-duration: 1.0s;
 }
 
-.transition--fast {
-		-webkit-transition-duration: 0.8s;
-		transition-duration: 0.8s;
+.transition:hover {
+		-webkit-box-shadow: 5px 5px 10px #1f2123;
+		        box-shadow: 5px 5px 10px #1f2123;
+		-webkit-transform: scale(1.1, 1.1);
+		        transform: scale(1.1, 1.1);
 	}
 
 .hidden {
@@ -552,7 +560,9 @@ button:focus {
 }
 
 .background--latte {
+	position: relative;
 	background-color: #F4F3F2;
+	overflow: hidden;
 }
 
 .background--latte--top {
@@ -569,23 +579,6 @@ button:focus {
 	}
 
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
-
-.logo {
-	width: 200px;
-	height: 200px;
-	margin: 0 auto;
-	margin-bottom: 40px;
-	margin-top: 100px;
-	background-image: url('assets/images/logo2.png');
-	background-size: cover;
-	/*Animacja zwiększania brightnessa po najechaniu myszą*/
-	-webkit-transition-duration: 2.4s;
-	transition-duration: 2.4s;
-}
-
-.logo:hover {
-		-webkit-filter: brightness(200%);
-	}
 
 /* ============================================ N O R M A L ============================================ */
 
@@ -604,9 +597,9 @@ button:focus {
 		position: absolute;
 		width: 1500px;
 		padding: 20px 0px;
-		-webkit-transform: translate(-700px, 30px) rotate(-45deg);
-		        transform: translate(-700px, 30px) rotate(-45deg);
-		font-size: .8rem
+		-webkit-transform: translate(-650px, 80px) rotate(-45deg);
+		        transform: translate(-650px, 80px) rotate(-45deg);
+		font-size: 1.0rem
 }
   }
 
@@ -629,70 +622,106 @@ button:focus {
 
 .header {
 		background: none;
-		padding-bottom: 120px
+		height: 80vh
 }
   }
 
-.header .motto {
-		min-width: 150px;
-		s margin: 0 auto;
-		margin-bottom: 30px;
-		text-align: center;
-	}
+.head{
+	position: relative;
 
-.header .motto .tytul {
-			color: white;
-			font-family: kaligrafia;
-			font-size: 0.7rem;
-		}
+}
 
 @media (min-width: 1000px) {
 
-.header .motto .tytul {
-				font-size: 1.3rem
-		}
+.head{
+
+		top:50%;
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%)
+
+}
   }
 
-.header .motto .slogan {
-			color: white;
-			font-family: regular;
-			font-size: 0.8rem;
-			margin-bottom: 40px;
-		}
+.logo {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	margin-top: 100px;
+	background-image: url('assets/images/logo2.png');
+	background-size: cover;
+}
+
+.slogan {
+	min-width: 150px;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	font-family: regular;
+	font-size: 0.8rem;
+	margin-bottom: 40px;
+}
 
 @media (min-width: 400px) {
 
-.header .motto .slogan {
-				font-size: 1.0rem
-		}
+.slogan {
+		font-size: 1.0rem
+}
   }
 
 @media (min-width: 600px) {
 
-.header .motto .slogan {
-				font-size: 1.6rem
-		}
+.slogan {
+		font-size: 1.6rem
+}
   }
 
 @media (min-width: 1000px) {
 
-.header .motto .slogan {
-				font-size: 2.7rem
-		}
+.slogan {
+		font-size: 2.7rem
+}
   }
 
-.header .bgvid {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: -100;
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+.backwideo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+.lang_container {
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.lang_container img {
+		width: 30px;
+		height: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
+
+@media (min-width: 1000px) {
+
+.lang_container img {
+			width:60px;
+			height:40px
+	}
+  }
 
 .naglowek {
 	min-width: 180px;
@@ -929,13 +958,6 @@ button:focus {
 	background-color: transparent;
 	clear: both;
 }
-
-.portfolio hr {
-		width: 200px;
-		max-width: 40%;
-		position: relative;
-		margin: 0 auto;
-	}
 
 .portfolio .dziedzina {
 		padding-bottom: 10px;
@@ -1218,13 +1240,16 @@ button:focus {
 
 .zycie .timeline ul {
 			list-style-image: url('assets/images/hat.png');
+			line-height: 30px;
 		}
+
+@media (min-width: 600px) {
+  }
 
 @media (min-width: 1000px) {
 
 .zycie .timeline ul {
-				-webkit-transform: translateY(220px);
-				        transform: translateY(220px)
+				line-height: 45px
 		}
   }
 
@@ -1273,7 +1298,21 @@ button:focus {
 }
   }
 
+.kurtyna{
+	position: absolute;
+	background-color: black;
+	height:100%;
+	width:100%;
+	z-index: 10;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f3f2+0,f4f3f2+100&1+10,0+30,0+70,1+90 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+background: -webkit-gradient(linear, left top, right top, from(rgba(244,243,242,1)),color-stop(10%, rgba(244,243,242,1)),color-stop(30%, rgba(244,243,242,0)),color-stop(70%, rgba(244,243,242,0)),color-stop(90%, rgba(244,243,242,1)),to(rgba(244,243,242,1)));
+background: linear-gradient(to right, rgba(244,243,242,1) 0%,rgba(244,243,242,1) 10%,rgba(244,243,242,0) 30%,rgba(244,243,242,0) 70%,rgba(244,243,242,1) 90%,rgba(244,243,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', endColorstr='#f4f3f2',GradientType=1 ); /* IE6-9 */
+}
+
 .galeria {
+	position: relative;
 	margin: 0 auto;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -1281,9 +1320,6 @@ button:focus {
 	padding-bottom: 60px;
 	padding-top: 20px;
 }
-
-@media (min-width: 1000px) {
-  }
 
 .galeria .row {
 		display: -webkit-box;
@@ -1293,29 +1329,16 @@ button:focus {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
-		-webkit-box-orient: vertical;
+		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+		-webkit-transition: width 1s, height 1s, -webkit-transform .3s;
+		transition: width 1s, height 1s, -webkit-transform .3s;
+		transition: width 1s, height 1s, transform .3s;
+		transition: width 1s, height 1s, transform .3s, -webkit-transform .3s;
 	}
-
-@media (min-width: 400px) {
-
-.galeria .row {
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: row;
-			        flex-direction: row
-	}
-  }
-
-@media (min-width: 1000px) {
-
-.galeria .row {
-			-webkit-transform: translateY(25%);
-			        transform: translateY(25%)
-	}
-  }
 
 .galeria .row .miniatura {
 			margin: 10px;
@@ -1326,27 +1349,19 @@ button:focus {
 			        box-shadow: 0px 0px 10px 0px #000000;
 		}
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
 
 .galeria .row .miniatura {
-				width: 80px;
-				height: 80px
-		}
-  }
-
-@media (min-width: 600px) {
-
-.galeria .row .miniatura {
-				width: 120px;
-				height: 120px
+				width:250px;
+				height:250px
 		}
   }
 
 @media (min-width: 1000px) {
 
 .galeria .row .miniatura {
-				width: 200px;
-				height: 200px
+				width:500px;
+				height:500px
 		}
   }
 

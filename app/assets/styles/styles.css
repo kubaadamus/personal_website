@@ -18,7 +18,9 @@ $mainRed:#950000;
 }
 
 /* ============================================= G L O B A L S =========================================== */
-
+*{
+	touch-action: manipulation;
+}
 wbr:after {
 	content: "\00200B";
 }
@@ -74,7 +76,7 @@ hr {
 	max-width: 40%;
 	margin: 0 auto;
 	padding: 0;
-	box-shadow: 0px 0 10px 0px #9e9e9e9c;
+	box-shadow: 0px 1px 10px 0px #9e9e9e9c;
 	height: 1px;
 }
 
@@ -85,12 +87,12 @@ button:focus {
 /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
 
 .transition {
-	/*Animacja zwiększania brightnessa po najechaniu myszą*/
-	-webkit-transition-duration: 2.4s;
-	transition-duration: 2.4s;
-	&--fast {
-		-webkit-transition-duration: 0.8s;
-		transition-duration: 0.8s;
+	transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
+	-webkit-transition-duration: 1.0s;
+	transition-duration: 1.0s;
+	&:hover {
+		box-shadow: 5px 5px 10px $mainBlack;
+		transform: scale(1.1, 1.1);
 	}
 }
 
@@ -99,7 +101,9 @@ button:focus {
 }
 
 .background--latte {
+	position: relative;
 	background-color: $mainLatte;
+	overflow: hidden;
 	&--top {
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0ebdd+2,f4f2ed+5,f4f3f2+100 */
 		background: #f0ebdd;
@@ -114,24 +118,7 @@ button:focus {
 		/* IE6-9 */
 	}
 }
-
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
-
-.logo {
-	width: 200px;
-	height: 200px;
-	margin: 0 auto;
-	margin-bottom: 40px;
-	margin-top: 100px;
-	background-image: url('assets/images/logo2.png');
-	background-size: cover;
-	/*Animacja zwiększania brightnessa po najechaniu myszą*/
-	-webkit-transition-duration: 2.4s;
-	transition-duration: 2.4s;
-	&:hover {
-		-webkit-filter: brightness(200%);
-	}
-}
 
 /* ============================================ N O R M A L ============================================ */
 
@@ -146,8 +133,8 @@ button:focus {
 		position: absolute;
 		width: 1500px;
 		padding: 20px 0px;
-		transform: translate(-700px, 30px) rotate(-45deg);
-		font-size: .8rem;
+		transform: translate(-650px, 80px) rotate(-45deg);
+		font-size: 1.0rem;
 	}
 }
 
@@ -161,47 +148,73 @@ button:focus {
 	}
 	@mixin pc {
 		background: none;
-		padding-bottom: 120px;
+		height: 80vh;
 	}
-	.motto {
-		min-width: 150px;
-		s margin: 0 auto;
-		margin-bottom: 30px;
-		text-align: center;
-		.tytul {
-			color: white;
-			font-family: kaligrafia;
-			font-size: 0.7rem;
-			@mixin pc {
-				font-size: 1.3rem;
-			}
-		}
-		.slogan {
-			color: white;
-			font-family: regular;
-			font-size: 0.8rem;
-			margin-bottom: 40px;
-			@mixin phone {
-				font-size: 1.0rem;
-			}
-			@mixin tablet {
-				font-size: 1.6rem;
-			}
-			@mixin pc {
-				font-size: 2.7rem;
-			}
-		}
+}
+.head{
+	position: relative;
+	@mixin pc{
+
+		top:50%;
+		transform: translateY(-100%);
 	}
-	.bgvid {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: -100;
-		transform: translate(-50%, -50%);
+
+}
+.logo {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	margin-top: 100px;
+	background-image: url('assets/images/logo2.png');
+	background-size: cover;
+}
+.slogan {
+	min-width: 150px;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	font-family: regular;
+	font-size: 0.8rem;
+	margin-bottom: 40px;
+	@mixin phone {
+		font-size: 1.0rem;
+	}
+	@mixin tablet {
+		font-size: 1.6rem;
+	}
+	@mixin pc {
+		font-size: 2.7rem;
+	}
+}
+
+.backwideo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translate(-50%, -50%);
+}
+
+.lang_container {
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	height: fit-content;
+	width: fit-content;
+	img {
+		width: 30px;
+		height: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
+		@mixin pc{
+			width:60px;
+			height:40px;
+		}
 	}
 }
 
@@ -239,6 +252,7 @@ button:focus {
 		justify-content: center;
 		align-items: center;
 		flex-direction: row;
+
 		@mixin tablet {
 			height: 90px;
 		}
@@ -359,12 +373,6 @@ button:focus {
 .portfolio {
 	background-color: transparent;
 	clear: both;
-	hr {
-		width: 200px;
-		max-width: 40%;
-		position: relative;
-		margin: 0 auto;
-	}
 	.dziedzina {
 		padding-bottom: 10px;
 		.kafelki {
@@ -484,6 +492,7 @@ button:focus {
 	justify-content: center;
 	color: black;
 	font-family: regular;
+
 	@mixin pc {
 		flex-direction: row;
 	}
@@ -535,8 +544,11 @@ button:focus {
 		}
 		ul {
 			list-style-image: url('assets/images/hat.png');
+			line-height: 30px;
+			@mixin tablet{
+			}
 			@mixin pc {
-				transform: translateY(220px);
+				line-height: 45px;
 			}
 			li {
 				margin: 10px 0;
@@ -569,41 +581,45 @@ button:focus {
 		margin: 0 auto;
 	}
 }
+.kurtyna{
+	position: absolute;
+	background-color: black;
+	height:100%;
+	width:100%;
+	z-index: 10;
 
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f3f2+0,f4f3f2+100&1+10,0+30,0+70,1+90 */
+background: -moz-linear-gradient(left, rgba(244,243,242,1) 0%, rgba(244,243,242,1) 10%, rgba(244,243,242,0) 30%, rgba(244,243,242,0) 70%, rgba(244,243,242,1) 90%, rgba(244,243,242,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(244,243,242,1) 0%,rgba(244,243,242,1) 10%,rgba(244,243,242,0) 30%,rgba(244,243,242,0) 70%,rgba(244,243,242,1) 90%,rgba(244,243,242,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(244,243,242,1) 0%,rgba(244,243,242,1) 10%,rgba(244,243,242,0) 30%,rgba(244,243,242,0) 70%,rgba(244,243,242,1) 90%,rgba(244,243,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', endColorstr='#f4f3f2',GradientType=1 ); /* IE6-9 */
+}
 .galeria {
+	position: relative;
 	margin: 0 auto;
 	width: fit-content;
 	padding-bottom: 60px;
 	padding-top: 20px;
-	@mixin pc {}
 	.row {
 		display: flex;
 		position: relative;
 		justify-content: center;
-		flex-direction: column;
-		@mixin phone {
-			flex-direction: row;
-		}
-		@mixin pc {
-			transform: translateY(25%);
-		}
+		flex-direction: row;
+		-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+		transition: width 1s, height 1s, transform .3s;
 		.miniatura {
 			margin: 10px;
 			width: 150px;
 			height: 150px;
 			overflow: hidden;
 			box-shadow: 0px 0px 10px 0px #000000;
-			@mixin phone {
-				width: 80px;
-				height: 80px;
+			@mixin phone_small{
+				width:250px;
+				height:250px;
 			}
-			@mixin tablet {
-				width: 120px;
-				height: 120px;
-			}
-			@mixin pc {
-				width: 200px;
-				height: 200px;
+			@mixin pc{
+				width:500px;
+				height:500px;
 			}
 			img {
 				width: 100%;
