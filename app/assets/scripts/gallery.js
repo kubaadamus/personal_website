@@ -32,7 +32,7 @@ function swiperightHandler(event) {
     
 }
 
-$(function() {      
+var funkcja = $(function() {      
     $(".background--latte").swipe( {
       swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
         console.log("You swiped " + direction );  
@@ -44,11 +44,15 @@ $(function() {
         {
             swiperightHandler();
         }
+
       },
        threshold:0
-
     });
 
 
 
+  });
+
+  $( window ).resize(function() {
+    $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
   });
