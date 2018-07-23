@@ -15,21 +15,15 @@ function swipeleftHandler(event) {
         photo_number += 1;
         position-=parseInt($(".miniatura").css("width"))+20;
     }
-
-    console.log(position);
     $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
-    console.log("SWIPE LEFT!");
 }
 
 function swiperightHandler(event) {
-    console.log("SWIPE! RIGHT");
     if (photo_number > 0) {
         photo_number -= 1;
         position+=parseInt($(".miniatura").css("width"))+20;
     }
-    console.log(position);
     $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
-    
 }
 
 var funkcja = $(function() {      

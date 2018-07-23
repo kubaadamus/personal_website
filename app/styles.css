@@ -497,13 +497,6 @@ body {
 	overflow-x: hidden;
 }
 
-/* DLA IE 11*/
-
-_:-ms-fullscreen,
-:root body {
-	background-color: red;
-}
-
 h1,
 h2,
 h3,
@@ -655,13 +648,31 @@ button:focus {
   }
 
 .logo {
+	position: relative;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 	margin-top: 100px;
-	background-image: url('assets/images/logo2.png');
 	background-size: cover;
+	z-index: 10;
+}
+
+.logo img{
+		width:100%;
+	}
+
+#compass{
+	position: absolute;
+	top:0px;
+	width:200px;
+	height: 200px;
+	z-index: -1;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+	-webkit-transition: width 1s, height 1s, -webkit-transform 1.3s;
+	transition: width 1s, height 1s, -webkit-transform 1.3s;
+	transition: width 1s, height 1s, transform 1.3s;
+	transition: width 1s, height 1s, transform 1.3s, -webkit-transform 1.3s;
 }
 
 .slogan {
@@ -730,8 +741,8 @@ button:focus {
 @media (min-width: 1000px) {
 
 .lang_container img {
-			width:60px;
-			height:40px
+			width:50px;
+			height:30px
 	}
   }
 
@@ -748,8 +759,10 @@ button:focus {
 }
 
 .skille {
-	width: 100%;
-	margin: 0 auto;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: transparent;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -757,11 +770,35 @@ button:focus {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	-webkit-box-pack: space-evenly;
-	    -ms-flex-pack: space-evenly;
-	        justify-content: space-evenly;
-	justify-content: space-evenly;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
+
+@media (min-width: 600px) {
+
+.skille {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		margin: 0 auto;
+		max-width: 700px
+}
+  }
+
+@media (min-width: 1000px) {
+
+.skille {
+		max-width: 1100px
+}
+  }
+
+@media (min-width: 1700px)  {
+
+.skille {
+		max-width: 1200px
+}
+  }
 
 @media (min-width: 1000px) {
 
@@ -1221,14 +1258,18 @@ button:focus {
 				border-radius: 10%;
 			}
 
+@media (min-width: 300px) {
+
+.zycie .cv .opis img {
+					width: 220px
+			}
+  }
+
 @media (min-width: 400px) {
 
 .zycie .cv .opis img {
-					width: 250px
+					width:300px
 			}
-					.zycie .cv .opis img.paragraph_end {
-						width: 100px;
-					}
   }
 
 .zycie .timeline {
@@ -1327,7 +1368,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 	width:100px;
 	height:100px;
 	position: absolute;
-	z-index: 11;
+	z-index: -11;
 	top:50%;
 	-webkit-transform:translateY(-50%);
 	        transform:translateY(-50%);
@@ -1344,7 +1385,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 	width:100px;
 	height:100px;
 	position: absolute;
-	z-index: 11;
+	z-index: -11;
 	top:50%;
 	-webkit-transform:translateY(-50%);
 	        transform:translateY(-50%);
@@ -1368,10 +1409,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 }
 
 .galeria .row {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
 		position: relative;
+		width:2100px;
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
@@ -1386,33 +1425,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 		transition: width 1s, height 1s, transform .3s, -webkit-transform .3s;
 	}
 
+@media (min-width: 400px) {
+
+.galeria .row {
+			width:3300px
+	}
+  }
+
 .galeria .row .miniatura {
-			margin: 10px;
+			display:-webkit-inline-box;
+			display:-ms-inline-flexbox;
+			display:inline-flex;
+			margin:10px;
 			width: 150px;
 			height: 150px;
-			overflow: hidden;
 			-webkit-box-shadow: 0px 0px 10px 0px #000000;
 			        box-shadow: 0px 0px 10px 0px #000000;
+
 		}
 
-@media (min-width: 300px) {
+@media (min-width: 400px) {
 
 .galeria .row .miniatura {
 				width:250px;
 				height:250px
+
 		}
   }
 
-@media (min-width: 1000px) {
-
-.galeria .row .miniatura {
-				width:300px;
-				height:300px
-		}
-  }
-
-.galeria .row .miniatura img {
-				width: 100%;
+.galeria .row .miniatura img{
+				width:100%;
+				height:initial;
 			}
 
 .stopka {

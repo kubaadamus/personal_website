@@ -19,13 +19,19 @@
 		<video autoplay muted loop class="backwideo" poster="assets/images/black.jpg">
 			<source src="video/intro.webm" type="video/mp4">
 		</video>
-		<div class="wbudowie">STRONA W BUDOWIE</div>
+		<div class="wbudowie hidden">STRONA W BUDOWIE</div>
 		<div class="lang_container">
 			<img id="pl" class="transition" src="assets/images/pl.gif" alt="">
 			<img id="eng" class="transition" src="assets/images/eng.png" alt="">
 		</div>
 		<div class="head">
-			<div class="logo"></div>
+			<div class="logo" id="logo">
+				<img src="assets/images/logo2.png" alt="">
+				<div id="compass">
+					<img src="assets/images/brackets.png" alt="">
+				</div>
+			</div>
+
 			<h1 class="slogan">Full stack web developer / Programista / Grafik&nbsp;3D</h1>
 		</div>
 	</div>
@@ -176,6 +182,7 @@
 						<br/>JQuery
 						<br/>*budowa trwa</h3>
 				</button>
+				
 			</div>
 		</div>
 		<!- K O N I E C WEB DEVELOPER->
@@ -345,7 +352,7 @@
 						<b>2017</b>- Rozpoczęcie doktoratu (ZUT - Technologia Chemiczna Poolimerow)
 					</li>
 					<li>
-						<b>2018</b>- Rozpoczecie pracy jako nauczyciel grafiki 3D (Zachodniopomorska Szkoła Biznesu)
+						<b>2018</b>- Rozpoczecie pracy jako wykładowca grafiki 3D (Zachodniopomorska Szkoła Biznesu)
 					</li>
 				</ul>
 				<ul class="hidden" id="timeline_eng">
@@ -374,7 +381,7 @@
 						<b>2010-2014</b> - Engineering studies (ZUT - Chemical Engineering of Polymers)
 					</li>
 					<li class="star">
-						<b>2011</b> - Undersood the basics of analog electronics
+						<b>2011</b> - Grasped the basics of analog electronics
 					</li>
 					<li class="star">
 						<b>2013</b> - Joined a post-punk rock band Offensywa (drummer)
@@ -389,19 +396,20 @@
 						<b>2017</b>- Doctoral studies (ZUT - Chemical Engineering of Polymers)
 					</li>
 					<li>
-						<b>2018</b>- Began teaching 3D graphics (West Pomeranian Business School)
+						<b>2018</b>- Began lecturing 3D graphics (West Pomeranian Business School)
 					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="background--latte">
-				<div class="kurtyna"></div>
+			<div class="kurtyna"></div>
 
 			<div class="galeria">
-
 				<div class="row" id="row">
-					<div class="swipe_left"><img src="assets/images/global/prev.png" alt=""></div>
+					<div class="swipe_left">
+						<img src="assets/images/global/prev.png" alt="">
+					</div>
 					<div class="miniatura">
 						<img src="assets/images/gallery/gary2.jpg" alt="">
 					</div>
@@ -438,13 +446,15 @@
 					<div class="miniatura ">
 						<img src="assets/images/gallery/gary6.jpg" alt="">
 					</div>
-					<div class="swipe_right"><img src="assets/images/global/next.png" alt=""></div>
+					<div class="swipe_right">
+						<img src="assets/images/global/next.png" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
 		<!- K O N I E C ->
 	</div>
-	
+
 	<!-zakonczenie portfolio->
 	<!===================================== F O O T E R ===========================================>
 	<div class="background--latte">
@@ -467,11 +477,12 @@
 		</div>
 	</div>
 	<!======================================== S K R Y P T Y ======================================>
-  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
 	<script type="text/javascript" src="assets/scripts/lang.js"></script>
 	<script type="text/javascript" src="assets/scripts/gallery.js"></script>
-	
+	<script type="text/javascript" src="assets/scripts/compass.js"></script>
+
 </body>
 
 </html>
