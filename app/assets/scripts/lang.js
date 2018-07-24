@@ -1,7 +1,7 @@
 // E N G L I S H
 $("#eng").click(function () {
     $(".wbudowie").text("UNDER CONSTRUCTION");
-    $(".slogan").html("Full stack web developer / Programmist / 3D&nbsp;Artist");
+    $(".slogan").html("Full stack web developer / Programmer / 3D&nbsp;Artist");
     $("#warsztat").text("WORKSHOP");
     $("#uzywam").text("USING");
     $("#uczesie").text("STUDYING");

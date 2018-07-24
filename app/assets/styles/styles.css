@@ -17,14 +17,14 @@ $mainRed:#950000;
 	src: url(assets/fonts/Regular.ttf);
 }
 @-webkit-keyframes pulsate {
-    0% {left: -10px;}
-    50% {left: -150px;}
-    100% {left: -10px;}
+    0% {left: -50px;}
+    50% {left: -80px;}
+    100% {left: -50px;}
 }
 @-webkit-keyframes pulsate2 {
-    0% {right: -10px;}
-    50% {right: -150px;}
-    100% {right: -10px;}
+    0% {right: -50px;}
+    50% {right: -80px;}
+    100% {right: -50px;}
 }
 /* ============================================= G L O B A L S =========================================== */
 *{
@@ -174,6 +174,9 @@ button:focus {
 	z-index: 10;
 	img{
 		width:100%;
+		position:relative;
+		top:50%;
+		transform:translateY(-50%);
 	}
 }
 #compass{
@@ -185,7 +188,10 @@ button:focus {
 	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
 	transition: width 1s, height 1s, transform 1.3s;
 }
-.slogan {
+.zapraszam{
+	display: none;
+}
+.slogan, .zapraszam {
 	min-width: 150px;
 	margin: 0 auto;
 	text-align: center;
@@ -291,16 +297,12 @@ button:focus {
 	.icon {
 		width: 33px;
 		height: 33px;
-		&--margin {
-			margin: 5px;
-		}
+		margin: 7px;
 		@mixin phone {
 			width: 50px;
 			height: 50px;
 			margin: 10px;
-			&--margin {
-				margin: 10px;
-			}
+			margin: 10px;
 		}
 		@mixin tablet {
 			width: 60px;
@@ -330,42 +332,6 @@ button:focus {
 			height: 100%;
 			margin: 0 auto;
 			display: block;
-		}
-	}
-}
-
-.umiejetnosci {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	h4 {
-		min-width: 180px;
-		margin: 0 auto;
-		color: black;
-		text-align: center;
-		font-family: regular;
-		padding-bottom: 20px;
-		font-size: 1.9rem;
-		@mixin tablet {
-			text-align: left;
-		}
-	}
-	.lista {
-		overflow: hidden;
-		width: fit-content;
-		max-width: 400px;
-		margin: 0 auto;
-	}
-	.umiem {
-		display: block;
-		@mixin tablet {
-			float: left;
-		}
-	}
-	.ucze_sie {
-		display: block;
-		@mixin tablet {
-			float: left;
 		}
 	}
 }
@@ -426,6 +392,7 @@ button:focus {
 				max-width: 1200px;
 			}
 			.kafelek {
+				background-color: transparent;
 				display: flex;
 				justify-content: center;
 				position: relative;
@@ -435,7 +402,7 @@ button:focus {
 				width: 180px;
 				height: 180px;
 				padding: 0px;
-				border: solid black 1px;
+				border: none;
 				overflow: hidden;
 				box-shadow: 0px 0 10px 0px #000000;
 				transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
@@ -446,7 +413,8 @@ button:focus {
 					transform: scale(1.1, 1.1);
 					h3 {
 						position: absolute;
-						display: block;
+						visibility: visible;
+						opacity: 1;
 						top: 0px;
 						width: 100%;
 						height: 100%;
@@ -466,7 +434,9 @@ button:focus {
 					transform: translateX(-50%);
 				}
 				h3 {
-					display: none;
+					visibility: hidden;
+					opacity: 0;
+					transition: visibility 0s, opacity 0.3s linear;
 					pointer-events: none;
 					background-color: rgba(0, 0, 0, 0.8);
 					color: white;
@@ -551,6 +521,9 @@ button:focus {
 				padding: 20px;
 				width: 120px;
 				border-radius: 10%;
+				transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
+				-webkit-transition-duration: 1.0s;
+				transition-duration: 1.0s;
 				@mixin phone_small {
 					width: 220px;
 				}
@@ -667,8 +640,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 		flex-direction: row;
 		-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
 		transition: width 1s, height 1s, transform .3s;
+		@mixin phone_small{
+			width:2684px;
+		}
 		@mixin phone{
-			width:3300px;
+			width:4485px;
 		}
 		.miniatura {
 			display:inline-flex;
@@ -676,9 +652,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 			width: 150px;
 			height: 150px;
 			box-shadow: 0px 0px 10px 0px #000000;
+			@mixin phone_small{
+				width:200px;
+				height:200px;
+			}
 			@mixin phone{
-				width:250px;
-				height:250px;
+				width:350px;
+				height:350px;
 			}
 			img{
 				width:100%;

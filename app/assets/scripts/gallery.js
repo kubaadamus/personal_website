@@ -13,7 +13,7 @@ function swipeleftHandler(event) {
     if(photo_number<$(".miniatura").length-1)
     {
         photo_number += 1;
-        position-=parseInt($(".miniatura").css("width"))+20;
+        position-=parseInt($(".miniatura").css("width"))+24;
     }
     $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
 }
@@ -21,7 +21,7 @@ function swipeleftHandler(event) {
 function swiperightHandler(event) {
     if (photo_number > 0) {
         photo_number -= 1;
-        position+=parseInt($(".miniatura").css("width"))+20;
+        position+=parseInt($(".miniatura").css("width"))+24;
     }
     $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
 }
@@ -48,5 +48,9 @@ var funkcja = $(function() {
   });
 
   $( window ).resize(function() {
+    photo_number = 0;
+    position=0;
+    miniatura_width = parseInt($(".miniatura").css("width"));
     $("#row").css('transform','translateX('+(position+window.innerWidth/2-miniatura_width/2)+'px)');
+
   });

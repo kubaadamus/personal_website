@@ -1,4 +1,4 @@
-var bgvid = document.getElementById('bgvid');
+var bgvid = document.getElementById('backwideo');
 var width = $(window).width();
 
 if(width>600)
