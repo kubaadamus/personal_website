@@ -976,24 +976,14 @@ button:focus {
 	}
 
 .portfolio .dziedzina .kafelki {
-			position: relative;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			background-color: transparent;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: column;
-			        flex-direction: column;
-			-webkit-box-pack: center;
-			    -ms-flex-pack: center;
-			        justify-content: center;
-			-webkit-transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
-			        transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
-			-webkit-transition-duration: 1.0s;
-			transition-duration: 1.0s;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin: 0 auto;
 		}
 
 @media (min-width: 600px) {
@@ -1002,9 +992,7 @@ button:focus {
 				-webkit-box-orient: horizontal;
 				-webkit-box-direction: normal;
 				    -ms-flex-direction: row;
-				        flex-direction: row;
-				margin: 0 auto;
-				max-width: 700px
+				        flex-direction: row
 		}
   }
 
@@ -1104,8 +1092,8 @@ button:focus {
 @media (min-width: 600px) {
 
 .portfolio .dziedzina .kafelki .kafelek {
-					width: 150px;
-					height: 150px
+					width: 130px;
+					height: 130px
 			}
   }
 
