@@ -13,14 +13,21 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body style="overflow:hidden">
+
+	<div class="loading" id="loading">
+		<div class="bar rotating">
+		</div>
+	</div>
+
 	<!===================================== H E A D E R ===========================================>
 	<div class="header">
+
 		<video autoplay muted loop class="backwideo" id="backwideo" poster="assets/images/black.jpg">
 
 		</video>
 
-		
+
 		<div class="wbudowie hidden">STRONA W BUDOWIE</div>
 		<div class="lang_container">
 			<img id="pl" class="transition" src="assets/images/global/pl.gif" alt="">
@@ -36,7 +43,7 @@
 
 			<h1 class="slogan">Full stack web developer / Programista / Grafik&nbsp;3D</h1>
 			<br/>
-			<h1 class="zapraszam">...zapraszam do zwiedzania...</h1>
+
 		</div>
 	</div>
 	<!===================================== S K I L L E  ===========================================>
@@ -98,6 +105,14 @@
 				<div class="icon">
 					<img src-data="assets/images/tech/small/blender.png" alt="" class="war_image">
 				</div>
+				<div class="icon">
+					<img src-data="assets/images/tech/small/bem.png" alt="" class="war_image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="icon">
+					<img src-data="assets/images/tech/small/rwd.png" alt="" class="war_image">
+				</div>
 			</div>
 		</div>
 		<div class="uczesie">
@@ -130,6 +145,8 @@
 				<div class="icon icon">
 					<img src-data="assets/images/tech/small/bootstrap.png" alt="" class="war_image">
 				</div>
+			</div>
+			<div class="row">
 				<div class="icon icon">
 					<img src-data="assets/images/tech/small/c70.png" alt="" class="war_image">
 				</div>
@@ -212,12 +229,12 @@
 					<picture>
 						<img src-data='assets/images/portfolio/small/gapp.jpg' class="por_image" />
 					</picture>
-					<h3>Skaner podsłuchu sieci
+					<h3>Program zbierający dane o aplikacjach Google Play
 						<br/> Wykonanie: 2018
 						<br/>Wykorzystano:
 						<br/>C#
 						<br/>Windows Forms
-						<br/>DataVisualization.Charting</h3>
+						<br/>Charting</h3>
 				</button>
 				<button class="kafelek">
 					<picture>
@@ -230,7 +247,8 @@
 						<br/>P.I.D
 						<br/>Arduino Nano
 						<br/>LCD
-						<br/>Przekaźniki i sterownik termopary</h3>
+						<br/>Przekaźniki
+						<br/>Sterownik termopary</h3>
 				</button>
 				<button class="kafelek">
 					<picture>
@@ -304,11 +322,11 @@
 			<div class="cv">
 				<div class="opis">
 
-					<picture >
+					<picture>
 						<source class="zyc_image" media="(max-width: 399px)" srcset="assets/images/gita_100w.jpg">
 						<source class="zyc_image" media="(min-width: 400px)" srcset="assets/images/gita_300w.jpg">
-						<img    class="zyc_image" src-data="assets/images/gita_300w.jpg" alt="Zdjęcie z gitarą"  >
-					  </picture>
+						<img class="zyc_image" src-data="assets/images/gita_300w.jpg" alt="Zdjęcie z gitarą">
+					</picture>
 
 					<p id="zycie_paragraf_1">Odkąd sięgam pamięcią, śrubokręt i&nbsp;taśma klejąca były moimi ulubionymi zabawkami. Już jako szkrab spędzałem długie
 						godziny na rozkręcaniu przekaźników elektrycznych, które dziadek (elektryk automatyk) nieopatrznie zostawiał w zasięgu
@@ -413,7 +431,7 @@
 		</div>
 
 		<div class="background--latte">
-			<div class="kurtyna"></div>
+
 
 			<div class="galeria">
 				<div class="row" id="row">
@@ -469,7 +487,7 @@
 	<!===================================== F O O T E R ===========================================>
 	<div id="kontakt" class="background--latte">
 		<div class="nazwa_dziedziny nazwa_dziedziny--round_top">
-			<h1 >KONTAKT</h1>
+			<h1>KONTAKT</h1>
 		</div>
 	</div>
 	<div class="stopka" id="stopka">
@@ -494,7 +512,8 @@
 	<script type="text/javascript" src="assets/scripts/compass.js"></script>
 	<script type="text/javascript" src="assets/scripts/header_bgvideo.js"></script>
 	<script type="text/javascript" src="assets/scripts/lazy.js"></script>
-	<script type="text/javascript" src="assets/scripts/zacheta.js"></script>
+	<script type="text/javascript" src="assets/scripts/onload.js">
+	</script>
 
 </body>
 

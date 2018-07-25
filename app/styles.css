@@ -566,47 +566,66 @@ button:focus {
 
 .background--latte {
 	position: relative;
-	background-color: #F4F3F2;
 	overflow: hidden;
 }
 
-.background--latte--top {
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0ebdd+2,f4f2ed+5,f4f3f2+100 */
-		background: #f0ebdd;
-		/* Old browsers */
-		/* FF3.6-15 */
-		/* Chrome10-25,Safari5.1-6 */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #f0ebdd), color-stop(5%, #f4f2ed), to(#f4f3f2));
-		background: linear-gradient(to bottom, #f0ebdd 2%, #f4f2ed 5%, #f4f3f2 100%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ebdd', endColorstr='#f4f3f2', GradientType=0);
-		/* IE6-9 */
-	}
+/*ROTACJA*/
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+.rotating {
+    -webkit-animation: rotating 1s linear infinite;
+    animation: rotating 1s linear infinite;
+  }
+
+/*KONIEC ROTACJI*/
 
 /* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
 
 /* ============================================ N O R M A L ============================================ */
 
-.wbudowie {
-	background-color: #950000;
-	text-align: center;
-	color: white;
-	z-index: -1;
-	opacity: 0.8;
-	font-size: 1rem;
+.loading{
+	position: relative;
+    width:100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top:0;
+	left:0;
+	z-index: 20;
 }
 
-@media (min-width: 1000px) {
-
-.wbudowie {
+.loading .bar{
 		position: absolute;
-		width: 1500px;
-		padding: 20px 0px;
-		-webkit-transform: translate(-650px, 80px) rotate(-45deg);
-		        transform: translate(-650px, 80px) rotate(-45deg);
-		font-size: 1.0rem
-}
-  }
+		margin-left:-25px;
+		top:50%;
+		left:50%;
+        background-image: url('assets/images/loading.png');
+        background-size:cover;
+        width:50px;
+        height:50px;
+        z-index: 5;
+    }
 
 .header {
 	-webkit-box-shadow: 0px 3px 12px 0px #000000;
@@ -614,6 +633,7 @@ button:focus {
 	position: relative;
 	overflow: hidden;
 	min-width: 100%;
+	max-height: 90vh;
 }
 
 @media (min-width: 400px) {
@@ -626,25 +646,18 @@ button:focus {
 @media (min-width: 1000px) {
 
 .header {
-		background: none;
-		height: 80vh
+		background: none
 }
   }
 
 .head{
 	position: relative;
+	padding-top:25vh;
+	padding-bottom: 25vh;
 
 }
 
 @media (min-width: 1000px) {
-
-.head{
-
-		top:50%;
-		-webkit-transform: translateY(-100%);
-		        transform: translateY(-100%)
-
-}
   }
 
 .logo {
@@ -737,6 +750,7 @@ button:focus {
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
+	z-index: 20;
 }
 
 .lang_container img {
@@ -1078,8 +1092,6 @@ button:focus {
 					background-color: rgba(0, 0, 0, 0.8);
 					color: white;
 					font-size: 0.8rem;
-					padding-top: 10px;
-					padding-bottom: 10px;
 				}
 
 @media (min-width: 1000px) {
@@ -1309,19 +1321,6 @@ button:focus {
 }
   }
 
-.kurtyna{
-	position: absolute;
-	background-color: black;
-	height:100%;
-	width:100%;
-	z-index: 10;
-
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f3f2+0,f4f3f2+100&1+10,0+30,0+70,1+90 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-background: -webkit-gradient(linear, left top, right top, from(rgba(244,243,242,1)),color-stop(10%, rgba(244,243,242,1)),color-stop(30%, rgba(244,243,242,0)),color-stop(70%, rgba(244,243,242,0)),color-stop(90%, rgba(244,243,242,1)),to(rgba(244,243,242,1)));
-background: linear-gradient(to right, rgba(244,243,242,1) 0%,rgba(244,243,242,1) 10%,rgba(244,243,242,0) 30%,rgba(244,243,242,0) 70%,rgba(244,243,242,1) 90%,rgba(244,243,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', endColorstr='#f4f3f2',GradientType=1 ); /* IE6-9 */
-}
-
 .swipe_left{
 	width:100px;
 	height:100px;
@@ -1367,6 +1366,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 }
 
 .galeria .row {
+		margin-left: -10px;
 		position: relative;
 		width:2100px;
 		-webkit-box-pack: center;
@@ -1447,7 +1447,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f3f2', end
 		margin-bottom: 30px;
 		text-align: center;
 		color: white;
-		font-family: kaligrafia;
+		font-family: regular;
 	}
 
 @media (min-width: 600px) {

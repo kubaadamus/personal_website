@@ -14,6 +14,8 @@
 
 
         };
+
+        
         HideAll();
     
     var war_bool=false;
@@ -36,7 +38,7 @@
     function LazyLoad() {
       var scrollBottom =$(window).scrollTop() + $(window).height();
       
-            if(scrollBottom>warsztat.top+250 && !war_bool)
+            if(scrollBottom>warsztat.top+350 && !war_bool)
             {
               console.log("loading: warsztat")
               war_bool=true;

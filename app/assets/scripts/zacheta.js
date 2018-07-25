@@ -1,4 +1,4 @@
-setInterval(function(){loop()}, 15000);
+setInterval(function(){loop()}, 20000);
 
 function loop(){
 
