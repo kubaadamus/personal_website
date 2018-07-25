@@ -488,7 +488,7 @@ wbr:after {
 }
 
 html {
-	cursor: context-menu;
+
 }
 
 body {
@@ -984,6 +984,10 @@ button:focus {
 		    -ms-flex-direction: column;
 		        flex-direction: column;
 		margin: 0 auto;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		max-width: 200px;
 		}
 
 @media (min-width: 600px) {
@@ -992,7 +996,8 @@ button:focus {
 				-webkit-box-orient: horizontal;
 				-webkit-box-direction: normal;
 				    -ms-flex-direction: row;
-				        flex-direction: row
+				        flex-direction: row;
+				max-width:600px
 		}
   }
 
@@ -1011,42 +1016,28 @@ button:focus {
   }
 
 .portfolio .dziedzina .kafelki .kafelek {
-				background-color: transparent;
+				position: relative;
+				border:none;
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
-				-webkit-box-pack: center;
-				    -ms-flex-pack: center;
-				        justify-content: center;
-				position: relative;
-				margin: 0 auto;
-				margin-top: 10px;
-				margin-bottom: 10px;
 				width: 180px;
 				height: 180px;
-				padding: 0px;
-				border: none;
 				overflow: hidden;
-				-webkit-box-shadow: 0px 0 10px 0px #000000;
-				        box-shadow: 0px 0 10px 0px #000000;
-				-webkit-transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
-				        transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
-				-webkit-transition-duration: 1.0s;
-				transition-duration: 1.0s;
+				margin:10px;
+			-webkit-transition-duration: 1.0s;
+			transition-duration: 1.0s;
+			-webkit-box-shadow: 0px 0px 10px 0px #000000;
+			        box-shadow: 0px 0px 10px 0px #000000;
+			background-color: transparent;
 			}
-
-.portfolio .dziedzina .kafelki .kafelek:hover {
-					-webkit-box-shadow: 5px 5px 10px #1f2123;
-					        box-shadow: 5px 5px 10px #1f2123;
-					-webkit-transform: scale(1.1, 1.1);
-					        transform: scale(1.1, 1.1);
-				}
 
 .portfolio .dziedzina .kafelki .kafelek:hover h3 {
 						position: absolute;
 						visibility: visible;
 						opacity: 1;
 						top: 0px;
+						left:0px;
 						width: 100%;
 						height: 100%;
 						font-family: regular;
@@ -1062,7 +1053,6 @@ button:focus {
 				}
 
 .portfolio .dziedzina .kafelki .kafelek img {
-					display: block;
 					position: absolute;
 					top: 0;
 					left: 50%;
@@ -1112,32 +1102,6 @@ button:focus {
 					height: 250px
 			}
   }
-
-.portfolio .dziedzina .kafelki_more {
-			display: none;
-		}
-
-.portfolio .dziedzina .pokaz_wszystkie {
-			display: block;
-			width: 50px;
-			margin: 0 auto;
-			background-color: white;
-			color: black;
-			text-align: center;
-			font-size: 2rem;
-			-webkit-box-shadow: 0px 0 10px 0px #9e9e9e9c;
-			        box-shadow: 0px 0 10px 0px #9e9e9e9c;
-			-webkit-transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
-			        transition-timing-function: cubic-bezier(0, 1.08, 0.03, 1.01);
-			-webkit-transition-duration: 1.0s;
-			transition-duration: 1.0s;
-		}
-
-.portfolio .dziedzina .pokaz_wszystkie:hover {
-				bbox-shadow: 0px 0 10px 0px #9e9e9e9c;
-				-webkit-transform: scale(1.1, 1.1);
-				        transform: scale(1.1, 1.1);
-			}
 
 .zycie {
 	display: -webkit-box;
@@ -1391,6 +1355,8 @@ button:focus {
 			display:inline-flex;
 			margin:10px;
 			width: 150px;
+			border:none;
+			overflow: hidden;
 			height: 150px;
 			-webkit-box-shadow: 0px 0px 10px 0px #000000;
 			        box-shadow: 0px 0px 10px 0px #000000;
