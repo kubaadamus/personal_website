@@ -44,7 +44,9 @@ body {
 	overflow-x: hidden;
 }
 
-
+::-webkit-scrollbar {
+    display:none;
+}
 h1,
 h2,
 h3,
@@ -425,7 +427,6 @@ button:focus {
 				margin:10px;
 			-webkit-transition-duration: 1.0s;
 			transition-duration: 1.0s;
-			box-shadow: 0px 0px 10px 0px #000000;
 			background-color: transparent;
 				&:hover {
 					h3 {
@@ -636,6 +637,9 @@ button:focus {
 			overflow: hidden;
 			height: 150px;
 			box-shadow: 0px 0px 10px 0px #000000;
+			&:hover{
+				transform:scale(1.03,1.03);
+			}
 			@mixin phone_small{
 				width:200px;
 				height:200px;

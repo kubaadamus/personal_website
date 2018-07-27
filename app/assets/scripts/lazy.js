@@ -52,7 +52,7 @@
               console.log("loading: portfolio")
               por_bool=true;
               $(".por_image").each(function(obraz){$(this).delay(50 * obraz).attr('src', $(this).delay(50 * obraz).attr('src-data'));$(this).delay(50 * obraz).fadeIn(1000);$(this).parent().parent().removeAttr("style");});
-              
+              $(".kafelek").attr('style','box-shadow:0px 0px 10px 0px #000000');
     
             }
             if(scrollBottom>zycie.top+200 && !zyc_bool)
