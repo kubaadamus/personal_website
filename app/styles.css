@@ -495,6 +495,9 @@ body {
 	min-width: 200px;
 	background-color: rgb(255, 255, 255);
 	overflow-x: hidden;
+	-ms-overflow-style: none;
+	-ms-overflow-width: 0px;
+	position: relative;
 }
 
 h1,
@@ -542,6 +545,10 @@ hr {
 
 button:focus {
 	outline: 0;
+}
+
+::-webkit-scrollbar {
+    display:none;
 }
 
 /*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
@@ -652,12 +659,16 @@ button:focus {
 
 .head{
 	position: relative;
-	padding-top:25vh;
-	padding-bottom: 25vh;
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
+
+.head{
+		padding-top:20vh;
+		padding-bottom: 25vh
+
+}
   }
 
 .logo {
@@ -669,6 +680,7 @@ button:focus {
 	margin-top: 100px;
 	background-size: cover;
 	z-index: 10;
+	fill-opacity: 0.4;
 }
 
 .logo img{
@@ -967,6 +979,7 @@ button:focus {
 	}
 
 .portfolio {
+	position: relative;
 	background-color: transparent;
 	clear: both;
 }
@@ -1313,8 +1326,8 @@ button:focus {
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
-	padding-bottom: 60px;
-	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 .galeria .row {
@@ -1363,6 +1376,11 @@ button:focus {
 
 		}
 
+.galeria .row .miniatura:hover{
+				-webkit-transform: scale(1.03, 1.03);
+				        transform: scale(1.03, 1.03);
+			}
+
 @media (min-width: 300px) {
 
 .galeria .row .miniatura {
@@ -1387,8 +1405,8 @@ button:focus {
 			}
 
 .stopka {
-	padding-top: 30px;
-	padding-bottom: 50px;
+
+	padding-bottom: 10px;
 	clear: both;
 	background-color: #1f2123;
 	background-size: 12px;
@@ -1398,7 +1416,6 @@ button:focus {
 
 .stopka .motto {
 		min-width: 150px;
-		margin-bottom: 30px;
 		text-align: center;
 		color: white;
 		font-family: regular;
@@ -1415,14 +1432,13 @@ button:focus {
 		text-align: center;
 		color: white;
 		margin: 0 auto;
-		margin-top: 30px;
 		max-width: 150px;
 		font-family: regular;
 		font-size: 1.0rem;
 	}
 
 .stopka .dane_kontaktowe p {
-			margin-top: 20px;
+			padding-top: 20px;
 		}
 
 @media (min-width: 600px) {
@@ -1449,9 +1465,19 @@ button:focus {
 	width: fit-content;
 	margin: 0 auto;
 	font-size: 0.8rem;
-	margin-bottom: 50px;
-	margin-top: 30px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
+
+@media (min-width: 300px) {
+
+.kontakty {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row
+}
+  }
 
 @media (min-width: 400px) {
 
@@ -1486,6 +1512,13 @@ button:focus {
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 }
+
+@media (min-width: 300px) {
+
+.kontakt {
+		padding:0px,
+}
+  }
 
 .kontakt:hover {
 		-webkit-transform: scale(1.3, 1.3);
