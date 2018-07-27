@@ -17,7 +17,6 @@ function swipeleftHandler() {
     }
     $("#row").css('transform', 'translateX(' + (position + window.innerWidth / 2 - miniatura_width / 2) + 'px)');
 }
-
 function swiperightHandler() {
     if (photo_number > 0) {
         photo_number -= 1;
@@ -25,7 +24,6 @@ function swiperightHandler() {
     }
     $("#row").css('transform', 'translateX(' + (position + window.innerWidth / 2 - miniatura_width / 2) + 'px)');
 }
-
 var funkcja = $(function () {
     $(".background--latte").swipe({
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -36,56 +34,18 @@ var funkcja = $(function () {
             if (direction == "right") {
                 swiperightHandler();
             }
-
         },
         threshold: 0
     });
-
-
-
 });
-
 $(window).resize(function () {
     photo_number = 0;
     position = 0;
     miniatura_width = parseInt($(".miniatura").css("width"));
     $("#row").css('transform', 'translateX(' + (position + window.innerWidth / 2 - miniatura_width / 2) + 'px)');
-
 });
-
-
-/*
-$(".galeria").mouseenter(function () {
-    console.log("galeria IN");
-    $("body").attr("style", "overflow-y:hidden");
-    bodyScroll = false;
-
-});
-
-$(".galeria").mouseleave(function () {
-    console.log("galeria OUT");
-    $("body").attr("style", "overflow:auto");
-    bodyScroll = true;
-});
-*/
 window.addEventListener("wheel", myScript);
 function myScript(event) {
-
-    /*
-    if (!bodyScroll) {
-        if (event.deltaY <= 0) {
-            //console.log('Scroll up');
-            swiperightHandler();
-        } else {
-            //console.log('Scroll down');
-            swipeleftHandler();
-        }
-    };
-console.log($(window).scrollTop() + $(window).height());
-console.log($(document).height());
-
-*/
-
     if($(window).scrollTop() + $(window).height() > $(document).height()-12) {
         if (event.deltaY <= 0) {
             console.log('Scroll up');
@@ -108,9 +68,6 @@ console.log($(document).height());
         $("body").attr("style", "overflow:auto");
     }
 }
-
-
-
 $(".miniatura").click(function(e){
 console.log($(e.target).attr("nr"));
 var nr = parseInt($(e.target).attr("nr"));
