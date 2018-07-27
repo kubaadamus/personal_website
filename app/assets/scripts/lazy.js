@@ -23,8 +23,8 @@
     var zyc_bool=false;
     var kon_bool=false;
     var warsztat = $("#warsztat").position();
-    var portfolio = $(".portfolio").position();
-    var zycie = $(".zycie").position();
+    var portfolio = $("#portfolio").position();
+    var zycie = $("#zycie").position();
     var kontakt = $("#kontakt").position();
 
 
@@ -37,12 +37,10 @@
 
     function LazyLoad() {
       var scrollBottom =$(window).scrollTop() + $(window).height();
-
-   
       
             if(scrollBottom>warsztat.top+350 && !war_bool)
             {
-              console.log("loading: warsztat");
+              console.log("loading: warsztat")
               war_bool=true;
               $(".war_image").each(function(obraz){
                 $(this).attr('src', $(this).attr('src-data'));
@@ -51,9 +49,7 @@
             }
             if(scrollBottom>portfolio.top+300 && !por_bool)
             {
-              console.log("loading: portfolio");
-              console.log(scrollBottom);
-              console.log(portfolio.top+300);
+              console.log("loading: portfolio")
               por_bool=true;
               $(".por_image").each(function(obraz){$(this).delay(50 * obraz).attr('src', $(this).delay(50 * obraz).attr('src-data'));$(this).delay(50 * obraz).fadeIn(1000);$(this).parent().parent().removeAttr("style");});
               
@@ -61,13 +57,13 @@
             }
             if(scrollBottom>zycie.top+200 && !zyc_bool)
             {
-              console.log("loading: zycie");
+              console.log("loading: zycie")
               zyc_bool=true;
               $(".zyc_image").each(function(obraz){$(this).attr('src', $(this).attr('src-data'));$(this).removeAttr("style");});
             }
             if(scrollBottom>kontakt.top && !kon_bool)
             {
-              console.log("loading: kontakt");
+              console.log("loading: kontakt")
               kon_bool=true;
             }
     
