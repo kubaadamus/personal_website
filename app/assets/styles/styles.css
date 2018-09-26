@@ -504,11 +504,13 @@ button:focus {
 		.opis {
 			padding-left: 20px;
 			padding-right: 20px;
+
 			@mixin phone {
 				text-align: justify;
 			}
 			@mixin pc {
 				line-height: 2rem;
+				font-size: 25px;
 			}
 			img {
 				position: relative;
@@ -533,11 +535,13 @@ button:focus {
 		position: relative;
 		width: fit-content;
 		margin: 0 auto;
+
 		img {
 			width: 50px;
 		}
 		@mixin pc {
 			padding-right: 20px;
+			font-size: 25px;
 		}
 		ul {
 			list-style-image: url('assets/images/hat.png');
@@ -545,7 +549,7 @@ button:focus {
 			@mixin tablet{
 			}
 			@mixin pc {
-				line-height: 45px;
+				line-height: 53px;
 			}
 			li {
 				margin: 10px 0;
