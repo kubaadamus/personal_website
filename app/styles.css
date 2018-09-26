@@ -1352,6 +1352,7 @@ button:focus {
   }
 
 .galeria .row .miniatura {
+			position: relative;
 			display:-webkit-inline-box;
 			display:-ms-inline-flexbox;
 			display:inline-flex;
@@ -1369,6 +1370,10 @@ button:focus {
 				-webkit-transform:scale(1.03,1.03);
 				        transform:scale(1.03,1.03);
 			}
+
+.galeria .row .miniatura:hover>div{
+					opacity: 1;
+				}
 
 @media (min-width: 300px) {
 
@@ -1392,6 +1397,29 @@ button:focus {
 				width:100%;
 				height:initial;
 			}
+
+.fullImage{
+	opacity: 0;
+	width:50px;
+	height:50px;
+	position: absolute;
+	right:0px;
+	bottom:0px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	background-image:url("assets/images/global/magnify.svg");
+	background-size: 100%;
+
+}
+
+.fullImage:hover{
+		-webkit-transform:scale(1.1);
+		        transform:scale(1.1);
+	}
+
+.fullImage:active::parent{
+			display: none;
+		}
 
 .stopka {
 	padding-top: 30px;

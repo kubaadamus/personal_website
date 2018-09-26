@@ -13,7 +13,7 @@ $("#eng").click(function () {
     $("#zycie_paragraf_2").text("Today as chemical engineer and fully dedicated web developer/programmist I look for the opportunities to use my knowledge and experience in real, commercial applications.");
     $("#timeline_pl").hide();$("#timeline_eng").show();
     $("#kontakt").text("CONTACT");
-    $("#motto").text("Let's make something amazing together!");
+    $("#motto").text("Let's create something amazing together!");
 });
 
 
