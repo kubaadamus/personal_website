@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rzeczy>
 		<nazwa>Gitara akustyczna LAG T-66</nazwa>
-
 		<obraz>assets/images/akustyk_rendery/Epic_shit2.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit3.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit4.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit5.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit6.png</obraz>
-
 		<paragraf>Dokładne odwzorowanie jednej z moich gitar - Lag T66. Machoniowy top, palisandrowa podstrunnica, zaopatrzona w przetwornik elektroakustyczny, stroik i 3-stopniową regulacją tonu. </paragraf>
-
-
 		<paragraf>* * *</paragraf>
-
 </rzeczy>

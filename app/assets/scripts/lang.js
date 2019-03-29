@@ -15,8 +15,6 @@ $("#eng").click(function () {
     $("#kontakt").text("CONTACT");
     $("#motto").text("Let's create something amazing together!");
 });
-
-
 //P O L I S H
 $("#pl").click(function () {
     $(".wbudowie").text("W BUDOWIE");

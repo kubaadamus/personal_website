@@ -10,7 +10,6 @@ $(function () {
 });
 // Callback function references the event target and adds the 'swipe' class to it
 function swipeleftHandler() {
-
     if (photo_number < $(".miniatura").length - 1) {
         photo_number += 1;
         position -= parseInt($(".miniatura").css("width")) + 24;
@@ -54,7 +53,6 @@ function myScript(event) {
             console.log('Scroll down');
             swipeleftHandler();
         }
-
         if(photo_number>0)
         {
             $("body").attr("style", "overflow-y:hidden");
@@ -71,7 +69,6 @@ function myScript(event) {
 $(".miniatura").click(function(e){
 console.log($(e.target).attr("nr"));
 var nr = parseInt($(e.target).attr("nr"));
-
 while(nr>photo_number)
 {
     swipeleftHandler();

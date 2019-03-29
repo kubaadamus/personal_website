@@ -1,6 +1,5 @@
 
         function HideAll(){
-
           $(".war_image").hide();
           $(".por_image").hide();
           if($( window ).width()>1000)
@@ -11,10 +10,7 @@
             $(".slogan").hide().fadeIn(1000);
             $(".lang_container").hide().delay( 800 ).slideDown(1000);
           }
-
-
         };
-
         
         HideAll();
     
@@ -26,16 +22,9 @@
     var portfolio = $("#portfolio").position();
     var zycie = $("#zycie").position();
     var kontakt = $("#kontakt").position();
-
-
     $(window).scroll(LazyLoad);
-
   
     LazyLoad();
-
-
-
-
     function LazyLoad() {
       var scrollBottom =$(window).scrollTop() + $(window).height();
       
@@ -71,5 +60,3 @@
     
     
     };
-
-

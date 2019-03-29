@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rzeczy>
 		<nazwa>Smartfon Lenovo A806</nazwa>
-
 		<obraz>assets/images/akustyk_rendery/Epic_shit2.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit3.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit4.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit5.png</obraz>
 		<obraz>assets/images/akustyk_rendery/Epic_shit6.png</obraz>
-
 		<paragraf>Replika telefonu Lenovo A806.</paragraf>
-
-
 		<paragraf>* * *</paragraf>
-
 </rzeczy>

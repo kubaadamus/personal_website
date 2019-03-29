@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rzeczy>
 		<nazwa>Etykieciarka</nazwa>
-
 		<obraz>assets/images/photo1.jpg</obraz>
 		<obraz>assets/images/photo2.jpg</obraz>
 		<obraz>assets/images/photo3.jpg</obraz>
 		<obraz>assets/images/photo4.jpg</obraz>
 		<obraz>assets/images/photo5.jpg</obraz>
 		<obraz>assets/images/photo6.jpg</obraz>
-
 		<paragraf> Bardzo trzyma temperature :D </paragraf>
 		<paragraf>  Trololo </paragraf>
-
 </rzeczy>

@@ -1,18 +1,12 @@
 @import "normalize.css";
 @import "_mixins";
-/* ========================================== V A R I A B L E S ========================================== */
-
-$mainBlack: #1f2123;
+/* ========================================== V A R I A B L E S ========================================== */$mainBlack: #1f2123;
 $mainLatte: #F4F3F2;
 $mainRed:#950000;
-/* =============================================  F O N T S  ============================================= */
-
-@font-face {
+/* =============================================  F O N T S  ============================================= */@font-face {
 	font-family: Kaligrafia;
 	src: url(assets/fonts/Kaligrafia.otf);
-}
-
-@font-face {
+}@font-face {
 	font-family: Regular;
 	src: url(assets/fonts/Regular.ttf);
 }
@@ -32,19 +26,11 @@ $mainRed:#950000;
 }
 wbr:after {
 	content: "\00200B";
-}
-
-html {
-
-}
-
-body {
+}html {}body {
 	min-width: 200px;
 	background-color: rgb(255, 255, 255);
 	overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
+}::-webkit-scrollbar {
     display:none;
 }
 h1,
@@ -54,51 +40,31 @@ h4,
 h5 {
 	margin: 0;
 	padding: 0;
-}
-
-h3{
+}h3{
 	background-color: white;
 	height: 25px;
-	width: 100%;
-
-}
-
-span {
+	width: 100%;}span {
 	margin: -5px;
 	padding: 0px;
-}
-
-h1 {
+}h1 {
 	margin: 0;
-}
-
-p {
+}p {
 	margin: 0;
-}
-
-a {
+}a {
 	text-decoration: none;
 	color: inherit;
 	width: fit-content;
 	height: fit-content;
-}
-
-hr {
+}hr {
 	width: 200px;
 	max-width: 40%;
 	margin: 0 auto;
 	padding: 0;
 	box-shadow: 0px 1px 10px 0px #9e9e9e9c;
 	height: 1px;
-}
-
-button:focus {
+}button:focus {
 	outline: 0;
-}
-
-/*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/
-
-.transition {
+}/*Usuwa niebieską ramkę która pojawiłaby się po kliknięciu przycisku*/.transition {
 	transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
 	-webkit-transition-duration: 1.0s;
 	transition-duration: 1.0s;
@@ -106,13 +72,9 @@ button:focus {
 		box-shadow: 5px 5px 10px $mainBlack;
 		transform: scale(1.1, 1.1);
 	}
-}
-
-.hidden {
+}.hidden {
 	display: none;
-}
-
-.background--latte {
+}.background--latte {
 	position: relative;
 	overflow: hidden;
 }
@@ -153,11 +115,7 @@ button:focus {
     animation: rotating 1s linear infinite;
   }
   /*KONIEC ROTACJI*/
-/* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ */
-
-/* ============================================ N O R M A L ============================================ */
-
-.loading{
+/* ============================================ E L E M E N T Y   P O W T A R Z A L N E ============================================ *//* ============================================ N O R M A L ============================================ */.loading{
 	position: relative;
     width:100%;
     height: 100%;
@@ -195,12 +153,7 @@ button:focus {
 	position: relative;
 	padding-top:25vh;
 	padding-bottom: 25vh;
-	@mixin pc{
-
-
-	}
-
-}
+	@mixin pc{	}}
 .logo {
 	position: relative;
 	width: 200px;
@@ -246,9 +199,7 @@ button:focus {
 	@mixin pc {
 		font-size: 2.7rem;
 	}
-}
-
-.backwideo {
+}.backwideo {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -258,9 +209,7 @@ button:focus {
 	height: auto;
 	z-index: -100;
 	transform: translate(-50%, -50%);
-}
-
-.lang_container {
+}.lang_container {
 	position: absolute;
 	right: 10px;
 	top: 25px;
@@ -277,9 +226,7 @@ button:focus {
 			height:30px;
 		}
 	}
-}
-
-.naglowek {
+}.naglowek {
 	min-width: 180px;
 	margin: 0 auto;
 	color: $mainBlack;
@@ -289,9 +236,7 @@ button:focus {
 	text-align: center;
 	margin-bottom: 10px;
 	padding-top: 40px;
-}
-
-.skille {
+}.skille {
 	position: relative;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -324,9 +269,7 @@ button:focus {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: row;
-
-		@mixin tablet {
+		flex-direction: row;		@mixin tablet {
 			height: 90px;
 		}
 		@mixin pc {
@@ -373,9 +316,7 @@ button:focus {
 			display: block;
 		}
 	}
-}
-
-.nazwa_dziedziny {
+}.nazwa_dziedziny {
 	background-color: $mainBlack;
 	margin: 0 auto;
 	padding-bottom: 20px;
@@ -401,9 +342,7 @@ button:focus {
 		border-top-left-radius: 50%;
 		border-top-right-radius: 50%;
 	}
-}
-
-.portfolio {
+}.portfolio {
 	background-color: transparent;
 	clear: both;
 	.dziedzina {
@@ -485,16 +424,12 @@ button:focus {
 			}
 		}
 	}
-}
-
-.zycie {
+}.zycie {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	color: black;
-	font-family: regular;
-
-	@mixin pc {
+	font-family: regular;	@mixin pc {
 		flex-direction: row;
 	}
 	p {
@@ -510,9 +445,7 @@ button:focus {
 		}
 		.opis {
 			padding-left: 20px;
-			padding-right: 20px;
-
-			@mixin phone {
+			padding-right: 20px;			@mixin phone {
 				text-align: justify;
 			}
 			@mixin pc {
@@ -541,9 +474,7 @@ button:focus {
 	.timeline {
 		position: relative;
 		width: fit-content;
-		margin: 0 auto;
-
-		img {
+		margin: 0 auto;		img {
 			width: 50px;
 		}
 		@mixin pc {
@@ -572,9 +503,7 @@ button:focus {
 			margin: 0px;
 		}
 	}
-}
-
-.konkrety {
+}.konkrety {
 	position: relative;
 	max-width: 500px;
 	font-family: regular;
@@ -588,9 +517,7 @@ button:focus {
 	@mixin tablet {
 		margin: 0 auto;
 	}
-}
-
-.swipe_left{
+}.swipe_left{
 	width:100px;
 	height:100px;
 	position: absolute;
@@ -602,9 +529,7 @@ button:focus {
 	animation: pulsate 2s ease infinite;
 	img{
 		width:100%;
-	}
-
-}
+	}}
 .swipe_right{
 	width:100px;
 	height:100px;
@@ -617,9 +542,7 @@ button:focus {
 	animation: pulsate2 2s ease infinite;
 	img{
 		width:100%;
-	}
-
-}
+	}}
 .galeria {
 	position: relative;
 	margin: 0 auto;
@@ -650,9 +573,7 @@ button:focus {
 			height: 150px;
 			box-shadow: 0px 0px 10px 0px #000000;
 			&:hover{
-				//transform:scale(1.03,1.03);
-
-				&>div{
+				//transform:scale(1.03,1.03);				&>div{
 					opacity: 1;
 				}
 			}
@@ -667,43 +588,30 @@ button:focus {
 			img{
 				width:100%;
 				height:initial;
-			}
-
-
-		}
+			}		}
 	}
-}
-
-.uczenwrapper{
+}.uczenwrapper{
 	width:80%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-}
-
-.miniatura_uczen{
+}.miniatura_uczen{
 width:200px;
 height: 200px;
 margin:30px;
 padding:0px;
 	background-size: cover;
-	font-weight: bold;
-
-	&:hover{
+	font-weight: bold;	&:hover{
 		transform: scale(1.05);
-	}
-
-h3{
+	}h3{
 	background-color:rgba(0,0,0,0.4);
 	height:100%;
 	width:100%;
 	color:white;
 	font-size:1rem;
-}
-
-}
+}}
 .fullImage{
 	opacity: 0;
 	width:50px;
@@ -714,23 +622,14 @@ h3{
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 	background-image:url("assets/images/global/magnify.svg");
-	background-size: 100%;
-
-	&:hover{
+	background-size: 100%;	&:hover{
 		transform:scale(1.1);
 	}
 	&:active{
 	
 		&::parent{
 			display: none;
-		}
-
-
-	}
-
-}
-
-.stopka {
+		}	}}.stopka {
 	padding-top: 30px;
 	padding-bottom: 50px;
 	clear: both;
@@ -763,9 +662,7 @@ h3{
 			font-size: 1.5rem;
 		}
 	}
-}
-
-.kontakty {
+}.kontakty {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -781,9 +678,7 @@ h3{
 	@mixin tablet {
 		width: 300px;
 	}
-}
-
-.kontakt {
+}.kontakt {
 	width: 40px;
 	height: 40px;
 	margin: 0 auto;
@@ -800,10 +695,7 @@ h3{
 	&:hover {
 		transform: scale(1.3, 1.3);
 	}
-}
-
-
-.tutorials_list{
+}.tutorials_list{
 	font-size: 1.5rem;
 	margin-left: 120px;
 	li:hover{

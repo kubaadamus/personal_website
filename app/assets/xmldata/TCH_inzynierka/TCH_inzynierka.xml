@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rzeczy>
 		<nazwa>Praca inzynierska</nazwa>
-
 		<obraz>assets/xmldata/TCH_inzynierka/praca_inzynierska.jpg</obraz>
 		<obraz>assets/xmldata/TCH_inzynierka/stara_chemia.jpg</obraz>
 		<obraz>assets/xmldata/TCH_inzynierka/suszarka.jpg</obraz>
 		<obraz>assets/xmldata/TCH_inzynierka/dmta.jpg</obraz>
 		<obraz>assets/xmldata/TCH_inzynierka/dsc.jpg</obraz>
-
 		<paragraf> 
 			Z czego robi się klocki lego? Dlaczego gorąca herbata stygnie? Te pytania niegdyś powodowały u mnie bezsenność. Chęć poznania fundamentów, na których opiera się wszystko co znane, skłoniła mnie do rozpoczęcia studiów na Wydziale Technologii i Inżynierii Chemicznej Zachodniopomorskiego Uniwersytetu Technologicznego w Szczecinie. 
 		 </paragraf>
@@ -19,18 +16,11 @@
 		<paragraf> 
 			Ostatni rok studiów inżynierskich zaowocował powstaniem pracy pod tytułem „Materiały epoksydowe sieciowane cieczami głęboko eutektycznymi”. Wspólnie z moim ówczesnym, znakomitym promotorem, Profesorem dr hab. inż. Tadeuszem Spychajem, opracowaliśmy układ dwuskładnikowy, pozwalający na sieciowanie żywic epoksydowych (podobnych do tych używanych np. w znanym i lubianym kleju „Poxipol”). Opracowany przez nas układ w przeciwieństwie do klasycznych i powszechnie stosowanych utwardzaczy aminowych, jest nietoksyczny dla użytkownika i zawiera składniki znacznie bardziej przyjazne środowisku. Projektowane przez nas układy zostały przebadane między innymi techniką reometrii naprężeniowej, skaningowej kalorymetrii różnicowej oraz termograwimetrii, którym poświęcona jest osobna zakładka witryny - „Aparatura laboratoryjna”. 
 		 </paragraf>
-
 		 <paragraf>
 		 	Dzięki studiom inżynierskim wiem, że bez kopolimeru akrylonitrylo-butadieno-styrenowego nie byłoby klocków lego a o stygnięcie herbaty mogę obwinić entropię.
 		 </paragraf>
 		 <paragraf>
 		 * * *
 		 </paragraf>
-
-
-
-
 		 <dodac>fotki na wydziale, wpasc po 18 i strzelic foty, fotke w czapeczce czterokątnej z pracą inzynierską w łapach na tle wydziału, fotke jak przelewam jakies kolorowe coś</dodac>
-
-
 </rzeczy>

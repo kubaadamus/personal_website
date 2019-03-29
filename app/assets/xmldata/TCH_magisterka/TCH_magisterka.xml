@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rzeczy>
 		<nazwa>Praca magisterska</nazwa>
-
 		<obraz>assets/images/photo1.jpg</obraz>
 		<obraz>assets/images/photo2.jpg</obraz>
 		<obraz>assets/images/photo3.jpg</obraz>
 		<obraz>assets/images/photo4.jpg</obraz>
 		<obraz>assets/images/photo5.jpg</obraz>
 		<obraz>assets/images/photo6.jpg</obraz>
-
 		<paragraf> 
 		Czy ze skrobi ziemniaczanej można zrobić "plastik"? Na to pytanie próbowałem odpowiedzieć podczas studiów magisterskich, pracując pod okiem Prof. dr hab. inż. Tadeusza Spychaja. Wspólnymi siłami dążyliśmy do otrzymania materiału, którego głównym składnikiem polimerowym byłaby skrobia ziemniaczana. Aby zmienić zwykłą mąkę w torebkę jednorazową czy pudełko, należy przeprowadzić proces plastyfikacji. Polega on na zmieszaniu skrobi ze specjalnym układem uplastyczniającem (plastyfikatorem) a następnie wytłoczeniu w podwyższonej temperaturze. W ten sposób zwykła mąka zmienia się w półprzezroczysty materiał polimerowy.
 		</paragraf>
@@ -19,5 +16,4 @@
 		<paragraf>
 		 * * *
 		</paragraf>
-
 </rzeczy>
