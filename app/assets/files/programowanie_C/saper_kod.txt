@@ -1,0 +1,60 @@
+using System;
+
+namespace saper_gra
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Witaj w grze SAPER!");
+            bool boom = false;
+            int[,] poleMinowe = new int[5, 5];
+            Random rand = new Random();
+
+            //wype³nianie tabeli minami
+            for(int y=0; y<5; y++)
+            {
+                for(int x=0; x<5; x++)
+                {
+                    poleMinowe[x, y] = rand.Next(0, 2);
+                }
+            }
+            while(!boom)
+            {
+                for (int y = 0; y < 5; y++)
+                {
+                    for (int x = 0; x < 5; x++)
+                    {
+                        //Console.Write(poleMinowe[x, y]+" ");
+                        if(poleMinowe[x, y]==6)
+                        {
+                            Console.Write("O ");
+                        }
+                        else
+                        {
+                            Console.Write("# ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+                Console.Write("Wpisz koordynat x: ");
+                int coord_x = int.Parse(Console.ReadLine());
+                Console.Write("Wpisz koordynat y: ");
+                int coord_y = int.Parse(Console.ReadLine());
+
+                if (poleMinowe[coord_x, coord_y] == 1)
+                {
+                    Console.WriteLine("BOOM!");
+
+                    boom = true;
+                }
+                else
+                {
+                    Console.WriteLine("Nie ma miny :3");
+                    poleMinowe[coord_x, coord_y] = 6;
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}
