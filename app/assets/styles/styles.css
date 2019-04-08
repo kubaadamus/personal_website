@@ -1,9 +1,18 @@
 @import "normalize.css";
 @import "_mixins";
-/* ========================================== V A R I A B L E S ========================================== */$mainBlack: #1f2123;
+/* ========================================== V A R I A B L E S ========================================== */
+$mainBlack: rgb(26, 26, 26);
+$mainGrey: rgb(46, 46, 46);
+$mainOrange:rgb(107, 0, 0);
+pre{
+	color: rgb(26, 26, 26);
+}
 $mainLatte: #F4F3F2;
 $mainRed:#950000;
-/* =============================================  F O N T S  ============================================= */@font-face {
+/* GRADIENT BACKGROUNDS */
+
+/* =============================================  F O N T S  ============================================= */
+@font-face {
 	font-family: Kaligrafia;
 	src: url(assets/fonts/Kaligrafia.otf);
 }@font-face {
@@ -28,7 +37,7 @@ wbr:after {
 	content: "\00200B";
 }html {}body {
 	min-width: 200px;
-	background-color: rgb(255, 255, 255);
+	background-color: $mainBlack;
 	overflow-x: hidden;
 }::-webkit-scrollbar {
     display:none;
@@ -151,7 +160,7 @@ h5 {
 }
 .head{
 	position: relative;
-	padding-top:25vh;
+	padding-top:15vh;
 	padding-bottom: 25vh;
 	@mixin pc{	}}
 .logo {
@@ -237,285 +246,98 @@ h5 {
 	margin-bottom: 10px;
 	padding-top: 40px;
 }.skille {
-	position: relative;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: transparent;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	@mixin tablet {
-		flex-direction: row;
-		margin: 0 auto;
-		max-width: 700px;
-	}
-	@mixin pc {
-		max-width: 1100px;
-	}
-	@mixin tv {
-		max-width: 1200px;
-	}
-	@mixin pc {
-		flex-direction: row;
-	}
-	h1 {
-		text-align: center;
-		padding: 20px;
-		font-family: regular;
-	}
-	.row {
-		height: 70px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;		@mixin tablet {
-			height: 90px;
-		}
-		@mixin pc {
-			height: 150px;
-		}
-	}
-	.icon {
-		width: 33px;
-		height: 33px;
-		margin: 7px;
-		@mixin phone {
-			width: 50px;
-			height: 50px;
-			margin: 10px;
-			margin: 10px;
-		}
-		@mixin tablet {
-			width: 60px;
-			height: 60px;
-			margin: 10px;
-			&--margin {
-				margin: 15px;
+	justify-content: center;
+	background-color: $mainBlack;
+	&_sub{
+		margin:3rem;
+		h3,li{
+			color:lightgreen;
+			background-color:transparent;
+			list-style-type: square;
+			line-height:1.8rem;
+			cursor:pointer;
+			&:hover{
+
 			}
-		}
-		@mixin pc {
-			width: 70px;
-			height: 70px;
-			margin: 10px;
-			&--margin {
-				margin: 15px;
-			}
-		}
-		@mixin tv {
-			width: 100px;
-			height: 100px;
-			margin: 40px;
-			&--margin {
-				margin: 70px;
-			}
-		}
-		img {
-			height: 100%;
-			margin: 0 auto;
-			display: block;
 		}
 	}
 }.nazwa_dziedziny {
-	background-color: $mainBlack;
+	background-color:$mainOrange;
+	position: relative;
 	margin: 0 auto;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	color: white;
 	font-family: regular;
 	font-size: 0.6rem;
 	text-align: center;
+	z-index: 9999;
 	@mixin pc {
 		letter-spacing: 8px;
 	}
-	box-shadow: 0px 0 10px 0px #000000;
+	box-shadow: 0px 0px 90px 10px rgba(0,0,0,0.75);
 	h1 {
 		width: fit-content;
 		position: relative;
 		margin: 0 auto;
 	}
-	&--round_bottom {
-		border-bottom-left-radius: 50%;
-		border-bottom-right-radius: 50%;
-	}
-	&--round_top {
-		border-top-left-radius: 50%;
-		border-top-right-radius: 50%;
-	}
+
 }.portfolio {
-	background-color: transparent;
-	clear: both;
-	.dziedzina {
-		padding-bottom: 10px;
-		.kafelki {
-		display:flex;
-		flex-direction: column;
-		margin: 0 auto;
-		justify-content: center;
-		max-width: 200px;
-			@mixin tablet {
-				flex-direction: row;
-				max-width:600px;
-			}
-			@mixin pc {
-				max-width: 1100px;
-			}
-			@mixin tv {
-				max-width: 1200px;
-			}
-			.kafelek {
-				position: relative;
-				border:none;
-				display: flex;
-				width: 180px;
-				height: 180px;
-				overflow: hidden;
-				margin:10px;
-			-webkit-transition-duration: 1.0s;
-			transition-duration: 1.0s;
-			background-color: transparent;
-				&:hover {
-					h3 {
-						position: absolute;
-						visibility: visible;
-						opacity: 1;
-						top: 0px;
-						left:0px;
-						width: 100%;
-						height: 100%;
-						font-family: regular;
-					}
-				}
-				picture {
-					display: flex;
-					justify-content: center;
-				}
-				img {
-					position: absolute;
-					top: 0;
-					left: 50%;
-					height: 100%;
-					transform: translateX(-50%);
-				}
-				h3 {
-					visibility: hidden;
-					opacity: 0;
-					transition: visibility 0s, opacity 0.3s linear;
-					pointer-events: none;
-					background-color: rgba(0, 0, 0, 0.8);
-					color: white;
-					font-size: 0.8rem;
-					@mixin pc {
-						font-size: 1.2rem;
-					}
-				}
-				@mixin tablet {
-					width: 130px;
-					height: 130px;
-				}
-				@mixin pc {
-					width: 200px;
-					height: 200px;
-				}
-				@mixin tv {
-					width: 250px;
-					height: 250px;
-				}
+	display: flex;
+	justify-content: center;
+	background-color: $mainBlack;
+	padding:3rem;
+	&_sub{
+
+		h3,li{
+			color:lightgreen;
+			background-color:transparent;
+			list-style-type: square;
+			line-height:1.8rem;
+			cursor:pointer;
+			&:hover{
+
 			}
 		}
 	}
-}.zycie {
+
+}
+.student{
+display: flex;
+padding:50px;
+color:lightgreen;
+flex-direction: column;
+justify-content: center;
+.center{
+	text-align:center;
+}
+button{
+	padding: 5px 30px 5px 30px;
+	background-color: darkgreen;
+
+	color: white;
+	border-radius: 10px;
+	margin:30px auto;
+	cursor:pointer;
+
+	
+}
+}
+.zycie {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	color: black;
-	font-family: regular;	@mixin pc {
-		flex-direction: row;
+	background-color: $mainBlack;
+	color:lightgreen;
+  picture{
+		margin:20px auto;
 	}
-	p {
-		text-indent: 30px;
+	.opis{
+		margin:20px auto;
 		max-width: 500px;
-		margin: 0 auto;
-	}
-	.cv {
-		margin: 0 auto;
-		width: fit-content;
-		@mixin pc {
-			margin: 0px;
-		}
-		.opis {
-			padding-left: 20px;
-			padding-right: 20px;			@mixin phone {
-				text-align: justify;
-			}
-			@mixin pc {
-				line-height: 2rem;
-				font-size: 25px;
-			}
-			img {
-				position: relative;
-				display: block;
-				margin: 0 auto;
-				padding: 20px;
-				width: 120px;
-				border-radius: 10%;
-				transition-timing-function: cubic-bezier(0.05, -0.03, 0.15, 1.06);
-				-webkit-transition-duration: 1.0s;
-				transition-duration: 1.0s;
-				@mixin phone_small {
-					width: 220px;
-				}
-				@mixin phone{
-					width:300px;
-				}
-			}
-		}
-	}
-	.timeline {
-		position: relative;
-		width: fit-content;
-		margin: 0 auto;		img {
-			width: 50px;
-		}
-		@mixin pc {
-			padding-right: 20px;
-			font-size: 25px;
-		}
-		ul {
-			list-style-image: url('assets/images/hat.png');
-			line-height: 30px;
-			@mixin tablet{
-			}
-			@mixin pc {
-				line-height: 53px;
-			}
-			li {
-				margin: 10px 0;
-			}
-		}
-		.born {
-			list-style-image: url('assets/images/born.png');
-		}
-		.star {
-			list-style-image: url('assets/images/star.png');
-		}
-		@mixin pc {
-			margin: 0px;
-		}
-	}
-}.konkrety {
-	position: relative;
-	max-width: 500px;
-	font-family: regular;
-	line-height: 30px;
-	padding-left: 20px;
-	padding-right: 20px;
-	@mixin pc {
-		padding-top: 80px;
-		max-width: fit-content;
-	}
-	@mixin tablet {
-		margin: 0 auto;
+		text-align: justify;
+		color:lightgreen;
 	}
 }.swipe_left{
 	width:100px;
@@ -549,6 +371,7 @@ h5 {
 	width: fit-content;
 	padding-bottom: 60px;
 	padding-top: 20px;
+	background-color: $mainBlack;
 	.row {
 		margin-left: -10px;
 		position: relative;
@@ -567,10 +390,10 @@ h5 {
 			position: relative;
 			display:inline-flex;
 			margin:10px;
-			width: 150px;
+			width: 100px;
 			border:none;
 			overflow: hidden;
-			height: 150px;
+			height: 100px;
 			box-shadow: 0px 0px 10px 0px #000000;
 			&:hover{
 				//transform:scale(1.03,1.03);				&>div{
@@ -582,8 +405,8 @@ h5 {
 				height:200px;
 			}
 			@mixin phone{
-				width:350px;
-				height:350px;
+				width:250px;
+				height:250px;
 			}
 			img{
 				width:100%;
@@ -592,25 +415,25 @@ h5 {
 	}
 }.uczenwrapper{
 	width:80%;
-	margin: 0 auto;
+	margin: 10% auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }.miniatura_uczen{
-width:200px;
-height: 200px;
+width:100px;
+height: 100px;
 margin:30px;
 padding:0px;
 	background-size: cover;
 	font-weight: bold;	&:hover{
 		transform: scale(1.05);
 	}h3{
-	background-color:rgba(0,0,0,0.4);
+	background-color:rgba(0,0,0,0.7);
 	height:100%;
 	width:100%;
 	color:white;
-	font-size:1rem;
+	font-size:0.8rem;
 }}
 .fullImage{
 	opacity: 0;
@@ -698,6 +521,7 @@ padding:0px;
 }.tutorials_list{
 	font-size: 1.5rem;
 	margin-left: 120px;
+	color:white;
 	li:hover{
 		color:red;
 	}
